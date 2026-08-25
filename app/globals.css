@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #5b3df5;
+  --color-primary-light: #8b5cf6;
+  --color-ink: #111827;
+  --color-ink-soft: #4b5563;
+  --color-surface: #f8fafc;
+  --color-surface-border: #e5e7eb;
+  --color-white: #ffffff;
+  --color-hero: #0b0a1f;
+  --color-hero-deep: #150e33;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-surface: var(--color-surface);
+  --color-surface-border: var(--color-surface-border);
+  --color-hero: var(--color-hero);
+  --color-hero-deep: var(--color-hero-deep);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-poppins);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(60% 50% at 15% 0%, rgba(139, 92, 246, 0.35), transparent 60%),
+    radial-gradient(50% 40% at 100% 20%, rgba(91, 61, 245, 0.3), transparent 60%),
+    linear-gradient(180deg, var(--color-hero-deep) 0%, var(--color-hero) 55%, var(--color-hero) 100%);
+}
+
+.grid-fade {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(80% 60% at 50% 0%, black 40%, transparent 100%);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-left 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  .animate-fade-up {
+    animation: none;
+    opacity: 1;
+    translate: 0 0;
+  }
 }
