@@ -1,53 +1,38 @@
 import Reveal from "./Reveal";
-
-const ITEMS = [
-  {
-    title: "Technology-Driven",
-    description:
-      "A client portal that replaces email threads and lost paperwork — track filings, documents, and deadlines in one place.",
-  },
-  {
-    title: "Dedicated Account Managers",
-    description:
-      "Your single point of contact for personalized support and corporate continuity, not a rotating support queue.",
-  },
-  {
-    title: "Transparent Pricing",
-    description:
-      "No hidden administrative fees or surprise costs. Predictable monthly and flat setup charges, shown before you commit.",
-  },
-  {
-    title: "WhatsApp-First Support",
-    description:
-      "Reach a real person where you already are — typically within 5 minutes during business hours.",
-  },
-];
+import DifferentiatorsShowcase from "./DifferentiatorsShowcase";
 
 export default function Differentiators() {
   return (
-    <section id="differentiators" className="bg-surface py-24">
+    <section id="differentiators" className="bg-surface/85 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-            Why leading businesses choose Purple Cow
-          </h2>
-          <p className="mt-4 text-lg text-ink-soft">
-            We treat accounting as the core of the business, not an upsell after formation.
-          </p>
-        </div>
+        <div className="relative overflow-hidden rounded-[0.5rem] hero-glow">
+          <div className="absolute inset-0 grid-fade" aria-hidden />
+          <div
+            className="stripe-corner pointer-events-none absolute right-0 top-0 h-24 w-24 sm:h-32 sm:w-32"
+            aria-hidden
+          />
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {ITEMS.map((item, index) => (
-            <Reveal key={item.title} delay={index * 100} className="h-full">
-              <div className="h-full rounded-2xl border border-surface-border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                  <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-                </div>
-                <h3 className="mt-4 text-base font-semibold text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm text-ink-soft">{item.description}</p>
-              </div>
+          <div className="relative grid grid-cols-1 items-center gap-12 p-8 sm:p-12 lg:grid-cols-2 lg:gap-16 lg:p-16">
+            {/* Left: heading & copy */}
+            <Reveal>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
+                Why Purple Cow
+              </span>
+              <h2 className="text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
+                Why leading businesses{" "}
+                <span className="text-primary-light">choose Purple Cow</span>
+              </h2>
+              <p className="mt-6 max-w-md text-lg text-white/70">
+                We treat accounting as the core of the business, not an upsell
+                after formation.
+              </p>
             </Reveal>
-          ))}
+
+            {/* Right: small mockup container — scenes animate in one by one */}
+            <Reveal delay={150}>
+              <DifferentiatorsShowcase />
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

@@ -46,11 +46,11 @@ const FACTS = [
 
 function FactCard({ fact }: { fact: (typeof FACTS)[number] }) {
   return (
-    <div className="flex w-80 shrink-0 items-center gap-3 rounded-xl border border-surface-border bg-white px-5 py-4 shadow-sm sm:w-96">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+    <div className="flex w-80 shrink-0 items-center gap-3 rounded-xl border border-white/15 bg-white/10 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-md sm:w-96">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-primary-light">
         <span className="h-5 w-5">{fact.icon}</span>
       </span>
-      <p className="text-sm font-medium text-ink-soft">{fact.text}</p>
+      <p className="text-sm font-medium text-white/90">{fact.text}</p>
     </div>
   );
 }
@@ -59,8 +59,8 @@ export default function TrustedBy() {
   const track = [...FACTS, ...FACTS];
 
   return (
-    <section className="overflow-hidden border-b border-surface-border bg-white py-8">
-      <div className="animate-marquee flex w-max gap-4">
+    <section className="relative py-8 sm:py-10">
+      <div className="animate-marquee relative flex w-max gap-4">
         {track.map((fact, index) => (
           <FactCard key={`${fact.text}-${index}`} fact={fact} />
         ))}

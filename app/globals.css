@@ -82,6 +82,31 @@ body {
   animation-play-state: paused;
 }
 
+@keyframes grow-bar {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.animate-grow-bar {
+  animation: grow-bar 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: bottom;
+}
+
+.stripe-corner {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 0,
+    rgba(255, 255, 255, 0.4) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none;
@@ -91,4 +116,9 @@ body {
     opacity: 1;
     translate: 0 0;
   }
+  .animate-grow-bar {
+    animation: none;
+    transform: scaleY(1);
+  }
 }
+

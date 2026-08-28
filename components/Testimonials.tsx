@@ -24,7 +24,7 @@ const QUOTES = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-surface py-24">
+    <section className="bg-surface/85 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
