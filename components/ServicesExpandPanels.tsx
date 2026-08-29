@@ -58,55 +58,62 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
               aria-hidden
             />
 
-            {/* Floating illustration card */}
-            {pillar.customIllustration ? (
-              <div className="absolute inset-x-4 top-4 bottom-20 overflow-hidden rounded-2xl sm:inset-x-6 sm:top-6 sm:bottom-24">
-                {pillar.customIllustration(isActive)}
-              </div>
-            ) : (
-              <div
-                className={`absolute inset-x-4 top-4 bottom-20 overflow-hidden rounded-2xl sm:inset-x-6 sm:top-6 sm:bottom-24 ${
-                  pillar.imageContainerVariant === "glass"
-                    ? "border border-white/50 bg-white/25 shadow-xl backdrop-blur-xl"
-                    : "bg-white shadow-xl ring-1 ring-black/5"
-                }`}
-              >
-                {pillar.imageContainerVariant === "glass" && (
-                  <div
-                    className="pointer-events-none absolute inset-0"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.08) 35%, rgba(255,255,255,0) 60%)",
-                    }}
-                    aria-hidden
-                  />
-                )}
-                <Image
-                  src={pillar.image}
-                  alt={pillar.title}
-                  fill
-                  sizes="(min-width: 1024px) 60vw, 90vw"
-                  priority={i === 0}
-                  className={`object-contain p-6 ${
-                    isActive && pillar.animateImageOnActive ? "animate-illustration-float" : ""
+            {/* Floating illustration card: hidden while a sibling card is expanded */}
+            <div
+              style={{
+                opacity: isDimmed ? 0 : 1,
+                transition: "opacity 0.25s ease-out",
+              }}
+            >
+              {pillar.customIllustration ? (
+                <div className="absolute inset-x-4 top-4 bottom-20 overflow-hidden rounded-2xl sm:inset-x-6 sm:top-6 sm:bottom-24">
+                  {pillar.customIllustration(isActive)}
+                </div>
+              ) : (
+                <div
+                  className={`absolute inset-x-4 top-4 bottom-20 overflow-hidden rounded-2xl sm:inset-x-6 sm:top-6 sm:bottom-24 ${
+                    pillar.imageContainerVariant === "glass"
+                      ? "border border-white/50 bg-white/25 shadow-xl backdrop-blur-xl"
+                      : "bg-white shadow-xl ring-1 ring-black/5"
                   }`}
-                  style={
-                    isActive && pillar.animateImageOnActive
-                      ? { transition: "transform 0.4s ease-out" }
-                      : {
-                          transform: isActive ? "scale(1.04)" : "scale(1)",
-                          transition: "transform 0.7s ease-out",
-                        }
-                  }
-                />
-              </div>
-            )}
+                >
+                  {pillar.imageContainerVariant === "glass" && (
+                    <div
+                      className="pointer-events-none absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.08) 35%, rgba(255,255,255,0) 60%)",
+                      }}
+                      aria-hidden
+                    />
+                  )}
+                  <Image
+                    src={pillar.image}
+                    alt={pillar.title}
+                    fill
+                    sizes="(min-width: 1024px) 60vw, 90vw"
+                    priority={i === 0}
+                    className={`object-contain p-6 ${
+                      isActive && pillar.animateImageOnActive ? "animate-illustration-float" : ""
+                    }`}
+                    style={
+                      isActive && pillar.animateImageOnActive
+                        ? { transition: "transform 0.4s ease-out" }
+                        : {
+                            transform: isActive ? "scale(1.04)" : "scale(1)",
+                            transition: "transform 0.7s ease-out",
+                          }
+                    }
+                  />
+                </div>
+              )}
+            </div>
 
-            {/* Collapsed label: horizontal title + arrow, bottom-left */}
+            {/* Idle label: horizontal title + arrow, bottom-left (shown when nothing is active) */}
             <div
               className="absolute bottom-6 left-5 flex items-center gap-2"
               style={{
-                opacity: isActive ? 0 : 1,
+                opacity: isActive || isDimmed ? 0 : 1,
                 transition: "opacity 0.18s ease-out",
               }}
             >
@@ -117,6 +124,19 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
                   <path d="M7 17 17 7M9 7h8v8" />
                 </svg>
+              </span>
+            </div>
+
+            {/* Dimmed label: large vertical title, centered (shown while a sibling card is expanded) */}
+            <div
+              className="absolute inset-0 flex items-center justify-center"
+              style={{
+                opacity: isDimmed ? 1 : 0,
+                transition: "opacity 0.3s ease-out",
+              }}
+            >
+              <span className="whitespace-nowrap text-2xl font-bold tracking-tight text-white/90 [writing-mode:vertical-rl] sm:text-2xl">
+                {pillar.title}
               </span>
             </div>
 
