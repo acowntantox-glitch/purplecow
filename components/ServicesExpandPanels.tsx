@@ -46,7 +46,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
                 : isDimmed
                 ? "0.7 1 0%"
                 : `${pillar.basis ?? 1} 1 0%`,
-              transition: "flex 0.6s cubic-bezier(0.22, 1, 0.36, 1)",
+              transition: "flex 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
               minWidth: 0,
             }}
           >
@@ -107,7 +107,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
               className="absolute bottom-6 left-5 flex items-center gap-2"
               style={{
                 opacity: isActive ? 0 : 1,
-                transition: "opacity 0.35s ease-out",
+                transition: "opacity 0.18s ease-out",
               }}
             >
               <span className="whitespace-nowrap text-lg font-semibold text-white/90">
@@ -122,11 +122,12 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
 
             {/* Expanded content */}
             <div
-              className="absolute inset-x-4 bottom-4 rounded-2xl bg-white/90 p-6 shadow-lg ring-1 ring-black/5 backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-8"
+              className="absolute inset-x-4 bottom-4 rounded-2xl p-6 shadow-lg ring-1 ring-black/5 backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-8"
               style={{
+                backgroundColor: "#fcf2fd",
                 opacity: isActive ? 1 : 0,
                 transform: isActive ? "translateY(0)" : "translateY(16px)",
-                transition: "opacity 0.4s ease-out 0.15s, transform 0.4s ease-out 0.15s",
+                transition: "opacity 0.2s ease-out 0.06s, transform 0.2s ease-out 0.06s",
                 pointerEvents: isActive ? "auto" : "none",
               }}
             >
@@ -137,7 +138,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
               <p className="mt-3 max-w-sm text-sm text-ink-soft sm:text-base">
                 {pillar.description}
               </p>
-              <span className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-light">
+              <span className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary shadow-sm backdrop-blur-md transition hover:border-primary/40 hover:bg-primary/20">
                 {pillar.cta} <span aria-hidden>&rarr;</span>
               </span>
             </div>

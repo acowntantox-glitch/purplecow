@@ -153,25 +153,21 @@ const SCENES = [
 
 export default function DifferentiatorsShowcase() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
   const count = SCENES.length;
 
   useEffect(() => {
-    if (paused) return;
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
     const id = setInterval(() => setActive((i) => (i + 1) % count), AUTOPLAY_MS);
     return () => clearInterval(id);
-  }, [paused, count]);
+  }, [count]);
 
   const scene = SCENES[active];
 
   return (
     <div
       className="mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/40"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
     >
       <div className="flex items-center gap-1.5 px-5 pt-4">
        <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
