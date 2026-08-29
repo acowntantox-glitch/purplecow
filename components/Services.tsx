@@ -1,15 +1,23 @@
+"use client";
+
 import Image from "next/image";
 import Reveal from "./Reveal";
-import ServicesExpandPanels from "./ServicesExpandPanels";
+import BusinessSetupShowcase from "./BusinessSetupShowcase";
+import CorporateServicesShowcase from "./CorporateServicesShowcase";
+import AccountingTaxShowcase from "./AccountingTaxShowcase";
+import ServicesExpandPanels, { type ServicePillar } from "./ServicesExpandPanels";
 
-const PILLARS = [
+const PILLARS: ServicePillar[] = [
   {
     title: "Business Setup",
     eyebrow: "Launch Your UAE Business",
     description:
       "Mainland, Free Zone, or Offshore — we structure your company around your business, not the other way around.",
     cta: "Get Started",
-    image: "/images/service/business setup.jpg",
+    image: "/images/service/business setup illustraion.png",
+    animateImageOnActive: true,
+    imageContainerVariant: "glass",
+    customIllustration: (active) => <BusinessSetupShowcase active={active} />,
     basis: 42,
   },
   {
@@ -18,7 +26,9 @@ const PILLARS = [
     description:
       "Everything that keeps a company running day to day, so you can focus on running the business.",
     cta: "Get Started",
-    image: "/images/service/corporate service.jpg",
+    image: "/images/service/corporate service illustration.png",
+    animateImageOnActive: true,
+    customIllustration: (active) => <CorporateServicesShowcase active={active} />,
     basis: 33,
   },
   {
@@ -27,7 +37,9 @@ const PILLARS = [
     description:
       "Real accountants, not a form-filling service. Your books and your filings, handled by people who understand UAE compliance.",
     cta: "Get Started",
-    image: "/images/service/tax.jpg",
+    image: "/images/service/tax illustration.png",
+    animateImageOnActive: true,
+    customIllustration: (active) => <AccountingTaxShowcase active={active} />,
     basis: 25,
   },
 ];

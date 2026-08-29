@@ -60,7 +60,7 @@ const SCENES = [
           <span className="absolute bottom-0 right-0 h-3.5 w-3.5 animate-pulse rounded-full border-2 border-white bg-emerald-500" />
         </div>
         <div style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "320ms" }}>
-          <p className="text-sm font-semibold text-ink">Fatima A.</p>
+          <p className="text-sm font-semibold text-ink">Nynsha.</p>
           <p className="text-xs text-ink-soft">Senior Account Manager</p>
           <p className="mt-1 text-xs font-medium text-emerald-600">Online now</p>
         </div>

@@ -96,12 +96,26 @@ body {
   transform-origin: bottom;
 }
 
+@keyframes illustration-float {
+  0%,
+  100% {
+    transform: scale(1.05) translateY(0);
+  }
+  50% {
+    transform: scale(1.09) translateY(-10px);
+  }
+}
+
+.animate-illustration-float {
+  animation: illustration-float 3.2s ease-in-out infinite;
+}
+
 .stripe-corner {
   background-image: repeating-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.4) 0,
     rgba(255, 255, 255, 0.4) 2px,
-    transparent 2px,
+    transparent 22px,
     transparent 10px
   );
   clip-path: polygon(100% 0, 0 0, 100% 100%);
@@ -119,6 +133,10 @@ body {
   .animate-grow-bar {
     animation: none;
     transform: scaleY(1);
+  }
+  .animate-illustration-float {
+    animation: none;
+    transform: scale(1.05);
   }
 }
 
