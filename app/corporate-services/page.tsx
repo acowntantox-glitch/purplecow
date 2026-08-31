@@ -5,12 +5,32 @@ import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
 import Breadcrumb from "@/components/Breadcrumb";
+import JsonLd from "@/components/JsonLd";
+import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+
+const TITLE = "Corporate Services in the UAE | Purple Cow";
+const DESCRIPTION =
+  "Visas, corporate banking, and renewals — Purple Cow handles the day-to-day corporate admin your UAE company needs, so nothing lapses on your watch.";
 
 export const metadata: Metadata = {
-  title: "Corporate Services in the UAE | Purple Cow",
-  description:
-    "Visas, corporate banking, and renewals — Purple Cow handles the day-to-day corporate admin your UAE company needs, so nothing lapses on your watch.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/corporate-services" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/corporate-services",
+    images: [{ url: "/images/service/corporate service.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/service/corporate service.jpg"],
+  },
 };
+
+const BREADCRUMB_ITEMS = [{ label: "Home", href: "/" }, { label: "Corporate Services" }];
 
 const STATS = [
   { value: "3", label: "Core services — PRO, Banking & Renewals" },
@@ -184,13 +204,15 @@ const CHECK_ICON = (
 export default function CorporateServicesPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(BREADCRUMB_ITEMS)} />
+      <JsonLd data={faqPageJsonLd(FAQS)} />
       <Navbar />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Corporate Services" }]} />
+            <Breadcrumb items={BREADCRUMB_ITEMS} />
             <div className="mx-auto mt-10 max-w-3xl text-center">
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 Corporate Services

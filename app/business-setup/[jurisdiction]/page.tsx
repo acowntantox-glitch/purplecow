@@ -7,6 +7,8 @@ import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
 import Breadcrumb from "@/components/Breadcrumb";
+import JsonLd from "@/components/JsonLd";
+import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 type Jurisdiction = {
   slug: string;
@@ -285,9 +287,21 @@ export async function generateMetadata({
   const data = JURISDICTIONS[jurisdiction];
   if (!data) return {};
 
+  const title = `${data.title} Company Setup in the UAE | Purple Cow`;
   return {
-    title: `${data.title} Company Setup in the UAE | Purple Cow`,
+    title,
     description: data.heroSubcopy,
+    alternates: { canonical: `/business-setup/${data.slug}` },
+    openGraph: {
+      title,
+      description: data.heroSubcopy,
+      url: `/business-setup/${data.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: data.heroSubcopy,
+    },
   };
 }
 
@@ -308,21 +322,23 @@ export default async function JurisdictionPage({
 
   const others = Object.values(JURISDICTIONS).filter((j) => j.slug !== data.slug);
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Business Setup", href: "/business-setup" },
+    { label: data.title },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(breadcrumbItems)} />
+      <JsonLd data={faqPageJsonLd(data.faqs)} />
       <Navbar />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
-            <Breadcrumb
-              items={[
-                { label: "Home", href: "/" },
-                { label: "Business Setup", href: "/business-setup" },
-                { label: data.title },
-              ]}
-            />
+            <Breadcrumb items={breadcrumbItems} />
             <div className="mx-auto mt-10 max-w-3xl text-center">
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80 [animation-delay:60ms]">
                 {data.badge}

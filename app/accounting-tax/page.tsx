@@ -5,12 +5,32 @@ import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
 import Breadcrumb from "@/components/Breadcrumb";
+import JsonLd from "@/components/JsonLd";
+import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+
+const TITLE = "Accounting & Tax in the UAE | Purple Cow";
+const DESCRIPTION =
+  "Real accountants, not a form-filling service. Bookkeeping, VAT filing, and Corporate Tax handled by people who understand UAE compliance.";
 
 export const metadata: Metadata = {
-  title: "Accounting & Tax in the UAE | Purple Cow",
-  description:
-    "Real accountants, not a form-filling service. Bookkeeping, VAT filing, and Corporate Tax handled by people who understand UAE compliance.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/accounting-tax" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/accounting-tax",
+    images: [{ url: "/images/service/tax.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/service/tax.jpg"],
+  },
 };
+
+const BREADCRUMB_ITEMS = [{ label: "Home", href: "/" }, { label: "Accounting & Tax" }];
 
 const STATS = [
   { value: "3", label: "Core services — Bookkeeping, VAT & Corporate Tax" },
@@ -184,13 +204,15 @@ const CHECK_ICON = (
 export default function AccountingTaxPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(BREADCRUMB_ITEMS)} />
+      <JsonLd data={faqPageJsonLd(FAQS)} />
       <Navbar />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Accounting & Tax" }]} />
+            <Breadcrumb items={BREADCRUMB_ITEMS} />
             <div className="mx-auto mt-10 max-w-3xl text-center">
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 Accounting & Tax

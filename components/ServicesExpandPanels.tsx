@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
 
@@ -28,7 +29,76 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
   }, []);
 
   return (
-    <div className="flex h-[480px] w-full gap-3 sm:h-[500px] lg:h-[580px]">
+    <>
+      {/* Mobile/tablet: stacked accordion — tap a row to expand it in place */}
+      <div className="flex flex-col gap-3 lg:hidden">
+        {pillars.map((pillar, i) => {
+          const isActive = active === i;
+
+          return (
+            <div
+              key={pillar.title}
+              className="overflow-hidden rounded-2xl border border-surface-border bg-white"
+            >
+              <button
+                type="button"
+                onClick={() => setActive((cur) => (cur === i ? null : i))}
+                aria-expanded={isActive}
+                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+              >
+                <span>
+                  <span className="block text-sm font-medium text-primary">{pillar.eyebrow}</span>
+                  <span className="mt-0.5 block text-lg font-semibold text-ink">{pillar.title}</span>
+                </span>
+                <span
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-transform duration-300"
+                  style={{ transform: isActive ? "rotate(45deg)" : "rotate(0deg)" }}
+                  aria-hidden
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+
+              <div
+                className="grid transition-[grid-template-rows] duration-500 ease-out"
+                style={{ gridTemplateRows: isActive ? "1fr" : "0fr" }}
+              >
+                <div className="overflow-hidden">
+                  <div className="relative aspect-[4/3] w-full sm:aspect-[16/9]">
+                    <Image
+                      src={pillar.image}
+                      alt={pillar.title}
+                      fill
+                      sizes="100vw"
+                      className="object-contain p-6"
+                    />
+                  </div>
+                  <div className="px-5 pb-6">
+                    <p className="text-sm leading-relaxed text-ink-soft">{pillar.description}</p>
+                    {pillar.ctaHref ? (
+                      <Link
+                        href={pillar.ctaHref}
+                        className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition hover:border-primary/40 hover:bg-primary/20"
+                      >
+                        {pillar.cta} <span aria-hidden>&rarr;</span>
+                      </Link>
+                    ) : (
+                      <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary">
+                        {pillar.cta} <span aria-hidden>&rarr;</span>
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Desktop: side-by-side hover/click-to-expand panels */}
+      <div className="hidden gap-3 lg:flex lg:h-[580px]">
       {pillars.map((pillar, i) => {
         const isActive = active === i;
         const isDimmed = active !== null && !isActive;
@@ -195,6 +265,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
           </button>
         );
       })}
-    </div>
+      </div>
+    </>
   );
 }

@@ -1,0 +1,35 @@
+# Purple Cow
+
+> Purple Cow is a UAE-based company formation and accounting firm. We combine
+> business setup (Mainland, Free Zone, and Offshore company formation) with
+> genuine accounting, tax, and corporate compliance services — a single
+> partner for founders instead of separate agents for each part of the
+> process.
+
+Purple Cow is based in Dubai, United Arab Emirates, and serves founders and
+businesses setting up and operating companies across the UAE.
+
+## Services
+
+- [Business Setup](https://purplecow.ae/business-setup): Mainland, Free Zone,
+  and Offshore company formation across 40+ UAE free zones.
+  - [Mainland](https://purplecow.ae/business-setup/mainland)
+  - [Free Zone](https://purplecow.ae/business-setup/free-zone)
+  - [Offshore](https://purplecow.ae/business-setup/offshore)
+- [Corporate Services](https://purplecow.ae/corporate-services): PRO
+  services, employment visas, corporate banking support, and license/permit
+  renewals.
+- [Accounting & Tax](https://purplecow.ae/accounting-tax): Bookkeeping, UAE
+  VAT filing, and Corporate Tax registration and filing.
+
+## Insights
+
+- [Mainland, Free Zone, or Offshore — how to actually choose](https://purplecow.ae/insights/mainland-freezone-offshore)
+- [UAE Corporate Tax for small businesses, explained simply](https://purplecow.ae/insights/uae-corporate-tax-small-business)
+- [What a Dubai company setup really costs in 2026](https://purplecow.ae/insights/dubai-company-setup-cost-2026)
+- [Employment visas and PRO services, without the queueing](https://purplecow.ae/insights/employment-visas-pro-services)
+
+## Contact
+
+- Email: hello@purplecow.ae
+- Website: https://purplecow.ae

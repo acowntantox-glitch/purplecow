@@ -5,12 +5,32 @@ import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
 import Counter from "@/components/Counter";
 import Breadcrumb from "@/components/Breadcrumb";
+import JsonLd from "@/components/JsonLd";
+import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+
+const TITLE = "Business Setup in the UAE | Purple Cow";
+const DESCRIPTION =
+  "Mainland, Free Zone, or Offshore — Purple Cow structures and licenses your UAE company with transparent pricing and real accountants from day one.";
 
 export const metadata: Metadata = {
-  title: "Business Setup in the UAE | Purple Cow",
-  description:
-    "Mainland, Free Zone, or Offshore — Purple Cow structures and licenses your UAE company with transparent pricing and real accountants from day one.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/business-setup" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/business-setup",
+    images: [{ url: "/images/service/business setup.jpg" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/service/business setup.jpg"],
+  },
 };
+
+const BREADCRUMB_ITEMS = [{ label: "Home", href: "/" }, { label: "Business Setup" }];
 
 const STATS = [
   { value: "3", label: "Jurisdictions — Mainland, Free Zone & Offshore" },
@@ -191,13 +211,15 @@ const CHECK_ICON = (
 export default function BusinessSetupPage() {
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(BREADCRUMB_ITEMS)} />
+      <JsonLd data={faqPageJsonLd(FAQS)} />
       <Navbar />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
-            <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Business Setup" }]} />
+            <Breadcrumb items={BREADCRUMB_ITEMS} />
             <div className="mx-auto mt-10 max-w-3xl text-center">
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 Business Setup

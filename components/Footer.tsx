@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const COLUMNS = [
   {
@@ -62,12 +63,12 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Purple Cow. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-white/40">
-            <a href="#" className="hover:text-white">
+            <Link href="/privacy" className="hover:text-white">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="/terms" className="hover:text-white">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

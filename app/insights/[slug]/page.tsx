@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
 import Breadcrumb from "@/components/Breadcrumb";
+import JsonLd from "@/components/JsonLd";
+import { articleJsonLd, faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 type Section = {
   heading: string;
@@ -22,6 +24,7 @@ type Article = {
   heroImage: string;
   readTime: string;
   updated: string;
+  updatedISO: string;
   sections: Section[];
   faqs: { q: string; a: string }[];
 };
@@ -35,6 +38,7 @@ const ARTICLES: Record<string, Article> = {
     heroImage: "/images/service/business setup.jpg",
     readTime: "7 min read",
     updated: "Updated August 2026",
+    updatedISO: "2026-08-31",
     sections: [
       {
         heading: "It's not \"which is best\" — it's \"which matches how you trade\"",
@@ -130,6 +134,7 @@ const ARTICLES: Record<string, Article> = {
     heroImage: "/images/service/tax.jpg",
     readTime: "6 min read",
     updated: "Updated August 2026",
+    updatedISO: "2026-08-31",
     sections: [
       {
         heading: "The headline numbers",
@@ -207,6 +212,7 @@ const ARTICLES: Record<string, Article> = {
     heroImage: "/images/dubai-skyline.png",
     readTime: "8 min read",
     updated: "Updated August 2026",
+    updatedISO: "2026-08-31",
     sections: [
       {
         heading: "Why the advertised price is never the real price",
@@ -287,6 +293,7 @@ const ARTICLES: Record<string, Article> = {
     heroImage: "/images/service/corporate service.jpg",
     readTime: "6 min read",
     updated: "Updated August 2026",
+    updatedISO: "2026-08-31",
     sections: [
       {
         heading: "What \"PRO services\" actually means",
@@ -363,9 +370,25 @@ export async function generateMetadata({
   const article = ARTICLES[slug];
   if (!article) return {};
 
+  const title = `${article.title} | Purple Cow`;
   return {
-    title: `${article.title} | Purple Cow`,
+    title,
     description: article.dek,
+    alternates: { canonical: `/insights/${article.slug}` },
+    openGraph: {
+      type: "article",
+      title,
+      description: article.dek,
+      url: `/insights/${article.slug}`,
+      images: [{ url: article.heroImage }],
+      modifiedTime: article.updatedISO,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: article.dek,
+      images: [article.heroImage],
+    },
   };
 }
 
@@ -380,21 +403,33 @@ export default async function InsightArticlePage({
 
   const related = Object.values(ARTICLES).filter((a) => a.slug !== article.slug);
 
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Insights", href: "/#insights" },
+    { label: article.title },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(breadcrumbItems)} />
+      <JsonLd data={faqPageJsonLd(article.faqs)} />
+      <JsonLd
+        data={articleJsonLd({
+          title: article.title,
+          description: article.dek,
+          slug: article.slug,
+          image: article.heroImage,
+          datePublished: article.updatedISO,
+          dateModified: article.updatedISO,
+        })}
+      />
       <Navbar />
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-4xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-24">
-            <Breadcrumb
-              items={[
-                { label: "Home", href: "/" },
-                { label: "Insights", href: "/#insights" },
-                { label: article.title },
-              ]}
-            />
+            <Breadcrumb items={breadcrumbItems} />
             <div className="mt-10">
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 {article.badge}
