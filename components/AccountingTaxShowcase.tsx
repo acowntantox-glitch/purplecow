@@ -88,7 +88,7 @@ export default function AccountingTaxShowcase({ active }: { active: boolean }) {
       <div
         className="absolute inset-0 overflow-hidden rounded-2xl"
         style={{
-          opacity: active ? 0 : 1,
+          opacity: active ? 0 : 0.6,
           transition: "opacity 0.3s ease-out",
           pointerEvents: active ? "none" : "auto",
         }}
@@ -104,7 +104,7 @@ export default function AccountingTaxShowcase({ active }: { active: boolean }) {
 
       {/* Animated mockup: shown on hover/expand */}
       <div
-        className="absolute inset-0 flex flex-col rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/40"
+        className="absolute inset-0 flex flex-col rounded-2xl border border-surface-border bg-white/98 shadow-2xl shadow-black/40"
         style={{
           opacity: active ? 1 : 0,
           transition: "opacity 0.3s ease-out",
@@ -119,65 +119,67 @@ export default function AccountingTaxShowcase({ active }: { active: boolean }) {
 
       <div
         key={active ? `scene-${sceneIndex}` : "static"}
-        className="flex min-h-0 flex-1 flex-col px-5 pb-3 pt-3 sm:px-6"
+        className="flex min-h-0 flex-1 gap-3 px-5 pb-3 pt-3 sm:px-6"
       >
-        <div className="flex items-center gap-2" style={enter(0)}>
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:h-4 [&_svg]:w-4">
-            {scene.icon}
-          </div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
-            {scene.eyebrow}
-          </p>
-        </div>
-
-        <div className="mt-5 space-y-2">
-          {scene.items.map((item, i) => (
-            <div
-              key={item.label}
-              className="flex items-center justify-between rounded-lg border border-surface-border bg-surface/60 px-3 py-2"
-              style={enter(200 + i * 160)}
-            >
-              <span className="text-xs font-medium text-ink">{item.label}</span>
-              <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">
-                {item.status}
-              </span>
+        <div className="flex min-w-0 flex-1 flex-col">
+          <div className="flex items-center gap-2" style={enter(0)}>
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:h-4 [&_svg]:w-4">
+              {scene.icon}
             </div>
-          ))}
+            <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
+              {scene.eyebrow}
+            </p>
+          </div>
+
+          <div className="mt-5 space-y-2">
+            {scene.items.map((item, i) => (
+              <div
+                key={item.label}
+                className="flex items-center justify-between rounded-lg border border-surface-border bg-surface/60 px-3 py-2"
+                style={enter(200 + i * 160)}
+              >
+                <span className="text-xs font-medium text-ink">{item.label}</span>
+                <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">
+                  {item.status}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-auto border-t border-surface-border pt-4" style={enter(650)}>
-          <h3 className="text-sm font-semibold text-ink">{scene.title}</h3>
-          <p className="mt-1.5 text-xs leading-relaxed text-ink-soft">{scene.description}</p>
+        {/* Workload split (donut) + rolling forecast (sparkline) */}
+        <div
+          className="hidden w-24 shrink-0 flex-col items-center justify-start gap-3 border-l border-surface-border/70 pl-3 pt-1 sm:flex sm:w-28"
+          style={enter(120)}
+        >
+          <div
+            className="flex h-16 w-16 items-center justify-center rounded-full animate-pop-in"
+            style={{
+              background:
+                "conic-gradient(var(--color-primary) 0% 33.3%, var(--color-primary-light) 33.3% 66.6%, #34d399 66.6% 100%)",
+            }}
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[10px] font-bold text-ink">
+              {sceneIndex + 1}/3
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-[9px] font-semibold uppercase tracking-wide text-ink-soft/70">
+              Forecast
+            </span>
+            <svg viewBox="0 0 100 30" className="h-6 w-20" fill="none">
+              <polyline
+                points="0,26 20,20 40,22 60,10 80,12 100,3"
+                stroke="#34d399"
+                className="animate-draw-line"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
         </div>
       </div>
-
-      {active && (
-        <div className="flex items-center justify-center gap-2 pb-5">
-          {SCENES.map((s, i) => (
-            <span
-              key={s.key}
-              role="button"
-              tabIndex={0}
-              onClick={(e) => {
-                e.stopPropagation();
-                setSceneIndex(i);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setSceneIndex(i);
-                }
-              }}
-              aria-label={`Show ${s.title}`}
-              aria-current={i === sceneIndex}
-              className={`h-1.5 cursor-pointer rounded-full transition-all duration-500 ${
-                i === sceneIndex ? "w-8 bg-primary" : "w-1.5 bg-surface-border hover:bg-primary/40"
-              }`}
-            />
-          ))}
-        </div>
-      )}
       </div>
     </div>
   );

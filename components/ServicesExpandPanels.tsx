@@ -46,11 +46,11 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
             className="relative h-full overflow-hidden rounded-2xl text-left outline-none"
             style={{
               flex: isActive
-                ? "3.4 1 0%"
+                ? "2.4 1 0%"
                 : isDimmed
                 ? "0.7 1 0%"
                 : `${pillar.basis ?? 1} 1 0%`,
-              transition: "flex 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
+              transition: "flex 2s cubic-bezier(0.22, 1, 0.36, 1)",
               minWidth: 0,
             }}
           >
@@ -62,13 +62,8 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
               aria-hidden
             />
 
-            {/* Floating illustration card: hidden while a sibling card is expanded */}
-            <div
-              style={{
-                opacity: isDimmed ? 0 : 1,
-                transition: "opacity 0.25s ease-out",
-              }}
-            >
+            {/* Floating illustration card: stays visible (as its faded cover) while a sibling card is expanded */}
+            <div>
               {pillar.customIllustration ? (
                 <div
                   className={
@@ -154,7 +149,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
             <div
               className="absolute inset-x-4 bottom-4 rounded-2xl p-6 shadow-lg ring-1 ring-black/5 backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-8"
               style={{
-                backgroundColor: "#fcf2fd",
+                backgroundColor: "rgba(252, 242, 253, 1)",
                 opacity: isActive ? 1 : 0,
                 transform: isActive ? "translateY(0)" : "translateY(16px)",
                 transition: "opacity 0.2s ease-out 0.06s, transform 0.2s ease-out 0.06s",

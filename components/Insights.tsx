@@ -1,22 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./Reveal";
 
 const INSIGHTS = [
   {
     title: "Mainland, Free Zone, or Offshore — how to actually choose",
     image: "/images/service/business setup.jpg",
+    slug: "mainland-freezone-offshore",
   },
   {
     title: "UAE Corporate Tax for small businesses, explained simply",
     image: "/images/service/tax.jpg",
+    slug: "uae-corporate-tax-small-business",
   },
   {
     title: "What a Dubai company setup really costs in 2026",
     image: "/images/dubai-skyline.png",
+    slug: "dubai-company-setup-cost-2026",
   },
   {
     title: "Employment visas and PRO services, without the queueing",
     image: "/images/service/corporate service.jpg",
+    slug: "employment-visas-pro-services",
   },
 ];
 
@@ -46,7 +51,10 @@ export default function Insights() {
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {INSIGHTS.map((item, index) => (
             <Reveal key={item.title} delay={index * 100}>
-              <article className="group h-full overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10">
+              <Link
+                href={`/insights/${item.slug}`}
+                className="group block h-full overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10"
+              >
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                   <Image
                     src={item.image}
@@ -67,7 +75,7 @@ export default function Insights() {
                     </span>
                   </span>
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>

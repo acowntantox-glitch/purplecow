@@ -98,13 +98,13 @@ export default function Navbar() {
                   {CHEVRON}
                 </Link>
 
-                <div className="invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                  <div className="w-64 overflow-hidden rounded-2xl border border-white/40 bg-white/60 shadow-2xl shadow-black/20 backdrop-blur-xl">
+                <div className="invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-7 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                  <div className="w-64 overflow-hidden rounded-2x1 border border-white/0 bg-white/50 shadow-2xl shadow-black/10 backdrop-blur-xl">
                     {link.children.map((child) => (
                       <Link
                         key={child.label}
                         href={child.href}
-                        className="block border-b border-white/30 px-5 py-3 text-sm font-medium text-ink transition-colors last:border-b-0 hover:bg-white/40 hover:text-primary"
+                        className="block border-b border-white/30 px-5 py-3 text-sm font-medium text-ink transition-colors last:border-b-0 hover:bg-white/70 hover:text-primary"
                       >
                         {child.label}
                       </Link>
