@@ -24,9 +24,9 @@ export default function Footer() {
             <Image
               src="/images/logo-transparent-white.png"
               alt="Purple Cow"
-              width={200}
-              height={100}
-              className="h-14 w-auto"
+              width={280}
+              height={180}
+              className="h-29 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm text-white/60">
               The clear-headed way to set up and run a company in the UAE.

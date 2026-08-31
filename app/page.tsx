@@ -3,8 +3,7 @@ import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
 import Services from "@/components/Services";
 import Differentiators from "@/components/Differentiators";
-import Process from "@/components/Process";
-import FAQ from "@/components/FAQ";
+import Insights from "@/components/Insights";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -40,8 +39,7 @@ export default function Home() {
         </section>
         <Services />
         <Differentiators />
-        <Process />
-        <FAQ />
+        <Insights />
         <CTA />
       </main>
       <Footer />

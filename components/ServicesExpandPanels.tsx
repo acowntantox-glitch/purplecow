@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
 
 export type ServicePillar = {
@@ -13,9 +14,12 @@ export type ServicePillar = {
   animateImageOnActive?: boolean;
   imageContainerVariant?: "solid" | "glass";
   customIllustration?: (isActive: boolean) => ReactNode;
+  illustrationFullBleed?: boolean;
+  ctaHref?: string;
 };
 
 export default function ServicesExpandPanels({ pillars }: { pillars: ServicePillar[] }) {
+  const router = useRouter();
   const [active, setActive] = useState<number | null>(null);
   const [supportsHover, setSupportsHover] = useState(false);
 
@@ -24,7 +28,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
   }, []);
 
   return (
-    <div className="flex h-[520px] w-full gap-3 sm:h-[560px] lg:h-[620px]">
+    <div className="flex h-[480px] w-full gap-3 sm:h-[500px] lg:h-[580px]">
       {pillars.map((pillar, i) => {
         const isActive = active === i;
         const isDimmed = active !== null && !isActive;
@@ -66,7 +70,13 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
               }}
             >
               {pillar.customIllustration ? (
-                <div className="absolute inset-x-4 top-4 bottom-20 overflow-hidden rounded-2xl sm:inset-x-6 sm:top-6 sm:bottom-24">
+                <div
+                  className={
+                    pillar.illustrationFullBleed
+                      ? "absolute inset-0 overflow-hidden rounded-2xl"
+                      : "absolute inset-x-4 top-4 bottom-20 overflow-hidden rounded-2xl sm:inset-x-6 sm:top-6 sm:bottom-24"
+                  }
+                >
                   {pillar.customIllustration(isActive)}
                 </div>
               ) : (
@@ -158,7 +168,32 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
               <p className="mt-3 max-w-sm text-sm text-ink-soft sm:text-base">
                 {pillar.description}
               </p>
-              <span className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary shadow-sm backdrop-blur-md transition hover:border-primary/40 hover:bg-primary/20">
+              <span
+                role={pillar.ctaHref ? "link" : undefined}
+                tabIndex={pillar.ctaHref ? 0 : undefined}
+                onClick={
+                  pillar.ctaHref
+                    ? (e) => {
+                        e.stopPropagation();
+                        router.push(pillar.ctaHref!);
+                      }
+                    : undefined
+                }
+                onKeyDown={
+                  pillar.ctaHref
+                    ? (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          router.push(pillar.ctaHref!);
+                        }
+                      }
+                    : undefined
+                }
+                className={`mt-5 inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary shadow-sm backdrop-blur-md transition hover:border-primary/40 hover:bg-primary/20 ${
+                  pillar.ctaHref ? "cursor-pointer" : ""
+                }`}
+              >
                 {pillar.cta} <span aria-hidden>&rarr;</span>
               </span>
             </div>

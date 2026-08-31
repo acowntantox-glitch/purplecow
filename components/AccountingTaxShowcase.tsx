@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const AUTOPLAY_MS = 3400;
@@ -82,7 +83,34 @@ export default function AccountingTaxShowcase({ active }: { active: boolean }) {
     active ? { animation: "fade-up 0.5s ease-out both", animationDelay: `${delayMs}ms` } : undefined;
 
   return (
-    <div className="flex h-full w-full flex-col rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/40">
+    <div className="relative h-full w-full">
+      {/* Static cover image: shown at rest, fades out on hover/expand */}
+      <div
+        className="absolute inset-0 overflow-hidden rounded-2xl"
+        style={{
+          opacity: active ? 0 : 1,
+          transition: "opacity 0.3s ease-out",
+          pointerEvents: active ? "none" : "auto",
+        }}
+      >
+        <Image
+          src="/images/service/tax 3.jpeg"
+          alt="Accounting & Tax"
+          fill
+          sizes="(min-width: 1024px) 60vw, 90vw"
+          className="object-cover"
+        />
+      </div>
+
+      {/* Animated mockup: shown on hover/expand */}
+      <div
+        className="absolute inset-0 flex flex-col rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/40"
+        style={{
+          opacity: active ? 1 : 0,
+          transition: "opacity 0.3s ease-out",
+          pointerEvents: active ? "auto" : "none",
+        }}
+      >
       <div className="flex items-center gap-1.5 px-5 pt-4">
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
@@ -150,6 +178,7 @@ export default function AccountingTaxShowcase({ active }: { active: boolean }) {
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 }

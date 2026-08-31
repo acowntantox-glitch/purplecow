@@ -13,7 +13,7 @@ export default function Differentiators() {
           </p>
         </Reveal>
 
-        <div className="relative mt-10 overflow-hidden rounded-[0.5rem] hero-glow">
+        <div className="relative mt-10 overflow-hidden rounded-[1rem] hero-glow">
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div
             className="stripe-corner pointer-events-none absolute right-0 top-0 h-24 w-24 sm:h-32 sm:w-32"
