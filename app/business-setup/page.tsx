@@ -235,7 +235,7 @@ export default function BusinessSetupPage() {
               </p>
               <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:320ms]">
                 <a
-                  href="/#contact"
+                  href="/book-consultation"
                   className="w-full rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light sm:w-auto"
                 >
                   Book Free Consultation

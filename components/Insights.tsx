@@ -149,7 +149,7 @@ export default function Insights() {
                 height={721}
                 className="h-6 w-auto shrink-0 sm:h-10"
               />
-              Business Setup in Dubai Insights
+              Business Setup in <span className="text-primary">Dubai Insights</span>
             </h2>
             <p className="mt-3 text-sm text-ink-soft sm:mt-4 sm:text-lg">
               Keep up with UAE company formation, tax, and compliance — explained

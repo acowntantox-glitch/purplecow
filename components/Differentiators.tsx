@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./Reveal";
 import DifferentiatorsShowcase from "./DifferentiatorsShowcase";
 
@@ -34,6 +35,12 @@ export default function Differentiators() {
                 We treat accounting as the core of the business, not an upsell
                 after formation.
               </p>
+              <Link
+                href="/why-purple-cow"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-light sm:mt-6"
+              >
+                See the full comparison <span aria-hidden>&rarr;</span>
+              </Link>
             </Reveal>
 
             {/* Right: small mockup container — scenes animate in one by one */}

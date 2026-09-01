@@ -10,7 +10,7 @@ import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const TITLE = "Corporate Services in the UAE | Purple Cow";
 const DESCRIPTION =
-  "Visas, corporate banking, and renewals — Purple Cow handles the day-to-day corporate admin your UAE company needs, so nothing lapses on your watch.";
+  "Visas, corporate banking, renewals, and accounting & tax — Purple Cow handles the day-to-day corporate admin your UAE company needs, so nothing lapses on your watch.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const BREADCRUMB_ITEMS = [{ label: "Home", href: "/" }, { label: "Corporate Services" }];
 
 const STATS = [
-  { value: "3", label: "Core services — PRO, Banking & Renewals" },
+  { value: "4", label: "Core services — PRO, Banking, Renewals & Tax" },
   { value: "40+", label: "Free zones supported" },
   { value: "100%", label: "Renewal deadlines tracked" },
   { value: "<5 min", label: "WhatsApp response" },
@@ -97,6 +97,27 @@ const SERVICES = [
       "Chamber of Commerce membership renewal",
       "Deadline alerts before anything lapses",
     ],
+  },
+  {
+    key: "accounting",
+    title: "Accounting & Tax",
+    tagline: "Bookkeeping, VAT & Corporate Tax, in-house",
+    bestFor:
+      "Companies that want bookkeeping, VAT filing, and Corporate Tax handled by real accountants — not outsourced after formation.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="3" width="16" height="18" rx="1.5" />
+        <path d="M8 8h8M8 12h5M8 16h8" />
+      </svg>
+    ),
+    benefits: [
+      "Monthly bookkeeping & reconciliation",
+      "Quarterly VAT return preparation & filing",
+      "Corporate Tax registration & filing",
+      "Financial statements ready on demand",
+    ],
+    href: "/accounting-tax",
+    cta: "Explore accounting & tax",
   },
 ];
 
@@ -222,13 +243,13 @@ export default function CorporateServicesPage() {
                 <span className="text-primary-light">without the admin grind</span>
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-lg text-white/70 [animation-delay:240ms]">
-                Visas, bank accounts, renewals, and compliance — the day-to-day corporate
-                admin every UAE company needs, managed by one team so you can focus on
-                running the business.
+                Visas, bank accounts, renewals, and accounting & tax — the day-to-day
+                corporate admin every UAE company needs, managed by one team so you can
+                focus on running the business.
               </p>
               <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:320ms]">
                 <a
-                  href="/#contact"
+                  href="/book-consultation"
                   className="w-full rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light sm:w-auto"
                 >
                   Book Free Consultation
@@ -265,13 +286,13 @@ export default function CorporateServicesPage() {
                   <span className="text-primary">running day to day</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  Three services, one team — instead of juggling a PRO agent, a bank
-                  relationship manager, and a renewal reminder on your calendar.
+                  Four services, one team — instead of juggling a PRO agent, a bank
+                  relationship manager, a renewal reminder, and a separate bookkeeper.
                 </p>
               </div>
             </Reveal>
 
-            <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {SERVICES.map((s, i) => (
                 <Reveal key={s.key} delay={i * 100}>
                   <div
@@ -293,10 +314,10 @@ export default function CorporateServicesPage() {
                       ))}
                     </ul>
                     <a
-                      href="/#contact"
+                      href={s.href ?? "/#contact"}
                       className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
                     >
-                      Ask about this service <span aria-hidden>&rarr;</span>
+                      {s.cta ?? "Ask about this service"} <span aria-hidden>&rarr;</span>
                     </a>
                   </div>
                 </Reveal>

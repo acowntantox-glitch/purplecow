@@ -22,19 +22,12 @@ const NAV_LINKS = [
       { label: "PRO & Visa Services", href: "/corporate-services#pro" },
       { label: "Corporate Banking", href: "/corporate-services#banking" },
       { label: "Renewals & Compliance", href: "/corporate-services#renewals" },
-    ],
-  },
-  {
-    label: "Accounting & Tax",
-    href: "/accounting-tax",
-    children: [
-      { label: "Bookkeeping", href: "/accounting-tax#bookkeeping" },
-      { label: "VAT Filing", href: "/accounting-tax#vat" },
-      { label: "Corporate Tax", href: "/accounting-tax#corptax" },
+      { label: "Accounting & Tax", href: "/accounting-tax" },
     ],
   },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const CHEVRON = (
@@ -77,7 +70,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <Link
           href="/"
-          className="inline-flex shrink-0 items-center rounded-full border border-white/15 bg-black/25 px-3 py-1.5 shadow-sm shadow-black/30 backdrop-blur-sm transition hover:bg-white/10"
+          className="inline-flex shrink-0 items-center rounded-full border border-white/25 bg-black/15 px-3 py-1.5 shadow-sm shadow-black/30 backdrop-blur-sm transition hover:bg-white/10"
           onClick={() => setMobileOpen(false)}
         >
           <Image
@@ -136,7 +129,7 @@ export default function Navbar() {
             WhatsApp Us
           </a>
           <a
-            href="/#contact"
+            href="/book-consultation"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light"
           >
             Book Free Consultation
@@ -145,7 +138,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-1.5 lg:hidden">
           <a
-            href="/#contact"
+            href="/book-consultation"
             className="rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-white"
           >
             Book Call
@@ -203,7 +196,7 @@ export default function Navbar() {
               WhatsApp Us
             </a>
             <a
-              href="/#contact"
+              href="/book-consultation"
               onClick={() => setMobileOpen(false)}
               className="rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light"
             >

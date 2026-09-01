@@ -16,6 +16,7 @@ const COLUMNS = [
     heading: "Company",
     links: [
       { label: "About Us", href: "/about" },
+      { label: "Why Purple Cow", href: "/why-purple-cow" },
       { label: "Pricing", href: "/insights/dubai-company-setup-cost-2026" },
       { label: "Blog", href: "/blog" },
       { label: "Careers", href: "/careers" },
@@ -27,7 +28,7 @@ const COLUMNS = [
       { label: "VAT Guide", href: "/insights/vat-registration-uae-guide" },
       { label: "Corporate Tax Guide", href: "/insights/uae-corporate-tax-small-business" },
       { label: "FAQs", href: "/business-setup#faq" },
-      { label: "Contact", href: "/#contact" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];
