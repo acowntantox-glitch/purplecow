@@ -137,11 +137,11 @@ export default function Insights() {
   }, []);
 
   return (
-    <section id="insights" className="bg-white/85 py-14 sm:py-24">
+    <section id="insights" className="bg-white/85 py-5 sm:py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <Reveal>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-balance flex items-center justify-center gap-2 text-xl font-semibold tracking-tight text-ink sm:gap-3 sm:text-4xl">
+          <div className="max-w-2xl text-left sm:mx-auto sm:text-center">
+            <h2 className="text-balance flex items-center justify-start gap-2 text-xl font-bold tracking-tight text-ink sm:justify-center sm:gap-3 sm:text-4xl">
               <Image
                 src="/images/logo-mark.png"
                 alt=""

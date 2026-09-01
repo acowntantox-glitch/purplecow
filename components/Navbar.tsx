@@ -75,13 +75,17 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
-        <Link href="/" className="shrink-0" onClick={() => setMobileOpen(false)}>
+        <Link
+          href="/"
+          className="inline-flex shrink-0 items-center rounded-full border border-white/15 bg-black/25 px-3 py-1.5 shadow-sm shadow-black/30 backdrop-blur-sm transition hover:bg-white/10"
+          onClick={() => setMobileOpen(false)}
+        >
           <Image
-            src="/images/logo-transparent-white.png"
+            src="/images/logo-white-navbar.png"
             alt="Purple Cow"
-            width={260}
-            height={130}
-            className="h-16 w-auto md:h-20 lg:h-24"
+            width={1353}
+            height={271}
+            className="h-3 w-auto md:h-9 lg:h-6"
             priority
           />
         </Link>
@@ -151,7 +155,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen((open) => !open)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-white"
+            className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-white/15 text-white"
           >
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
               {mobileOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}

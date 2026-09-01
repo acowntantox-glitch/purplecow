@@ -169,37 +169,37 @@ export default function DifferentiatorsShowcase() {
     <div
       className="mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/40"
     >
-      <div className="flex items-center gap-1.5 px-5 pt-4">
+      <div className="flex items-center gap-1.5 px-4 pt-3 sm:px-5 sm:pt-4">
        <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
        <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
        <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
       </div>
 
-      <div key={active} className="min-h-[13rem] px-5 pb-5 pt-3 sm:min-h-[20rem] sm:px-6">
+      <div key={active} className="h-[17rem] overflow-hidden px-4 pb-3 pt-2 sm:min-h-[20rem] sm:h-auto sm:px-6 sm:pb-5 sm:pt-3">
         <div
           className="flex items-center gap-2"
           style={{ animation: "fade-up 0.45s ease-out both" }}
         >
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:h-4 [&_svg]:w-4">
+          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:h-3.5 [&_svg]:w-3.5 sm:h-8 sm:w-8 sm:[&_svg]:h-4 sm:[&_svg]:w-4">
             {scene.icon}
           </div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft sm:text-xs">
             {scene.eyebrow}
           </p>
         </div>
 
-        <div className="mt-3 sm:mt-5">{scene.illustration}</div>
+        <div className="mt-2 sm:mt-5">{scene.illustration}</div>
 
         <div
-          className="mt-4 border-t border-surface-border pt-3 sm:mt-6 sm:pt-4"
+          className="mt-3 border-t border-surface-border pt-2 sm:mt-6 sm:pt-4"
           style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "650ms" }}
         >
           <h3 className="text-sm font-semibold text-ink">{scene.title}</h3>
-          <p className="mt-1.5 text-xs leading-relaxed text-ink-soft">{scene.description}</p>
+          <p className="mt-1 text-[11px] leading-snug text-ink-soft sm:mt-1.5 sm:text-xs sm:leading-relaxed">{scene.description}</p>
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-2 pb-5">
+      <div className="flex items-center justify-center gap-2 pb-3 sm:pb-5">
         {SCENES.map((s, i) => (
           <button
             key={s.title}
