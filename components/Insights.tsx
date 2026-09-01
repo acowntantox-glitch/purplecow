@@ -163,21 +163,21 @@ export default function Insights() {
         <Reveal>
           <div
             ref={scrollerRef}
-            className="mt-8 flex cursor-grab select-none gap-4 overflow-x-auto py-2 scrollbar-hide active:cursor-grabbing sm:mt-16 sm:gap-6"
+            className="-mx-6 mt-8 flex cursor-grab select-none gap-4 overflow-x-auto py-2 scrollbar-hide active:cursor-grabbing sm:mx-0 sm:mt-16 sm:gap-6"
           >
             {track.map((item, index) => (
               <Link
                 key={`${item.slug}-${index}`}
                 href={`/insights/${item.slug}`}
                 draggable={false}
-                className="group flex h-full w-60 shrink-0 flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 sm:w-80"
+                className="group flex h-full w-44 shrink-0 flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 sm:w-80"
               >
                 <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(min-width: 640px) 320px, 240px"
+                    sizes="(min-width: 640px) 320px, 176px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>

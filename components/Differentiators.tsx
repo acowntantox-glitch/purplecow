@@ -14,7 +14,7 @@ export default function Differentiators() {
           </p>
         </Reveal>
 
-        <div className="relative mt-4 overflow-hidden rounded-[1rem] hero-glow sm:mt-6">
+        <div className="relative -mx-6 mt-4 overflow-hidden rounded-none hero-glow sm:mt-6 lg:-mx-8">
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div
             className="stripe-corner pointer-events-none absolute right-0 top-0 h-24 w-24 sm:h-32 sm:w-32"

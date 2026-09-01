@@ -46,7 +46,7 @@ const FACTS = [
 
 function FactCard({ fact }: { fact: (typeof FACTS)[number] }) {
   return (
-    <div className="flex w-36 shrink-0 items-center gap-1.5 rounded-lg border border-white/15 bg-white/10 px-2 py-1.5 shadow-lg shadow-black/10 backdrop-blur-md sm:w-96 sm:gap-3 sm:rounded-xl sm:px-5 sm:py-4">
+    <div className="flex w-28 shrink-0 items-center gap-1.5 rounded-lg border border-white/15 bg-white/10 px-2 py-1.5 shadow-lg shadow-black/10 backdrop-blur-md sm:w-96 sm:gap-3 sm:rounded-xl sm:px-5 sm:py-4">
       <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15 text-primary-light sm:h-9 sm:w-9">
         <span className="h-3 w-3 sm:h-5 sm:w-5">{fact.icon}</span>
       </span>
