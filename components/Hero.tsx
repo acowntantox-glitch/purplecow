@@ -1,53 +1,43 @@
 import Counter from "./Counter";
 
 const STATS = [
-  { value: "500+", label: "Companies formed" },
-  { value: "100%", label: "Transparent pricing" },
-  { value: "<5 min", label: "WhatsApp response" },
-  { value: "10+", label: "Years combined expertise" },
+  { value: "500+", label: "Companies formed", shortLabel: "Companies" },
+  { value: "100%", label: "Transparent pricing", shortLabel: "Transparent" },
+  { value: "<5 min", label: "WhatsApp response", shortLabel: "Response" },
+  { value: "10+", label: "Years combined expertise", shortLabel: "Experience" },
 ];
 
 export default function Hero() {
   return (
-    <div className="relative mx-auto max-w-7xl px-6 pt-40 pb-24 lg:px-8 lg:pt-48 lg:pb-32">
-      <div className="mx-auto max-w-5xl text-center">
-        <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
-          Business Setup &middot; Accounting &middot; Tax &middot; Corporate Services
+    <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-8 sm:pt-40 sm:pb-24 lg:px-8 lg:pt-48 lg:pb-32">
+      <div className="max-w-xl text-right sm:mx-auto sm:max-w-5xl sm:text-center">
+        <span className="animate-fade-up mx-auto flex w-fit items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-0.5 text-[9px] font-medium text-white/80 sm:mx-0 sm:inline-flex sm:w-auto sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs">
+          Business Setup &middot; Corporate Services
         </span>
 
-        <h1 className="animate-fade-up mt-6 font-display text-3xl leading-[1.15] font-medium tracking-tight text-white/70 [animation-delay:120ms] [text-shadow:0_4px_24px_rgba(0,0,0,0.45)] sm:text-4xl lg:text-5xl">
-          <span className="block">The Clear-Headed Way To Set Up And Run </span>
-          <span className="block lg:whitespace-nowrap">A company in the UAE</span>
+        <h1 className="animate-fade-up mt-4 text-balance font-display text-xl leading-[1.25] font-medium tracking-tight text-white/70 [animation-delay:120ms] [text-shadow:0_4px_24px_rgba(0,0,0,0.45)] sm:mt-6 sm:text-4xl sm:leading-[1.15] lg:text-5xl">
+          <span className="sm:block">The Clear-Headed Way To Set Up And Run </span>
+          <span className="sm:block lg:whitespace-nowrap">A company in the UAE</span>
         </h1>
 
-        <p className="animate-fade-up mx-auto mt-6 max-w-2xl text-balance text-lg text-white/70 [animation-delay:240ms]">
+        <p className="animate-fade-up mt-3 max-w-md text-balance text-xs text-white/70 [animation-delay:240ms] sm:mx-auto sm:mt-6 sm:max-w-2xl sm:text-lg">
           Purple Cow replaces confusion with clarity — combining company formation
           with genuine accounting and tax expertise
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          {/* <a
-            href="#contact"
-            className="w-full rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light sm:w-auto"
-          >
-            Book Free Consultation
-          </a>
-          <a
-            href="https://wa.me/"
-            className="w-full rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto"
-          >
-            Chat on WhatsApp
-          </a> */}
-        </div>
+        <div className="sm:mt-10" />
       </div>
 
-      <dl className="mx-auto mt-20 grid max-w-4xl grid-cols-2 gap-8 border-t border-white/10 pt-10 sm:grid-cols-4">
+      <dl className="mt-16 grid max-w-2xl grid-cols-4 gap-2 border-t border-white/10 pt-4 sm:mx-auto sm:mt-20 sm:max-w-4xl sm:gap-8 sm:pt-10">
         {STATS.map((stat) => (
           <div key={stat.label} className="text-center">
-            <dt className="text-2xl font-semibold text-white sm:text-3xl">
+            <dt className="text-sm font-semibold whitespace-nowrap text-white sm:text-3xl">
               <Counter value={stat.value} />
             </dt>
-            <dd className="mt-1 text-xs text-white/60 sm:text-sm">{stat.label}</dd>
+            <dd className="mt-1 text-[9px] whitespace-nowrap text-white/60 sm:hidden">
+              {stat.shortLabel}
+            </dd>
+            <dd className="mt-1 hidden text-sm text-white/60 sm:block">{stat.label}</dd>
           </div>
         ))}
       </dl>

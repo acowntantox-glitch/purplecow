@@ -60,7 +60,7 @@ const SCENES = [
           <span className="absolute bottom-0 right-0 h-3.5 w-3.5 animate-pulse rounded-full border-2 border-white bg-emerald-500" />
         </div>
         <div style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "320ms" }}>
-          <p className="text-sm font-semibold text-ink">Nynsha.</p>
+          <p className="text-sm font-semibold text-ink">Fathima A.</p>
           <p className="text-xs text-ink-soft">Senior Account Manager</p>
           <p className="mt-1 text-xs font-medium text-emerald-600">Online now</p>
         </div>
@@ -81,7 +81,7 @@ const SCENES = [
     illustration: (
       <div className="flex items-end justify-center gap-8 py-1">
         <div className="flex flex-col items-center gap-2">
-          <div className="flex h-24 w-10 items-end overflow-hidden rounded-md bg-surface-border/50">
+          <div className="flex h-16 w-10 items-end overflow-hidden rounded-md bg-surface-border/50 sm:h-24">
             <div
               className="w-full animate-grow-bar rounded-md bg-rose-300"
               style={{ height: "88%", animationDelay: "150ms" }}
@@ -94,7 +94,7 @@ const SCENES = [
           </span>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <div className="flex h-24 w-10 items-end overflow-hidden rounded-md bg-surface-border/50">
+          <div className="flex h-16 w-10 items-end overflow-hidden rounded-md bg-surface-border/50 sm:h-24">
             <div
               className="w-full animate-grow-bar rounded-md bg-primary"
               style={{ height: "32%", animationDelay: "350ms" }}
@@ -175,7 +175,7 @@ export default function DifferentiatorsShowcase() {
        <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
       </div>
 
-      <div key={active} className="min-h-[19rem] px-5 pb-5 pt-3 sm:min-h-[20rem] sm:px-6">
+      <div key={active} className="min-h-[13rem] px-5 pb-5 pt-3 sm:min-h-[20rem] sm:px-6">
         <div
           className="flex items-center gap-2"
           style={{ animation: "fade-up 0.45s ease-out both" }}
@@ -188,10 +188,10 @@ export default function DifferentiatorsShowcase() {
           </p>
         </div>
 
-        <div className="mt-5">{scene.illustration}</div>
+        <div className="mt-3 sm:mt-5">{scene.illustration}</div>
 
         <div
-          className="mt-6 border-t border-surface-border pt-4"
+          className="mt-4 border-t border-surface-border pt-3 sm:mt-6 sm:pt-4"
           style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "650ms" }}
         >
           <h3 className="text-sm font-semibold text-ink">{scene.title}</h3>

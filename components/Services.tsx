@@ -2,12 +2,31 @@
 
 import Image from "next/image";
 import Reveal from "./Reveal";
+import ServiceCards, { type ServiceCardData } from "./ServiceCards";
 import BusinessSetupShowcase from "./BusinessSetupShowcase";
 import CorporateServicesShowcase from "./CorporateServicesShowcase";
 import AccountingTaxShowcase from "./AccountingTaxShowcase";
 import ServicesExpandPanels, { type ServicePillar } from "./ServicesExpandPanels";
 
-const PILLARS: ServicePillar[] = [
+const CARDS: ServiceCardData[] = [
+  {
+    title: "Business Setup",
+    photo: "/images/service/business set 3.jpeg",
+    href: "/business-setup",
+  },
+  {
+    title: "Corporate Services",
+    photo: "/images/service/corporate 3.jpeg",
+    href: "/corporate-services",
+  },
+  {
+    title: "Accounting & Tax",
+    photo: "/images/service/tax 3.jpeg",
+    href: "/accounting-tax",
+  },
+];
+
+const PANELS: ServicePillar[] = [
   {
     title: "Business Setup",
     eyebrow: "Launch Your UAE Business",
@@ -52,14 +71,14 @@ const PILLARS: ServicePillar[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-14">
+    <section id="services" className="relative py-6 sm:py-10">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex items-start justify-between gap-6">
+        <div className="flex items-start justify-between gap-4 sm:gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-5xl">
+            <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-5xl">
               Everything your Business <span className="text-primary">needs to Thrive</span>
             </h2>
-            <p className="mt-4 text-lg text-ink-soft">
+            <p className="mt-3 text-sm text-ink-soft sm:mt-4 sm:text-lg">
               One partner for formation, compliance, and the corporate admin in between.
             </p>
           </div>
@@ -68,12 +87,18 @@ export default function Services() {
             alt="Purple Cow"
             width={775}
             height={721}
-            className="h-24 w-auto shrink-0 sm:h-30 lg:h-34 opacity-85"
+            className="hidden shrink-0 opacity-85 sm:block sm:h-30 sm:w-auto lg:h-34"
           />
         </div>
 
-        <Reveal delay={1} className="mt-12">
-          <ServicesExpandPanels pillars={PILLARS} />
+        {/* Mobile/tablet: static photo cards */}
+        <Reveal delay={1} className="mt-8 lg:hidden">
+          <ServiceCards cards={CARDS} />
+        </Reveal>
+
+        {/* Desktop: original hover-to-expand animated panels */}
+        <Reveal delay={1} className="mt-12 hidden lg:block">
+          <ServicesExpandPanels pillars={PANELS} />
         </Reveal>
       </div>
     </section>

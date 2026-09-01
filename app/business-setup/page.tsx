@@ -370,7 +370,7 @@ export default function BusinessSetupPage() {
         </section>
 
         {/* FAQ */}
-        <section className="bg-surface py-20 sm:py-24">
+        <section id="faq" className="scroll-mt-24 bg-surface py-20 sm:py-24">
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">

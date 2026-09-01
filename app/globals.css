@@ -35,6 +35,15 @@ body {
   text-wrap: balance;
 }
 
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .hero-glow {
   background:
     radial-gradient(60% 50% at 15% 0%, rgba(139, 92, 246, 0.35), transparent 60%),

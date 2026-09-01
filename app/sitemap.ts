@@ -8,6 +8,8 @@ const INSIGHT_SLUGS = [
   "uae-corporate-tax-small-business",
   "dubai-company-setup-cost-2026",
   "employment-visas-pro-services",
+  "uae-corporate-bank-account-guide",
+  "vat-registration-uae-guide",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/careers`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/business-setup`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/corporate-services`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/accounting-tax`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },

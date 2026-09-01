@@ -33,8 +33,8 @@ const NAV_LINKS = [
       { label: "Corporate Tax", href: "/accounting-tax#corptax" },
     ],
   },
-  { label: "About", href: "/#differentiators" },
-  { label: "Blog", href: "/#insights" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const CHEVRON = (
@@ -139,10 +139,10 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-1.5 lg:hidden">
           <a
             href="/#contact"
-            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
+            className="rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-white"
           >
             Book Call
           </a>
@@ -151,9 +151,9 @@ export default function Navbar() {
             onClick={() => setMobileOpen((open) => !open)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 text-white"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-white"
           >
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
               {mobileOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
             </svg>
           </button>

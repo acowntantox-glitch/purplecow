@@ -4,30 +4,46 @@ import Link from "next/link";
 const COLUMNS = [
   {
     heading: "Services",
-    links: ["Mainland Setup", "Free Zone Setup", "Offshore Setup", "Accounting & Tax", "PRO Services"],
+    links: [
+      { label: "Mainland Setup", href: "/business-setup/mainland" },
+      { label: "Free Zone Setup", href: "/business-setup/free-zone" },
+      { label: "Offshore Setup", href: "/business-setup/offshore" },
+      { label: "Accounting & Tax", href: "/accounting-tax" },
+      { label: "PRO Services", href: "/corporate-services#pro" },
+    ],
   },
   {
     heading: "Company",
-    links: ["About Us", "Pricing", "Blog", "Careers"],
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Pricing", href: "/insights/dubai-company-setup-cost-2026" },
+      { label: "Blog", href: "/blog" },
+      { label: "Careers", href: "/careers" },
+    ],
   },
   {
     heading: "Resources",
-    links: ["VAT Guide", "Corporate Tax Guide", "FAQs", "Contact"],
+    links: [
+      { label: "VAT Guide", href: "/insights/vat-registration-uae-guide" },
+      { label: "Corporate Tax Guide", href: "/insights/uae-corporate-tax-small-business" },
+      { label: "FAQs", href: "/business-setup#faq" },
+      { label: "Contact", href: "/#contact" },
+    ],
   },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-hero-deep">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.5fr_repeat(3,1fr)]">
+      <div className="mx-auto max-w-7xl px-6 py-10 sm:py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 sm:gap-12 lg:grid-cols-[1.5fr_repeat(3,1fr)]">
           <div>
             <Image
               src="/images/logo-transparent-white.png"
               alt="Purple Cow"
               width={280}
               height={180}
-              className="h-29 w-auto"
+              className="h-14 w-auto sm:h-20"
             />
             <p className="mt-4 max-w-xs text-sm text-white/60">
               The clear-headed way to set up and run a company in the UAE.
@@ -47,10 +63,10 @@ export default function Footer() {
               <h3 className="text-sm font-semibold text-white">{column.heading}</h3>
               <ul className="mt-4 space-y-3">
                 {column.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-white/60 hover:text-white">
-                      {link}
-                    </a>
+                  <li key={link.label}>
+                    <Link href={link.href} className="text-sm text-white/60 hover:text-white">
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -58,7 +74,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:mt-16 sm:flex-row sm:pt-8">
           <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Purple Cow. All rights reserved.
           </p>
