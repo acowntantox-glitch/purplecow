@@ -224,11 +224,11 @@ export default function BusinessSetupPage() {
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 Business Setup
               </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
+              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
                 Launch your UAE company the{" "}
                 <span className="text-primary-light">clear-headed way</span>
               </h1>
-              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-lg text-white/70 [animation-delay:240ms]">
+              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
                 Mainland, Free Zone, or Offshore — we structure your company around your
                 business, handle the paperwork end to end, and stay on as your accountants
                 once you&apos;re licensed.
@@ -267,7 +267,7 @@ export default function BusinessSetupPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Three jurisdictions, <span className="text-primary">one clear recommendation</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
@@ -313,7 +313,7 @@ export default function BusinessSetupPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   From consultation to <span className="text-primary">company in hand</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
@@ -347,7 +347,7 @@ export default function BusinessSetupPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Why founders set up with <span className="text-primary">Purple Cow</span>
                 </h2>
               </div>
@@ -374,7 +374,7 @@ export default function BusinessSetupPage() {
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Frequently asked <span className="text-primary">questions</span>
                 </h2>
               </div>

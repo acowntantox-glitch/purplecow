@@ -186,11 +186,11 @@ export default function WhyPurpleCowPage() {
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 Why Purple Cow
               </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
+              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
                 Formation agents disappear after your license.{" "}
                 <span className="text-primary-light">We don&apos;t.</span>
               </h1>
-              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-lg text-white/70 [animation-delay:240ms]">
+              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
                 We treat accounting as the core of the business, not an upsell
                 after formation — one team for setup, banking, visas, and the
                 compliance work that comes after.
@@ -232,7 +232,7 @@ export default function WhyPurpleCowPage() {
                 <span className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-surface px-4 py-1.5 text-xs font-medium text-ink-soft">
                   How it feels to work with us
                 </span>
-                <h2 className="text-balance mt-6 text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance mt-6 text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Built to replace{" "}
                   <span className="text-primary">email threads and lost paperwork</span>
                 </h2>
@@ -256,7 +256,7 @@ export default function WhyPurpleCowPage() {
           <div className="mx-auto max-w-5xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Purple Cow vs. a typical{" "}
                   <span className="text-primary">formation agency</span>
                 </h2>
@@ -308,7 +308,7 @@ export default function WhyPurpleCowPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   What that looks like{" "}
                   <span className="text-primary">day to day</span>
                 </h2>
@@ -336,7 +336,7 @@ export default function WhyPurpleCowPage() {
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Frequently asked <span className="text-primary">questions</span>
                 </h2>
               </div>

@@ -199,11 +199,11 @@ export default function CareersPage() {
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 We&apos;re hiring
               </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
+              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
                 Help founders build companies that{" "}
                 <span className="text-primary-light">actually stay compliant</span>
               </h1>
-              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-lg text-white/70 [animation-delay:240ms]">
+              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
                 We&apos;re a small, Dubai-based team combining company formation with
                 real accounting expertise. If you&apos;d rather own client relationships
                 than push tickets, this is that kind of place.
@@ -242,7 +242,7 @@ export default function CareersPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   What it&apos;s like to work here
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
@@ -272,7 +272,7 @@ export default function CareersPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Benefits
                 </h2>
               </div>
@@ -296,7 +296,7 @@ export default function CareersPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Open <span className="text-primary">roles</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
@@ -334,7 +334,7 @@ export default function CareersPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Our hiring process
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
@@ -368,7 +368,7 @@ export default function CareersPage() {
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Frequently asked <span className="text-primary">questions</span>
                 </h2>
               </div>
@@ -401,7 +401,7 @@ export default function CareersPage() {
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Don&apos;t see your role listed?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-balance text-lg text-white/70">
+            <p className="mx-auto mt-4 max-w-xl text-balance text-base text-white/70 sm:text-lg">
               Send us your CV anyway. We&apos;d rather hear from good people early
               than miss them because the timing didn&apos;t line up with an open req.
             </p>

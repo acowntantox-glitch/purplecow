@@ -104,11 +104,11 @@ export default function ContactPage() {
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 Contact Us
               </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
+              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.25rem]">
                 Let&apos;s talk about{" "}
                 <span className="text-primary-light">your business in the UAE</span>
               </h1>
-              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-lg text-white/70 [animation-delay:240ms]">
+              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
                 Whether you&apos;re forming a new company or need a second opinion on
                 your books, send us a message. A real person on the team replies —
                 not a support queue.
@@ -152,7 +152,7 @@ export default function ContactPage() {
                 <span className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-white px-4 py-1.5 text-xs font-medium text-ink-soft">
                   Send a message
                 </span>
-                <h2 className="text-balance mt-6 text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance mt-6 text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Tell us what you need
                 </h2>
                 <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
@@ -205,7 +205,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Frequently asked <span className="text-primary">questions</span>
                 </h2>
               </div>

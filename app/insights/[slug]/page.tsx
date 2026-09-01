@@ -91,7 +91,7 @@ export default async function InsightArticlePage({
               <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-4xl lg:text-[2.75rem]">
                 {article.title}
               </h1>
-              <p className="animate-fade-up text-balance mt-6 max-w-2xl text-lg text-white/70 [animation-delay:240ms]">
+              <p className="animate-fade-up text-balance mt-6 max-w-2xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
                 {article.dek}
               </p>
               <div className="animate-fade-up mt-6 flex items-center gap-3 text-xs font-medium text-white/50 [animation-delay:300ms]">
@@ -160,7 +160,7 @@ export default async function InsightArticlePage({
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   Frequently asked <span className="text-primary">questions</span>
                 </h2>
               </div>
@@ -196,25 +196,25 @@ export default async function InsightArticlePage({
             </Reveal>
 
             <Reveal delay={80}>
-              <div className="mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 scrollbar-hide">
+              <div className="-mx-6 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 scrollbar-hide sm:mx-0 sm:gap-6">
                 {related.map((a) => (
                   <Link
                     key={a.slug}
                     href={`/insights/${a.slug}`}
-                    className="group flex h-full w-72 shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 sm:w-80"
+                    className="group flex h-full w-44 shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-surface-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 sm:w-80"
                   >
-                    <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden">
+                    <div className="relative aspect-[3/4] w-full shrink-0 overflow-hidden sm:aspect-[4/3]">
                       <Image
                         src={a.heroImage}
                         alt={a.title}
                         fill
-                        sizes="(min-width: 640px) 320px, 288px"
+                        sizes="(min-width: 640px) 320px, 176px"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <div className="flex flex-1 flex-col p-6">
-                      <h3 className="line-clamp-2 text-base font-semibold leading-snug text-ink">{a.title}</h3>
-                      <span className="mt-auto inline-flex items-center gap-1 pt-4 text-xs font-bold uppercase tracking-wide text-primary">
+                    <div className="flex flex-1 flex-col p-4 sm:p-6">
+                      <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-ink sm:text-base">{a.title}</h3>
+                      <span className="mt-auto inline-flex items-center gap-1 pt-3 text-xs font-bold uppercase tracking-wide text-primary sm:pt-4">
                         Read more
                         <span className="transition-transform duration-300 group-hover:translate-x-1">»</span>
                       </span>

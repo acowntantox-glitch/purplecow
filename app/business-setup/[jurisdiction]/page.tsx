@@ -343,10 +343,10 @@ export default async function JurisdictionPage({
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80 [animation-delay:60ms]">
                 {data.badge}
               </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.1rem]">
+              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl lg:text-[3.1rem]">
                 {data.heroTitle}
               </h1>
-              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-lg text-white/70 [animation-delay:240ms]">
+              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
                 {data.heroSubcopy}
               </p>
               <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:320ms]">
@@ -386,7 +386,7 @@ export default async function JurisdictionPage({
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary [&_svg]:h-6 [&_svg]:w-6">
                   {data.icon}
                 </div>
-                <h2 className="text-balance mt-5 text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance mt-5 text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   What is {data.article} {data.title} company?
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-ink-soft">{data.overview}</p>
@@ -426,7 +426,7 @@ export default async function JurisdictionPage({
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   What you&apos;ll need <span className="text-primary">to get started</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
@@ -456,7 +456,7 @@ export default async function JurisdictionPage({
           <div className="mx-auto max-w-3xl px-6 lg:px-8">
             <Reveal>
               <div className="text-center">
-                <h2 className="text-balance text-3xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   {data.title} FAQs
                 </h2>
               </div>

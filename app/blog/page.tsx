@@ -51,11 +51,11 @@ export default function BlogPage() {
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 Blog
               </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl">
+              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl">
                 UAE business setup, tax &{" "}
                 <span className="text-primary-light">compliance, explained plainly</span>
               </h1>
-              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-xl text-lg text-white/70 [animation-delay:240ms]">
+              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
                 Company formation, Corporate Tax, VAT, banking, and PRO services —
                 written by the team that files it, not summarized from someone
                 else&apos;s blog.
