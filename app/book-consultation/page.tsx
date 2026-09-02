@@ -35,7 +35,7 @@ export default function BookConsultationPage() {
     <>
       <JsonLd data={breadcrumbJsonLd(BREADCRUMB_ITEMS)} />
       <Navbar />
-      <main>
+      <main className="animate-page-drop">
         {/* Intro */}
         <section className="relative overflow-hidden hero-glow">
           <div className="absolute inset-0 grid-fade" aria-hidden />

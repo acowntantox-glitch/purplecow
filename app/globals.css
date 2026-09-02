@@ -144,6 +144,19 @@ body {
   transform-origin: left;
 }
 
+@keyframes page-drop {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+.animate-page-drop {
+  animation: page-drop 3.7s cubic-bezier(0.16, 1, 0.3, 2) both;
+}
+
 @keyframes pop-in {
   from {
     opacity: 0;
@@ -202,6 +215,10 @@ body {
   .animate-grow-bar {
     animation: none;
     transform: scaleY(1);
+  }
+  .animate-page-drop {
+    animation: none;
+    clip-path: inset(0 0 0% 0);
   }
   .animate-illustration-float {
     animation: none;

@@ -85,23 +85,35 @@ export default function Insights() {
     };
 
     // Mouse click-and-drag panning (touch already scrolls natively via overflow-x-auto).
+    // Pointer capture is only claimed once the mouse actually moves past DRAG_THRESHOLD_PX —
+    // claiming it immediately on pointerdown retargets the eventual pointerup/click to `el`
+    // instead of the card link underneath, silently breaking clicks.
+    const DRAG_THRESHOLD_PX = 4;
+    let pending = false;
     let dragging = false;
+    let pointerId = 0;
     let dragStartX = 0;
     let dragStartScrollLeft = 0;
 
     const onPointerDown = (e: PointerEvent) => {
       pause();
       if (e.pointerType !== "mouse") return;
-      dragging = true;
+      pending = true;
+      pointerId = e.pointerId;
       dragStartX = e.clientX;
       dragStartScrollLeft = el.scrollLeft;
-      el.setPointerCapture(e.pointerId);
     };
     const onPointerMove = (e: PointerEvent) => {
-      if (!dragging) return;
+      if (!pending && !dragging) return;
+      if (!dragging) {
+        if (Math.abs(e.clientX - dragStartX) < DRAG_THRESHOLD_PX) return;
+        dragging = true;
+        el.setPointerCapture(pointerId);
+      }
       el.scrollLeft = dragStartScrollLeft - (e.clientX - dragStartX);
     };
     const onPointerUp = (e: PointerEvent) => {
+      pending = false;
       if (dragging) {
         dragging = false;
         try {

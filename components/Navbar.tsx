@@ -70,7 +70,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <Link
           href="/"
-          className="inline-flex shrink-0 items-center rounded-full border border-white/25 bg-black/15 px-3 py-1.5 shadow-sm shadow-black/30 backdrop-blur-sm transition hover:bg-white/10"
+          className="inline-flex shrink-0 items-center rounded-full border border-white/5 bg-white/5 px-3 py-1.5 shadow-sm shadow-black/5 backdrop-blur-lg transition hover:bg-white/10"
           onClick={() => setMobileOpen(false)}
         >
           <Image
