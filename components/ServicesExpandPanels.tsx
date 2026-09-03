@@ -62,7 +62,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
               </button>
 
               <div
-                className="grid transition-[grid-template-rows] duration-500 ease-out"
+                className="grid transition-[grid-template-rows] duration-300 ease-out"
                 style={{ gridTemplateRows: isActive ? "1fr" : "0fr" }}
               >
                 <div className="overflow-hidden">
@@ -120,7 +120,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
                 : isDimmed
                 ? "0.7 1 0%"
                 : `${pillar.basis ?? 1} 1 0%`,
-              transition: "flex 2s cubic-bezier(0.22, 1, 0.36, 1)",
+              transition: "flex 1s cubic-bezier(0.22, 1, 0.36, 1)",
               minWidth: 0,
             }}
           >
@@ -219,7 +219,7 @@ export default function ServicesExpandPanels({ pillars }: { pillars: ServicePill
             <div
               className="absolute inset-x-4 bottom-4 rounded-2xl p-6 shadow-lg ring-1 ring-black/5 backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-8"
               style={{
-                backgroundColor: "rgba(252, 242, 253, 1)",
+                backgroundColor: "rgb(247, 232, 255)",
                 opacity: isActive ? 1 : 0,
                 transform: isActive ? "translateY(0)" : "translateY(16px)",
                 transition: "opacity 0.2s ease-out 0.06s, transform 0.2s ease-out 0.06s",

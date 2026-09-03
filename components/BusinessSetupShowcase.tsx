@@ -81,7 +81,7 @@ export default function BusinessSetupShowcase({ active }: { active: boolean }) {
 
   const scene = SCENES[sceneIndex];
   const enter = (delayMs: number) =>
-    active ? { animation: "fade-up 0.5s ease-out both", animationDelay: `${delayMs}ms` } : undefined;
+    active ? { animation: "fade-up 0.28s ease-out both", animationDelay: `${delayMs}ms` } : undefined;
 
   return (
     <div className="relative h-full w-full">
@@ -137,7 +137,7 @@ export default function BusinessSetupShowcase({ active }: { active: boolean }) {
               <div
                 key={item.label}
                 className="flex items-center justify-between rounded-lg border border-surface-border bg-surface/60 px-3 py-2"
-                style={enter(200 + i * 160)}
+                style={enter(80 + i * 70)}
               >
                 <span className="text-xs font-medium text-ink">{item.label}</span>
                 <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">
@@ -151,7 +151,7 @@ export default function BusinessSetupShowcase({ active }: { active: boolean }) {
         {/* Setup pipeline: three stages, the one matching the current scene lit up */}
         <div
           className="hidden w-24 shrink-0 items-start justify-center border-l border-surface-border/70 pl-3 pt-1 sm:flex sm:w-28"
-          style={enter(120)}
+          style={enter(60)}
         >
           <div className="relative flex flex-col items-center gap-6">
             <div className="absolute left-1/2 top-2 bottom-2 w-px -translate-x-1/2 bg-surface-border" aria-hidden />

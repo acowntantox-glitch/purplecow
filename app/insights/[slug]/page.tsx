@@ -88,13 +88,13 @@ export default async function InsightArticlePage({
               <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
                 {article.badge}
               </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-4xl lg:text-[2.75rem]">
+              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:60ms] sm:text-4xl lg:text-[2.75rem]">
                 {article.title}
               </h1>
-              <p className="animate-fade-up text-balance mt-6 max-w-2xl text-base text-white/70 [animation-delay:240ms] sm:text-lg">
+              <p className="animate-fade-up text-balance mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
                 {article.dek}
               </p>
-              <div className="animate-fade-up mt-6 flex items-center gap-3 text-xs font-medium text-white/50 [animation-delay:300ms]">
+              <div className="animate-fade-up mt-6 flex items-center gap-3 text-xs font-medium text-white/50 [animation-delay:150ms]">
                 <span>{article.updated}</span>
                 <span aria-hidden>&middot;</span>
                 <span>{article.readTime}</span>

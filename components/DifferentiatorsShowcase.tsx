@@ -28,7 +28,7 @@ const SCENES = [
           <div
             key={doc.name}
             className="flex items-center justify-between rounded-lg border border-surface-border bg-surface/60 px-3 py-2"
-            style={{ animation: "fade-up 0.5s ease-out both", animationDelay: `${200 + i * 160}ms` }}
+            style={{ animation: "fade-up 0.28s ease-out both", animationDelay: `${80 + i * 70}ms` }}
           >
             <span className="text-xs font-medium text-ink">{doc.name}</span>
             <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700">
@@ -54,12 +54,12 @@ const SCENES = [
       <div className="flex items-center gap-4 py-1">
         <div
           className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary/10 text-lg font-semibold text-primary"
-          style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "150ms" }}
+          style={{ animation: "fade-up 0.28s ease-out both", animationDelay: "60ms" }}
         >
           FA
           <span className="absolute bottom-0 right-0 h-3.5 w-3.5 animate-pulse rounded-full border-2 border-white bg-emerald-500" />
         </div>
-        <div style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "320ms" }}>
+        <div style={{ animation: "fade-up 0.28s ease-out both", animationDelay: "140ms" }}>
           <p className="text-sm font-semibold text-ink">Fathima A.</p>
           <p className="text-xs text-ink-soft">Senior Account Manager</p>
           <p className="mt-1 text-xs font-medium text-emerald-600">Online now</p>
@@ -108,7 +108,7 @@ const SCENES = [
         </div>
         <div
           className="max-w-[7rem] text-xs text-ink-soft"
-          style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "550ms" }}
+          style={{ animation: "fade-up 0.28s ease-out both", animationDelay: "220ms" }}
         >
           <span className="font-semibold text-ink">AED 0</span> hidden fees, ever
         </div>
@@ -129,19 +129,19 @@ const SCENES = [
       <div className="space-y-2 py-1">
         <div
           className="max-w-[80%] rounded-2xl rounded-bl-sm bg-surface px-3 py-2 text-xs text-ink"
-          style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "150ms" }}
+          style={{ animation: "fade-up 0.28s ease-out both", animationDelay: "60ms" }}
         >
           Hi, need help with my VAT filing 🙋
         </div>
         <div
           className="ml-auto max-w-[80%] rounded-2xl rounded-br-sm bg-primary px-3 py-2 text-xs text-white"
-          style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "380ms" }}
+          style={{ animation: "fade-up 0.28s ease-out both", animationDelay: "160ms" }}
         >
           On it! Sending the checklist now ✅
         </div>
         <div
           className="flex items-center gap-1.5 pt-1 text-[11px] font-medium text-emerald-600"
-          style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "600ms" }}
+          style={{ animation: "fade-up 0.28s ease-out both", animationDelay: "240ms" }}
         >
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
           Replied in 3 minutes
@@ -178,7 +178,7 @@ export default function DifferentiatorsShowcase() {
       <div key={active} className="h-[17rem] overflow-hidden px-4 pb-3 pt-2 sm:min-h-[20rem] sm:h-auto sm:px-6 sm:pb-5 sm:pt-3">
         <div
           className="flex items-center gap-2"
-          style={{ animation: "fade-up 0.45s ease-out both" }}
+          style={{ animation: "fade-up 0.25s ease-out both" }}
         >
           <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:h-3.5 [&_svg]:w-3.5 sm:h-8 sm:w-8 sm:[&_svg]:h-4 sm:[&_svg]:w-4">
             {scene.icon}
@@ -192,7 +192,7 @@ export default function DifferentiatorsShowcase() {
 
         <div
           className="mt-3 border-t border-surface-border pt-2 sm:mt-6 sm:pt-4"
-          style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "650ms" }}
+          style={{ animation: "fade-up 0.28s ease-out both", animationDelay: "260ms" }}
         >
           <h3 className="text-sm font-semibold text-ink">{scene.title}</h3>
           <p className="mt-1 text-[11px] leading-snug text-ink-soft sm:mt-1.5 sm:text-xs sm:leading-relaxed">{scene.description}</p>

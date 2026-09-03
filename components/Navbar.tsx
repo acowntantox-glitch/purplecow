@@ -70,7 +70,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <Link
           href="/"
-          className="inline-flex shrink-0 items-center rounded-full border border-white/5 bg-white/5 px-3 py-1.5 shadow-sm shadow-black/5 backdrop-blur-lg transition hover:bg-white/10"
+          className="inline-flex shrink-0 items-center rounded-full border border-black/0 bg-black/0 px-3 py-1.5 shadow-sm shadow-black/0 transition hover:bg-black/60"
           onClick={() => setMobileOpen(false)}
         >
           <Image
@@ -78,7 +78,7 @@ export default function Navbar() {
             alt="Purple Cow"
             width={1353}
             height={271}
-            className="h-3 w-auto md:h-9 lg:h-6"
+            className="h-5 w-auto md:h-10 lg:h-8"
             priority
           />
         </Link>
@@ -137,12 +137,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-1.5 lg:hidden">
-          <a
-            href="/book-consultation"
-            className="rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-white"
-          >
-            Book Call
-          </a>
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
@@ -165,7 +159,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-white/80 transition hover:bg-white/5 hover:text-white"
+                  className="block rounded-lg px-3 py-2.5 text-xs font-medium text-white/80 transition hover:bg-white/5 hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -176,7 +170,7 @@ export default function Navbar() {
                         key={child.label}
                         href={child.href}
                         onClick={() => setMobileOpen(false)}
-                        className="rounded-lg px-3 py-2 text-sm text-white/60 transition hover:bg-white/5 hover:text-white"
+                        className="rounded-lg px-3 py-2 text-xs text-white/60 transition hover:bg-white/5 hover:text-white"
                       >
                         {child.label}
                       </Link>
@@ -191,14 +185,14 @@ export default function Navbar() {
             <a
               href="https://wa.me/"
               onClick={() => setMobileOpen(false)}
-              className="text-center text-sm font-medium text-white/80 transition hover:text-white"
+              className="text-center text-xs font-medium text-white/80 transition hover:text-white"
             >
               WhatsApp Us
             </a>
             <a
               href="/book-consultation"
               onClick={() => setMobileOpen(false)}
-              className="rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light"
+              className="rounded-full bg-primary px-5 py-3 text-center text-xs font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light"
             >
               Book Free Consultation
             </a>

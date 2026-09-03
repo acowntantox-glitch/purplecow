@@ -159,7 +159,7 @@ export default function Insights() {
                 alt=""
                 width={775}
                 height={721}
-                className="h-6 w-auto shrink-0 sm:h-10"
+                className="h-10 w-auto shrink-0 sm:h-10"
               />
               <span>
                 Business Setup in <span className="text-primary">Dubai Insights</span>

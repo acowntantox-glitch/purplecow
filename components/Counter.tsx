@@ -14,7 +14,7 @@ function parseValue(raw: string) {
 
 export default function Counter({
   value,
-  duration = 1600,
+  duration = 900,
 }: {
   value: string;
   duration?: number;

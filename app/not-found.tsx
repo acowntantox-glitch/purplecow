@@ -13,14 +13,14 @@ export default function NotFound() {
             <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
               404
             </span>
-            <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:120ms] sm:text-5xl">
+            <h1 className="animate-fade-up text-balance mt-6 font-display text-4xl font-semibold leading-tight tracking-tight text-white [animation-delay:60ms] sm:text-5xl">
               This page didn&apos;t make it through customs
             </h1>
-            <p className="animate-fade-up text-balance mx-auto mt-6 max-w-xl text-lg text-white/70 [animation-delay:240ms]">
+            <p className="animate-fade-up text-balance mx-auto mt-6 max-w-xl text-lg text-white/70 [animation-delay:120ms]">
               The page you&apos;re looking for doesn&apos;t exist or has moved. Let&apos;s get you back
               on track.
             </p>
-            <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:320ms]">
+            <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:160ms]">
               <Link
                 href="/"
                 className="w-full rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light sm:w-auto"
