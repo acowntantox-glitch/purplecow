@@ -19,10 +19,18 @@ const NAV_LINKS = [
     label: "Corporate Services",
     href: "/corporate-services",
     children: [
-      { label: "PRO & Visa Services", href: "/corporate-services#pro" },
-      { label: "Corporate Banking", href: "/corporate-services#banking" },
-      { label: "Renewals & Compliance", href: "/corporate-services#renewals" },
-      { label: "Accounting & Tax", href: "/accounting-tax" },
+      { label: "PRO & Visa Services", href: "/corporate-services/pro" },
+      { label: "Corporate Banking", href: "/corporate-services/banking" },
+      { label: "Renewals & Compliance", href: "/corporate-services/renewals" },
+      {
+        label: "Accounting & Tax",
+        href: "/accounting-tax",
+        children: [
+          { label: "Bookkeeping", href: "/accounting-tax/bookkeeping" },
+          { label: "VAT Filing", href: "/accounting-tax/vat" },
+          { label: "Corporate Tax", href: "/accounting-tax/corptax" },
+        ],
+      },
     ],
   },
   { label: "About", href: "/about" },
@@ -43,6 +51,22 @@ const CHEVRON = (
     className="transition-transform duration-200 group-hover:rotate-180"
   >
     <path d="M6 9l6 6 6-6" />
+  </svg>
+);
+
+const CHEVRON_RIGHT = (
+  <svg
+    viewBox="0 0 24 24"
+    width="12"
+    height="12"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2.5}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="shrink-0 text-ink/40"
+  >
+    <path d="M9 6l6 6-6 6" />
   </svg>
 );
 
@@ -89,23 +113,49 @@ export default function Navbar() {
               <div key={link.label} className="group relative">
                 <Link
                   href={link.href}
-                  className="flex items-center gap-1.5 text-sm font-medium text-white/80 transition-colors duration-300 group-hover:text-white"
+                  className="flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-white/80 transition-colors duration-300 group-hover:text-white"
                 >
                   {link.label}
                   {CHEVRON}
                 </Link>
 
                 <div className="invisible absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-7 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                  <div className="w-64 overflow-hidden rounded-2x1 border border-white/0 bg-white/50 shadow-2xl shadow-black/10 backdrop-blur-xl">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        className="block border-b border-white/30 px-5 py-3 text-sm font-medium text-ink transition-colors last:border-b-0 hover:bg-white/70 hover:text-primary"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                  <div className="w-64 rounded-2x1 border border-white/0 bg-white/50 shadow-2xl shadow-black/10 backdrop-blur-xl">
+                    {link.children.map((child) =>
+                      child.children ? (
+                        <div key={child.label} className="group/nested relative">
+                          <Link
+                            href={child.href}
+                            className="flex items-center justify-between gap-2 border-b border-white/30 px-5 py-3 text-sm font-medium text-ink transition-colors last:border-b-0 hover:bg-white/70 hover:text-primary"
+                          >
+                            {child.label}
+                            {CHEVRON_RIGHT}
+                          </Link>
+
+                          <div className="invisible absolute left-full top-0 pl-3 opacity-0 transition-all duration-200 group-hover/nested:visible group-hover/nested:opacity-100">
+                            <div className="w-56 overflow-hidden rounded-2x1 border border-white/0 bg-white/50 shadow-2xl shadow-black/10 backdrop-blur-xl">
+                              {child.children.map((grandchild) => (
+                                <Link
+                                  key={grandchild.label}
+                                  href={grandchild.href}
+                                  className="block border-b border-white/30 px-5 py-3 text-sm font-medium text-ink transition-colors last:border-b-0 hover:bg-white/70 hover:text-primary"
+                                >
+                                  {grandchild.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          className="block border-b border-white/30 px-5 py-3 text-sm font-medium text-ink transition-colors last:border-b-0 hover:bg-white/70 hover:text-primary"
+                        >
+                          {child.label}
+                        </Link>
+                      )
+                    )}
                   </div>
                 </div>
               </div>
@@ -113,7 +163,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="relative text-sm font-medium text-white/80 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 after:content-[''] hover:text-white hover:after:w-full"
+                className="relative whitespace-nowrap text-sm font-medium text-white/80 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 after:content-[''] hover:text-white hover:after:w-full"
               >
                 {link.label}
               </Link>
@@ -166,14 +216,29 @@ export default function Navbar() {
                 {link.children && (
                   <div className="ml-3 flex flex-col gap-1 border-l border-white/10 pl-3">
                     {link.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="rounded-lg px-3 py-2 text-xs text-white/60 transition hover:bg-white/5 hover:text-white"
-                      >
-                        {child.label}
-                      </Link>
+                      <div key={child.label}>
+                        <Link
+                          href={child.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block rounded-lg px-3 py-2 text-xs text-white/60 transition hover:bg-white/5 hover:text-white"
+                        >
+                          {child.label}
+                        </Link>
+                        {child.children && (
+                          <div className="ml-3 flex flex-col gap-1 border-l border-white/10 pl-3">
+                            {child.children.map((grandchild) => (
+                              <Link
+                                key={grandchild.label}
+                                href={grandchild.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="rounded-lg px-3 py-2 text-[11px] text-white/50 transition hover:bg-white/5 hover:text-white"
+                              >
+                                {grandchild.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}

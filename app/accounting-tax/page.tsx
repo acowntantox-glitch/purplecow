@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
@@ -58,6 +59,8 @@ const SERVICES = [
       "Financial statements ready on demand",
       "IFRS-aligned bookkeeping standards",
     ],
+    href: "/accounting-tax/bookkeeping",
+    cta: "Learn more about Bookkeeping",
   },
   {
     key: "vat",
@@ -77,6 +80,8 @@ const SERVICES = [
       "FTA submission & correspondence handled",
       "VAT registration for new companies",
     ],
+    href: "/accounting-tax/vat",
+    cta: "Learn more about VAT Filing",
   },
   {
     key: "corptax",
@@ -96,6 +101,8 @@ const SERVICES = [
       "CT return preparation & filing",
       "Exemption & small business relief assessment",
     ],
+    href: "/accounting-tax/corptax",
+    cta: "Learn more about Corporate Tax",
   },
 ];
 
@@ -210,6 +217,15 @@ export default function AccountingTaxPage() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
+          <div className="absolute inset-0 opacity-20" aria-hidden>
+            <Image
+              src="/images/service/tax 3.jpeg"
+              alt=""
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
             <Breadcrumb items={BREADCRUMB_ITEMS} />
@@ -292,10 +308,10 @@ export default function AccountingTaxPage() {
                       ))}
                     </ul>
                     <a
-                      href="/#contact"
+                      href={s.href}
                       className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
                     >
-                      Ask about this service <span aria-hidden>&rarr;</span>
+                      {s.cta} <span aria-hidden>&rarr;</span>
                     </a>
                   </div>
                 </Reveal>

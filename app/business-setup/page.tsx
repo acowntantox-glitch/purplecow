@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
@@ -217,6 +218,15 @@ export default function BusinessSetupPage() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
+          <div className="absolute inset-0 opacity-20" aria-hidden>
+            <Image
+              src="/images/service/business set 3.jpeg"
+              alt=""
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
             <Breadcrumb items={BREADCRUMB_ITEMS} />

@@ -11,12 +11,12 @@ export default function Hero() {
   return (
     <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-8 sm:pt-40 sm:pb-24 lg:px-8 lg:pt-48 lg:pb-32">
       <div className="max-w-xl text-right sm:mx-auto sm:max-w-5xl sm:text-center">
-        <h1 className="animate-fade-up mt-8 text-left text-balance font-display text-xl leading-[1.25] font-medium tracking-tight text-white/70 [animation-delay:60ms] [text-shadow:0_4px_24px_rgba(0,0,0,0.45)] sm:mt-6 sm:text-4xl sm:leading-[1.15] lg:text-5xl">
+        <h1 className="animate-fade-up mt-8 text-left text-balance font-display text-xl leading-[1.25] font-medium tracking-tight text-white/70 [animation-delay:60ms] [text-shadow:0_4px_24px_rgba(0,0,0,0.45)] sm:mt-6 sm:text-center sm:text-4xl sm:leading-[1.15] lg:text-5xl">
           <span className="sm:block">The Clear-Headed Way To Set Up</span>
           <span className="sm:block lg:whitespace-nowrap"> And Run A company in the UAE</span>
         </h1>
 
-        <p className="animate-fade-up mt-3 text-left text-[9px] text-white/40 [animation-delay:120ms] sm:mx-auto sm:mt-6 sm:max-w-2xl sm:text-balance sm:text-lg">
+        <p className="animate-fade-up mt-3 text-left text-[9px] text-white/40 [animation-delay:120ms] sm:mx-auto sm:mt-6 sm:max-w-2xl sm:text-center sm:text-balance sm:text-lg">
           <span className="sm:inline">Purple Cow replaces confusion with clarity —</span>
           <br className="sm:hidden" />
           <span className="sm:inline"> combining company formation with genuine accounting and tax expertise</span>

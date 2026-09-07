@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
@@ -59,6 +60,8 @@ const SERVICES = [
       "Medical fitness test coordination",
       "Dependent & family visa support",
     ],
+    href: "/corporate-services/pro",
+    cta: "Learn more about PRO & Visa Services",
   },
   {
     key: "banking",
@@ -78,6 +81,8 @@ const SERVICES = [
       "Multi-currency account guidance",
       "Support through account activation",
     ],
+    href: "/corporate-services/banking",
+    cta: "Learn more about Corporate Banking",
   },
   {
     key: "renewals",
@@ -97,6 +102,8 @@ const SERVICES = [
       "Chamber of Commerce membership renewal",
       "Deadline alerts before anything lapses",
     ],
+    href: "/corporate-services/renewals",
+    cta: "Learn more about Renewals & Compliance",
   },
   {
     key: "accounting",
@@ -231,6 +238,15 @@ export default function CorporateServicesPage() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
+          <div className="absolute inset-0 opacity-20" aria-hidden>
+            <Image
+              src="/images/service/corporate 3.jpeg"
+              alt=""
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
             <Breadcrumb items={BREADCRUMB_ITEMS} />
