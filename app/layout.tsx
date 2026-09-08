@@ -17,7 +17,7 @@ const poppins = Poppins({
 
 const TITLE = "Purple Cow | The clear-headed way to set up and run a company in the UAE";
 const DESCRIPTION =
-  "Purple Cow combines company formation with genuine accounting and tax expertise — a digital-first business setup and compliance partner for the UAE.";
+  "Purple Cow combines company formation with genuine accounting and tax expertise: a digital-first business setup and compliance partner for the UAE.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -9,7 +9,7 @@ export default function Differentiators() {
         <Reveal>
           <p className="text-balance ml-auto max-w-4x1 text-right text-sm font-bold tracking-tight text-black sm:text-2xl">
             Company formation is easy. Staying compliant afterwards is where
-            most businesses struggle —{" "}
+            most businesses struggle.{" "}
             <span className="text-primary">it&apos;s where we come in.</span>
           </p>
         </Reveal>

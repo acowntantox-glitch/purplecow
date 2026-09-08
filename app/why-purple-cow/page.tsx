@@ -11,7 +11,7 @@ import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const TITLE = "Why Purple Cow | UAE Business Setup & Accounting, One Team";
 const DESCRIPTION =
-  "See what sets Purple Cow apart from a typical UAE formation agency — transparent pricing, in-house accountants, a dedicated account manager, and WhatsApp-first support.";
+  "See what sets Purple Cow apart from a typical UAE formation agency: transparent pricing, in-house accountants, a dedicated account manager, and WhatsApp-first support.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -44,12 +44,12 @@ const COMPARISON = [
   {
     category: "Pricing",
     typical: "Quoted low, then admin fees appear after you've committed",
-    purpleCow: "One upfront number — the price quoted is the price you pay",
+    purpleCow: "One upfront number: the price quoted is the price you pay",
   },
   {
     category: "After the license is issued",
     typical: "Relationship ends once the license is filed",
-    purpleCow: "We continue as your accountants — bookkeeping, VAT, and tax filing",
+    purpleCow: "We continue as your accountants: bookkeeping, VAT, and tax filing",
   },
   {
     category: "Accounting & tax",
@@ -72,7 +72,7 @@ const DIFFERENTIATORS = [
   {
     title: "One team, start to finish",
     description:
-      "Formation, banking, visas, and accounting sit with the same team — not handed off between departments after your license is issued.",
+      "Formation, banking, visas, and accounting sit with the same team, not handed off between departments after your license is issued.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 15l6-6M8 7l1.5-1.5a3.5 3.5 0 0 1 5 5L13 12M16 17l-1.5 1.5a3.5 3.5 0 0 1-5-5L11 12" />
@@ -82,7 +82,7 @@ const DIFFERENTIATORS = [
   {
     title: "Say the true cost upfront",
     description:
-      "The setup cost we quote is the setup cost you pay — no administrative add-ons revealed after you've committed.",
+      "The setup cost we quote is the setup cost you pay, with no administrative add-ons revealed after you've committed.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .586 1.414l8.5 8.5a2 2 0 0 0 2.828 0l7.5-7.5a2 2 0 0 0 0-2.828l-8.5-8.5A2 2 0 0 0 12.5 3z" />
@@ -93,7 +93,7 @@ const DIFFERENTIATORS = [
   {
     title: "Real accountants, in-house",
     description:
-      "Qualified accountants handle your bookkeeping, VAT, and Corporate Tax filings directly — never outsourced to a third party.",
+      "Qualified accountants handle your bookkeeping, VAT, and Corporate Tax filings directly, never outsourced to a third party.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="3" width="16" height="18" rx="1.5" />
@@ -126,7 +126,7 @@ const DIFFERENTIATORS = [
   {
     title: "WhatsApp-first support",
     description:
-      "Reach a real person where you already are, typically within five minutes during business hours — not a support ticket that goes quiet.",
+      "Reach a real person where you already are, typically within five minutes during business hours, not a support ticket that goes quiet.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.2-3.4A7.96 7.96 0 0 1 4 12z" />
@@ -138,19 +138,19 @@ const DIFFERENTIATORS = [
 const FAQS = [
   {
     q: "How is Purple Cow different from a typical business setup agent?",
-    a: "Most agents are formation-first: they're paid on the license and have little reason to think past it. We built the accounting side in from the start, so the same team that structures your company also keeps it compliant — one point of contact, not a handoff.",
+    a: "Most agents are formation-first: they're paid on the license and have little reason to think past it. We built the accounting side in from the start, so the same team that structures your company also keeps it compliant: one point of contact, not a handoff.",
   },
   {
     q: "Is the setup cost really the final cost?",
-    a: "Yes. The price we quote for formation is the price you pay — no administrative fees revealed after you've committed to the process.",
+    a: "Yes. The price we quote for formation is the price you pay, with no administrative fees revealed after you've committed to the process.",
   },
   {
     q: "What happens after my license is issued?",
-    a: "That's where most formation agents stop. We continue as your accountants — bookkeeping, VAT and Corporate Tax filing, renewals, and PRO services — so your company stays compliant long after day one.",
+    a: "That's where most formation agents stop. We continue as your accountants: bookkeeping, VAT and Corporate Tax filing, renewals, and PRO services, so your company stays compliant long after day one.",
   },
   {
     q: "Do I get a dedicated point of contact, or a support queue?",
-    a: "A dedicated account manager, reachable on WhatsApp, typically responds within five minutes during business hours — you're not starting over with someone new each time you reach out.",
+    a: "A dedicated account manager, reachable on WhatsApp, typically responds within five minutes during business hours. You're not starting over with someone new each time you reach out.",
   },
   {
     q: "Do you only work with certain business sizes or industries?",
@@ -192,7 +192,7 @@ export default function WhyPurpleCowPage() {
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
                 We treat accounting as the core of the business, not an upsell
-                after formation — one team for setup, banking, visas, and the
+                after formation: one team for setup, banking, visas, and the
                 compliance work that comes after.
               </p>
               <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:160ms]">

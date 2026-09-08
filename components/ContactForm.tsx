@@ -129,7 +129,7 @@ export default function ContactForm() {
 
       {sent && (
         <p className="text-sm text-ink-soft">
-          Opening your email app to send this — if nothing happens, email us
+          Opening your email app to send this. If nothing happens, email us
           directly at{" "}
           <a href="mailto:hello@purplecow.ae" className="font-medium text-primary">
             hello@purplecow.ae

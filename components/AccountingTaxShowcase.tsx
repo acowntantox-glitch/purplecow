@@ -37,7 +37,7 @@ const SCENES = [
       </svg>
     ),
     items: [
-      { label: "VAT Return — Q2", status: "Filed" },
+      { label: "VAT Return: Q2", status: "Filed" },
       { label: "Input Tax Verified", status: "Verified" },
       { label: "FTA Submission", status: "Accepted" },
     ],

@@ -8,7 +8,7 @@ import { breadcrumbJsonLd } from "@/lib/seo";
 
 const TITLE = "Book a Free Consultation | Purple Cow";
 const DESCRIPTION =
-  "Book a free consultation with Purple Cow for UAE company formation, PRO services, or accounting and tax support — a clear, upfront answer, no sales pressure.";
+  "Book a free consultation with Purple Cow for UAE company formation, PRO services, or accounting and tax support: a clear, upfront answer, no sales pressure.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -50,7 +50,7 @@ export default function BookConsultationPage() {
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
                 Fill in the form with a few essential details and a dedicated
-                account manager will get back to you — usually within a business
+                account manager will get back to you, usually within a business
                 day. All information stays private with us.
               </p>
             </div>
@@ -84,7 +84,7 @@ export default function BookConsultationPage() {
                   <p className="text-white/70">Dubai, United Arab Emirates</p>
                   <p className="mt-2 text-sm text-white/50">
                     Most of the process, including document submission, can be
-                    handled remotely — some steps, like visa biometrics, typically
+                    handled remotely. Some steps, like visa biometrics, typically
                     require a visit.
                   </p>
                 </div>
@@ -98,7 +98,7 @@ export default function BookConsultationPage() {
             </h2>
             <p className="mt-4 max-w-xl text-white/80">
               Tell us a bit about your business so that our expert team can
-              prepare before we speak — no sales pressure, no hidden fees.
+              prepare before we speak, no sales pressure, no hidden fees.
             </p>
 
             <div className="mt-8">

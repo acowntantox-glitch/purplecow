@@ -34,7 +34,7 @@ const SERVICES: Record<string, AccountingService> = {
       <>Books that are <span className="text-primary-light">always audit-ready</span></>
     ),
     heroSubcopy:
-      "Every invoice and expense reconciled by a real accountant every month — not sorted out in a scramble at year end.",
+      "Every invoice and expense reconciled by a real accountant every month, not sorted out in a scramble at year end.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
@@ -48,7 +48,7 @@ const SERVICES: Record<string, AccountingService> = {
       { value: "1", label: "Dedicated accountant on your file" },
     ],
     overview:
-      "Bookkeeping is the foundation everything else — VAT filing, Corporate Tax, and financial statements — depends on. We reconcile your invoices, expenses, and bank transactions every month, so your books are accurate and audit-ready year round, not assembled retroactively before a deadline.",
+      "Bookkeeping is the foundation everything else (VAT filing, Corporate Tax, and financial statements) depends on. We reconcile your invoices, expenses, and bank transactions every month, so your books are accurate and audit-ready year round, not assembled retroactively before a deadline.",
     benefits: [
       {
         title: "Monthly reconciliation & bank matching",
@@ -60,7 +60,7 @@ const SERVICES: Record<string, AccountingService> = {
       },
       {
         title: "Financial statements ready on demand",
-        description: "Profit & loss, balance sheet, and cash flow reports are available whenever you need them — for a bank, investor, or your own visibility.",
+        description: "Profit & loss, balance sheet, and cash flow reports are available whenever you need them, for a bank, investor, or your own visibility.",
       },
       {
         title: "IFRS-aligned bookkeeping standards",
@@ -94,7 +94,7 @@ const SERVICES: Record<string, AccountingService> = {
       },
       {
         q: "How often will my books be updated?",
-        a: "Monthly, as standard — so your financial position is always current rather than reconstructed once a year.",
+        a: "Monthly, as standard, so your financial position is always current rather than reconstructed once a year.",
       },
       {
         q: "Do you provide financial statements I can show a bank or investor?",
@@ -110,7 +110,7 @@ const SERVICES: Record<string, AccountingService> = {
       <>Quarterly VAT, <span className="text-primary-light">filed before the deadline</span></>
     ),
     heroSubcopy:
-      "VAT returns prepared, checked, and submitted to the FTA — with input tax reviewed before anything is ever filed.",
+      "VAT returns prepared, checked, and submitted to the FTA, with input tax reviewed before anything is ever filed.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .586 1.414l8.5 8.5a2 2 0 0 0 2.828 0l7.5-7.5a2 2 0 0 0 0-2.828l-8.5-8.5A2 2 0 0 0 12.5 3z" />
@@ -124,7 +124,7 @@ const SERVICES: Record<string, AccountingService> = {
       { value: "AED 375k", label: "Mandatory VAT registration threshold" },
     ],
     overview:
-      "UAE VAT returns are filed quarterly (or monthly for some businesses) with the Federal Tax Authority, covering output tax on sales and input tax on purchases. Missed deadlines or incorrect filings can trigger penalties — we prepare, verify, and submit your returns on schedule, every quarter.",
+      "UAE VAT returns are filed quarterly (or monthly for some businesses) with the Federal Tax Authority, covering output tax on sales and input tax on purchases. Missed deadlines or incorrect filings can trigger penalties, so we prepare, verify, and submit your returns on schedule, every quarter.",
     benefits: [
       {
         title: "Quarterly VAT return preparation & filing",
@@ -186,7 +186,7 @@ const SERVICES: Record<string, AccountingService> = {
       <>Corporate Tax, <span className="text-primary-light">handled by people who understand it</span></>
     ),
     heroSubcopy:
-      "Registration, taxable income calculation, and CT return filing — handled by accountants who know UAE Corporate Tax law, not a generic checklist.",
+      "Registration, taxable income calculation, and CT return filing: handled by accountants who know UAE Corporate Tax law, not a generic checklist.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="3" width="16" height="18" rx="2" />
@@ -200,7 +200,7 @@ const SERVICES: Record<string, AccountingService> = {
       { value: "100%", label: "Returns reviewed before filing" },
     ],
     overview:
-      "UAE Corporate Tax applies to most businesses at 9% on profits above AED 375,000, with 0% on profits up to that threshold. We handle registration, calculate your taxable income with the correct adjustments, and prepare and file your Corporate Tax return — including assessing eligibility for exemptions or Small Business Relief.",
+      "UAE Corporate Tax applies to most businesses at 9% on profits above AED 375,000, with 0% on profits up to that threshold. We handle registration, calculate your taxable income with the correct adjustments, and prepare and file your Corporate Tax return, including assessing eligibility for exemptions or Small Business Relief.",
     benefits: [
       {
         title: "Corporate Tax registration",
@@ -238,7 +238,7 @@ const SERVICES: Record<string, AccountingService> = {
     faqs: [
       {
         q: "What's the UAE Corporate Tax rate?",
-        a: "0% on profits up to AED 375,000, and 9% on profits above that, for most businesses. Some qualifying free zone entities may be eligible for 0% on qualifying income — we'll assess your eligibility.",
+        a: "0% on profits up to AED 375,000, and 9% on profits above that, for most businesses. Some qualifying free zone entities may be eligible for 0% on qualifying income. We'll assess your eligibility.",
       },
       {
         q: "Do all UAE companies need to register for Corporate Tax?",
@@ -418,7 +418,7 @@ export default async function AccountingServicePage({
                   What you&apos;ll need <span className="text-primary">to get started</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  We prepare and file everything — this is simply what we&apos;ll ask you for.
+                  We prepare and file everything: this is simply what we&apos;ll ask you for.
                 </p>
               </div>
             </Reveal>

@@ -9,7 +9,7 @@ const FACTS = [
     ),
   },
   {
-    text: "In-house accounting & tax — not outsourced",
+    text: "In-house accounting & tax, not outsourced",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="3" width="16" height="18" rx="1.5" />

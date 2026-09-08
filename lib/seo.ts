@@ -10,7 +10,7 @@ export function organizationJsonLd() {
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo-mark.png`,
     description:
-      "Purple Cow combines company formation with genuine accounting and tax expertise — a digital-first business setup and compliance partner for the UAE.",
+      "Purple Cow combines company formation with genuine accounting and tax expertise: a digital-first business setup and compliance partner for the UAE.",
     email: "hello@purplecow.ae",
     areaServed: "AE",
     address: {

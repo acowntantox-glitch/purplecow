@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const BREADCRUMB_ITEMS = [{ label: "Home", href: "/" }, { label: "Accounting & Tax" }];
 
 const STATS = [
-  { value: "3", label: "Core services — Bookkeeping, VAT & Corporate Tax" },
+  { value: "3", label: "Core services: Bookkeeping, VAT & Corporate Tax" },
   { value: "100%", label: "Transparent, flat-fee pricing" },
   { value: "0", label: "Hidden admin fees" },
   { value: "<5 min", label: "WhatsApp response" },
@@ -67,7 +67,7 @@ const SERVICES = [
     title: "VAT Filing",
     tagline: "Quarterly VAT, filed before the deadline",
     bestFor:
-      "Companies that need VAT returns prepared, checked, and submitted to the FTA — with input tax reviewed before it's ever filed.",
+      "Companies that need VAT returns prepared, checked, and submitted to the FTA, with input tax reviewed before it's ever filed.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .586 1.414l8.5 8.5a2 2 0 0 0 2.828 0l7.5-7.5a2 2 0 0 0 0-2.828l-8.5-8.5A2 2 0 0 0 12.5 3z" />
@@ -159,7 +159,7 @@ const WHY = [
   {
     title: "Transparent, flat-fee pricing",
     description:
-      "No hidden administrative fees or surprise costs — your fee is shown before you commit to anything.",
+      "No hidden administrative fees or surprise costs: your fee is shown before you commit to anything.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .586 1.414l8.5 8.5a2 2 0 0 0 2.828 0l7.5-7.5a2 2 0 0 0 0-2.828l-8.5-8.5A2 2 0 0 0 12.5 3z" />
@@ -186,7 +186,7 @@ const FAQS = [
   },
   {
     q: "What's the UAE Corporate Tax rate?",
-    a: "0% on profits up to AED 375,000, and 9% on profits above that, for most businesses. Some qualifying free zone entities may be eligible for 0% on qualifying income — we'll assess your eligibility.",
+    a: "0% on profits up to AED 375,000, and 9% on profits above that, for most businesses. Some qualifying free zone entities may be eligible for 0% on qualifying income. We'll assess your eligibility.",
   },
   {
     q: "How often do I need to file VAT?",
@@ -238,7 +238,7 @@ export default function AccountingTaxPage() {
                 <span className="text-primary-light">not a form-filling service</span>
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
-                Bookkeeping, VAT filing, and Corporate Tax — your books and your filings,
+                Bookkeeping, VAT filing, and Corporate Tax: your books and your filings,
                 handled by people who understand UAE compliance, not a template.
               </p>
               <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:160ms]">
@@ -280,7 +280,7 @@ export default function AccountingTaxPage() {
                   <span className="text-primary">actually need</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  Three services, one team of accountants — not a formation agent
+                  Three services, one team of accountants, not a formation agent
                   who disappears once your license is issued.
                 </p>
               </div>

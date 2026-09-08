@@ -22,7 +22,7 @@ const SECTIONS = [
   {
     heading: "2. Information we collect",
     body: [
-      "We collect information you provide directly — for example, when you book a consultation, email us, or message us on WhatsApp. This may include your name, email address, phone number, and details about your business.",
+      "We collect information you provide directly, for example, when you book a consultation, email us, or message us on WhatsApp. This may include your name, email address, phone number, and details about your business.",
       "We also collect limited technical information automatically when you visit our website, such as pages viewed and general usage patterns, typically through analytics tools.",
     ],
   },

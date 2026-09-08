@@ -12,7 +12,7 @@ import { getAllArticles } from "@/lib/insights";
 
 const TITLE = "Blog | UAE Business Setup, Tax & Compliance Insights | Purple Cow";
 const DESCRIPTION =
-  "Company formation, Corporate Tax, VAT, banking, and PRO services in the UAE, explained plainly by the team that files it — not summarized from someone else's blog.";
+  "Company formation, Corporate Tax, VAT, banking, and PRO services in the UAE, explained plainly by the team that files it, not summarized from someone else's blog.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -56,7 +56,7 @@ export default function BlogPage() {
                 <span className="text-primary-light">compliance, explained plainly</span>
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
-                Company formation, Corporate Tax, VAT, banking, and PRO services —
+                Company formation, Corporate Tax, VAT, banking, and PRO services:
                 written by the team that files it, not summarized from someone
                 else&apos;s blog.
               </p>

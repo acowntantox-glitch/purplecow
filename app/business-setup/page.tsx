@@ -11,7 +11,7 @@ import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const TITLE = "Business Setup in the UAE | Purple Cow";
 const DESCRIPTION =
-  "Mainland, Free Zone, or Offshore — Purple Cow structures and licenses your UAE company with transparent pricing and real accountants from day one.";
+  "Mainland, Free Zone, or Offshore: Purple Cow structures and licenses your UAE company with transparent pricing and real accountants from day one.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const BREADCRUMB_ITEMS = [{ label: "Home", href: "/" }, { label: "Business Setup" }];
 
 const STATS = [
-  { value: "3", label: "Jurisdictions — Mainland, Free Zone & Offshore" },
+  { value: "3", label: "Jurisdictions: Mainland, Free Zone & Offshore" },
   { value: "40+", label: "Free zones licensed" },
   { value: "100%", label: "Foreign ownership available" },
   { value: "<5 min", label: "WhatsApp response" },
@@ -88,7 +88,7 @@ const JURISDICTIONS = [
     title: "Offshore",
     tagline: "Hold assets, structure internationally",
     bestFor:
-      "Holding companies, asset protection, and international structuring — no local office needed.",
+      "Holding companies, asset protection, and international structuring, no local office needed.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="9" />
@@ -109,7 +109,7 @@ const PROCESS = [
     step: "01",
     title: "Free consultation",
     description:
-      "We map your business activity to the right jurisdiction, license, and visa package — no jargon, no pressure.",
+      "We map your business activity to the right jurisdiction, license, and visa package, no jargon, no pressure.",
   },
   {
     step: "02",
@@ -135,7 +135,7 @@ const WHY = [
   {
     title: "One partner, start to finish",
     description:
-      "Formation, licensing, bank account, and visas handled by one team — not handed off between departments.",
+      "Formation, licensing, bank account, and visas handled by one team, not handed off between departments.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 15l6-6M8 7l1.5-1.5a3.5 3.5 0 0 1 5 5L13 12M16 17l-1.5 1.5a3.5 3.5 0 0 1-5-5L11 12" />
@@ -156,7 +156,7 @@ const WHY = [
   {
     title: "Transparent, flat-fee pricing",
     description:
-      "No hidden administrative fees or surprise costs — your setup cost is shown before you commit to anything.",
+      "No hidden administrative fees or surprise costs: your setup cost is shown before you commit to anything.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .586 1.414l8.5 8.5a2 2 0 0 0 2.828 0l7.5-7.5a2 2 0 0 0 0-2.828l-8.5-8.5A2 2 0 0 0 12.5 3z" />
@@ -179,7 +179,7 @@ const WHY = [
 const FAQS = [
   {
     q: "Can I own 100% of my company in the UAE?",
-    a: "Yes. Every free zone company allows 100% foreign ownership, and most mainland business activities were opened to 100% foreign ownership under the UAE's 2021 reforms — we'll confirm this for your specific activity during your consultation.",
+    a: "Yes. Every free zone company allows 100% foreign ownership, and most mainland business activities were opened to 100% foreign ownership under the UAE's 2021 reforms. We'll confirm this for your specific activity during your consultation.",
   },
   {
     q: "Should I choose Mainland or Free Zone?",
@@ -187,11 +187,11 @@ const FAQS = [
   },
   {
     q: "How long does company formation take?",
-    a: "Many free zone licenses can be issued within a few working days once your documents are ready. Mainland timelines depend on your activity and the approvals it requires — we'll give you a clear timeline upfront.",
+    a: "Many free zone licenses can be issued within a few working days once your documents are ready. Mainland timelines depend on your activity and the approvals it requires. We'll give you a clear timeline upfront.",
   },
   {
     q: "Do I need to be in the UAE to set up my company?",
-    a: "Not always. Much of the process — including document submission and license issuance — can be handled remotely. Some steps, like visa biometrics or opening a bank account, typically require a visit.",
+    a: "Not always. Much of the process, including document submission and license issuance, can be handled remotely. Some steps, like visa biometrics or opening a bank account, typically require a visit.",
   },
   {
     q: "Will I need a physical office?",
@@ -199,7 +199,7 @@ const FAQS = [
   },
   {
     q: "What does Purple Cow handle after my license is issued?",
-    a: "Bookkeeping, VAT and corporate tax filing, renewals, and PRO services for visas — so your company stays compliant long after the formation itself is done.",
+    a: "Bookkeeping, VAT and corporate tax filing, renewals, and PRO services for visas, so your company stays compliant long after the formation itself is done.",
   },
 ];
 
@@ -239,7 +239,7 @@ export default function BusinessSetupPage() {
                 <span className="text-primary-light">clear-headed way</span>
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
-                Mainland, Free Zone, or Offshore — we structure your company around your
+                Mainland, Free Zone, or Offshore: we structure your company around your
                 business, handle the paperwork end to end, and stay on as your accountants
                 once you&apos;re licensed.
               </p>
@@ -281,8 +281,8 @@ export default function BusinessSetupPage() {
                   Three jurisdictions, <span className="text-primary">one clear recommendation</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  We don&apos;t steer you toward whichever jurisdiction pays us more —
-                  we match you to the one that actually fits your business.
+                  We don&apos;t steer you toward whichever jurisdiction pays us more.
+                  We match you to the one that actually fits your business.
                 </p>
               </div>
             </Reveal>

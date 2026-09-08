@@ -94,7 +94,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <Link
           href="/"
-          className="inline-flex shrink-0 items-center rounded-full border border-black/0 bg-black/0 px-3 py-1.5 shadow-sm shadow-black/0 transition hover:bg-black/60"
+          className="inline-flex shrink-0 items-center rounded-full border border-black/0 bg-black/50 px-3 py-1.5 shadow-sm shadow-black/0 transition hover:bg-black/90"
           onClick={() => setMobileOpen(false)}
         >
           <Image
@@ -102,7 +102,7 @@ export default function Navbar() {
             alt="Purple Cow"
             width={1353}
             height={271}
-            className="h-5 w-auto md:h-10 lg:h-8"
+            className="h-3 w-auto md:h-10 lg:h-7"
             priority
           />
         </Link>

@@ -36,7 +36,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       <>Trade anywhere in the UAE with a <span className="text-primary-light">Mainland</span> company</>
     ),
     heroSubcopy:
-      "A Mainland license lets you operate across the entire UAE market and beyond — no restriction on where you trade, and no cap on foreign ownership for most activities.",
+      "A Mainland license lets you operate across the entire UAE market and beyond: no restriction on where you trade, and no cap on foreign ownership for most activities.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 21V9l6-4 6 4v12" />
@@ -61,7 +61,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       {
         title: "Eligible for government contracts",
         description:
-          "Mainland companies can bid on and win UAE government tenders — a route closed to free zone entities.",
+          "Mainland companies can bid on and win UAE government tenders, a route closed to free zone entities.",
       },
       {
         title: "100% foreign ownership on most activities",
@@ -95,7 +95,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     faqs: [
       {
         q: "Do I need a local UAE sponsor for a Mainland company?",
-        a: "For most commercial and professional activities, no — 100% foreign ownership is allowed since the 2021 reforms. A small number of \"strategic\" activities still require a UAE national partner or local service agent; we'll confirm this for your activity.",
+        a: "For most commercial and professional activities, no: 100% foreign ownership is allowed since the 2021 reforms. A small number of \"strategic\" activities still require a UAE national partner or local service agent; we'll confirm this for your activity.",
       },
       {
         q: "Can a Mainland company open branches in other emirates?",
@@ -103,7 +103,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       },
       {
         q: "Is Mainland more expensive than Free Zone?",
-        a: "It depends on the activity and office requirement — we'll give you an exact, itemized quote rather than a rule of thumb.",
+        a: "It depends on the activity and office requirement, so we'll give you an exact, itemized quote rather than a rule of thumb.",
       },
       {
         q: "How many visas can a Mainland company sponsor?",
@@ -120,7 +120,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       <>100% foreign ownership in one of <span className="text-primary-light">40+ UAE free zones</span></>
     ),
     heroSubcopy:
-      "Free zones give international founders full ownership, fast licensing, and a jurisdiction tailored to their industry — without needing a mainland presence.",
+      "Free zones give international founders full ownership, fast licensing, and a jurisdiction tailored to their industry, without needing a mainland presence.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3 3 8l9 5 9-5-9-5z" />
@@ -134,7 +134,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       { value: "<5 min", label: "WhatsApp response" },
     ],
     overview:
-      "Free zones are self-contained jurisdictions with their own registration authority, each typically focused on a specific industry — media, tech, logistics, finance, and more. They're built for international founders who want full ownership and a fast setup, without needing to trade directly with the UAE mainland market.",
+      "Free zones are self-contained jurisdictions with their own registration authority, each typically focused on a specific industry: media, tech, logistics, finance, and more. They're built for international founders who want full ownership and a fast setup, without needing to trade directly with the UAE mainland market.",
     benefits: [
       {
         title: "100% foreign ownership, guaranteed",
@@ -176,11 +176,11 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     faqs: [
       {
         q: "Can a free zone company trade directly with UAE mainland customers?",
-        a: "Only through a registered mainland distributor, or by obtaining a dual license in select free zones — we'll advise on the right structure for your activity.",
+        a: "Only through a registered mainland distributor, or by obtaining a dual license in select free zones. We'll advise on the right structure for your activity.",
       },
       {
         q: "Which free zone should I choose?",
-        a: "It depends on your activity, budget, and whether you need physical office space or visas — we'll narrow it down to 2-3 zones during your consultation.",
+        a: "It depends on your activity, budget, and whether you need physical office space or visas. We'll narrow it down to 2-3 zones during your consultation.",
       },
       {
         q: "Can I upgrade from Free Zone to Mainland later?",
@@ -201,7 +201,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       <>Hold assets and structure internationally with an <span className="text-primary-light">Offshore</span> company</>
     ),
     heroSubcopy:
-      "An offshore company doesn't trade within the UAE — it's built for holding assets, opening international bank accounts, and structuring cross-border operations with full confidentiality.",
+      "An offshore company doesn't trade within the UAE: it's built for holding assets, opening international bank accounts, and structuring cross-border operations with full confidentiality.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="9" />
@@ -215,7 +215,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       { value: "<5 min", label: "WhatsApp response" },
     ],
     overview:
-      "Offshore companies are registered in the UAE but are not licensed to conduct business within the UAE market. They're used for holding companies, international trading structures, IP holding, and opening multi-currency bank accounts — with a level of confidentiality mainland and free zone companies don't offer.",
+      "Offshore companies are registered in the UAE but are not licensed to conduct business within the UAE market. They're used for holding companies, international trading structures, IP holding, and opening multi-currency bank accounts, with a level of confidentiality mainland and free zone companies don't offer.",
     benefits: [
       {
         title: "No physical office required",
@@ -250,13 +250,13 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       "Passport copies of shareholders & directors",
       "Proof of address (utility bill or bank statement)",
       "Bank reference letter (for some registries)",
-      "A registered agent in the UAE — mandatory, and we act as yours",
+      "A registered agent in the UAE (mandatory, and we act as yours)",
       "No physical presence or visit required in most cases",
     ],
     faqs: [
       {
         q: "Can an offshore company get UAE residency visas?",
-        a: "No. Offshore companies aren't licensed to sponsor visas — if you need a UAE visa, you'll need a mainland or free zone company alongside it.",
+        a: "No. Offshore companies aren't licensed to sponsor visas. If you need a UAE visa, you'll need a mainland or free zone company alongside it.",
       },
       {
         q: "Can an offshore company open a UAE bank account?",
@@ -268,7 +268,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       },
       {
         q: "Do I need to visit the UAE to set up an offshore company?",
-        a: "In most cases, no — the entire process can be completed remotely through your registered agent.",
+        a: "In most cases, no: the entire process can be completed remotely through your registered agent.",
       },
     ],
   },
@@ -430,7 +430,7 @@ export default async function JurisdictionPage({
                   What you&apos;ll need <span className="text-primary">to get started</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  We prepare and file everything — this is simply what we&apos;ll ask you for.
+                  We prepare and file everything: this is simply what we&apos;ll ask you for.
                 </p>
               </div>
             </Reveal>

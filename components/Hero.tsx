@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
 
         <p className="animate-fade-up mt-3 text-left text-[9px] text-white/40 [animation-delay:120ms] sm:mx-auto sm:mt-6 sm:max-w-2xl sm:text-center sm:text-balance sm:text-lg">
-          <span className="sm:inline">Purple Cow replaces confusion with clarity —</span>
+          <span className="sm:inline">Purple Cow replaces confusion with clarity,</span>
           <br className="sm:hidden" />
           <span className="sm:inline"> combining company formation with genuine accounting and tax expertise</span>
         </p>

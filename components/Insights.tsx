@@ -7,7 +7,7 @@ import Reveal from "./Reveal";
 
 const INSIGHTS = [
   {
-    title: "Mainland, Free Zone, or Offshore — how to actually choose",
+    title: "Mainland, Free Zone, or Offshore: how to actually choose",
     image: "/images/service/business setup.jpg",
     slug: "mainland-freezone-offshore",
   },
@@ -166,7 +166,7 @@ export default function Insights() {
               </span>
             </h2>
             <p className="mt-3 text-sm text-ink-soft sm:mt-4 sm:text-lg">
-              Keep up with UAE company formation, tax, and compliance — explained
+              Keep up with UAE company formation, tax, and compliance, explained
               by the team that files it.
             </p>
           </div>

@@ -34,7 +34,7 @@ const SERVICES: Record<string, CorporateService> = {
       <>Visas and Emirates ID, <span className="text-primary-light">without the government counters</span></>
     ),
     heroSubcopy:
-      "Employment, investor, and dependent visas, Emirates ID, and labor cards — processed by an in-house PRO team so you're never stuck typing centers or chasing a counter appointment.",
+      "Employment, investor, and dependent visas, Emirates ID, and labor cards: processed by an in-house PRO team so you're never stuck typing centers or chasing a counter appointment.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -46,10 +46,10 @@ const SERVICES: Record<string, CorporateService> = {
       { value: "<5 min", label: "WhatsApp response" },
       { value: "100%", label: "Applications filed on your behalf" },
       { value: "0", label: "Government counters you visit" },
-      { value: "4", label: "Visa types handled — employment, investor, dependent & golden" },
+      { value: "4", label: "Visa types handled: employment, investor, dependent & golden" },
     ],
     overview:
-      "PRO & Visa Services covers every government-facing task tied to running a licensed UAE company — employment and investor visas, Emirates ID, labor cards, and medical fitness tests — handled by our in-house PRO team instead of scattered typing centers and government counters.",
+      "PRO & Visa Services covers every government-facing task tied to running a licensed UAE company (employment and investor visas, Emirates ID, labor cards, and medical fitness tests), handled by our in-house PRO team instead of scattered typing centers and government counters.",
     benefits: [
       {
         title: "Full visa lifecycle handled",
@@ -73,7 +73,7 @@ const SERVICES: Record<string, CorporateService> = {
       },
       {
         title: "Status tracked in real time",
-        description: "You always know where an application stands — no chasing typing centers for updates.",
+        description: "You always know where an application stands, no chasing typing centers for updates.",
       },
     ],
     whoFor: [
@@ -92,11 +92,11 @@ const SERVICES: Record<string, CorporateService> = {
     faqs: [
       {
         q: "How long does an employment visa take?",
-        a: "Typically 1–3 weeks from entry permit to Emirates ID, depending on medical test scheduling and Emirates ID appointment availability — we'll give you a specific timeline once the application is filed.",
+        a: "Typically 1–3 weeks from entry permit to Emirates ID, depending on medical test scheduling and Emirates ID appointment availability. We'll give you a specific timeline once the application is filed.",
       },
       {
         q: "Can you sponsor visas for my employees' families?",
-        a: "Yes — dependent visas for spouses, children, and in some cases parents are processed the same way as employment visas, once the sponsoring employee's visa is issued.",
+        a: "Yes, dependent visas for spouses, children, and in some cases parents are processed the same way as employment visas, once the sponsoring employee's visa is issued.",
       },
       {
         q: "What is a Golden Visa and can you help me apply?",
@@ -104,7 +104,7 @@ const SERVICES: Record<string, CorporateService> = {
       },
       {
         q: "Do I need to be present in the UAE for visa processing?",
-        a: "Medical testing and Emirates ID biometrics require your physical presence in the UAE — we schedule these efficiently so it's a single visit wherever possible.",
+        a: "Medical testing and Emirates ID biometrics require your physical presence in the UAE. We schedule these efficiently so it's a single visit wherever possible.",
       },
     ],
   },
@@ -130,7 +130,7 @@ const SERVICES: Record<string, CorporateService> = {
       { value: "5+", label: "UAE banking partners" },
     ],
     overview:
-      "Opening a UAE corporate bank account is one of the most common points where new companies stall — banks apply strict KYC and compliance checks, and an incomplete or poorly prepared file is the most common reason for delay or rejection. We prepare your compliance file correctly the first time and manage the relationship with the bank on your behalf.",
+      "Opening a UAE corporate bank account is one of the most common points where new companies stall. Banks apply strict KYC and compliance checks, and an incomplete or poorly prepared file is the most common reason for delay or rejection. We prepare your compliance file correctly the first time and manage the relationship with the bank on your behalf.",
     benefits: [
       {
         title: "Compliance file prepared for you",
@@ -169,7 +169,7 @@ const SERVICES: Record<string, CorporateService> = {
     faqs: [
       {
         q: "Can you guarantee my bank account will be approved?",
-        a: "No — the bank makes the final decision, and no provider can guarantee approval. What we do is prepare your file to the standard banks expect and manage the process so it doesn't stall.",
+        a: "No. The bank makes the final decision, and no provider can guarantee approval. What we do is prepare your file to the standard banks expect and manage the process so it doesn't stall.",
       },
       {
         q: "How long does account opening take?",
@@ -177,7 +177,7 @@ const SERVICES: Record<string, CorporateService> = {
       },
       {
         q: "Which bank should I choose?",
-        a: "It depends on your activity, expected transaction volumes, and whether you need multi-currency or international transfer capability — we'll recommend 2-3 banks that fit your profile.",
+        a: "It depends on your activity, expected transaction volumes, and whether you need multi-currency or international transfer capability. We'll recommend 2-3 banks that fit your profile.",
       },
       {
         q: "Can you help if my application was already rejected?",
@@ -193,7 +193,7 @@ const SERVICES: Record<string, CorporateService> = {
       <>Nothing lapses <span className="text-primary-light">on your watch</span></>
     ),
     heroSubcopy:
-      "License, establishment card, labor file, and membership renewals — tracked on one compliance calendar and filed before they're due, not after a warning letter.",
+      "License, establishment card, labor file, and membership renewals: tracked on one compliance calendar and filed before they're due, not after a warning letter.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="5" width="18" height="16" rx="2" />
@@ -204,10 +204,10 @@ const SERVICES: Record<string, CorporateService> = {
       { value: "<5 min", label: "WhatsApp response" },
       { value: "100%", label: "Renewal deadlines tracked" },
       { value: "0", label: "Lapsed licenses on our watch" },
-      { value: "3", label: "Renewal types tracked — license, cards & membership" },
+      { value: "3", label: "Renewal types tracked: license, cards & membership" },
     ],
     overview:
-      "UAE companies carry a running list of dates that matter — trade license renewal, establishment card, labor file, Chamber of Commerce membership, and visa expiries. Missing any one of them can mean fines or a lapsed status. We track every deadline attached to your company and handle the renewal filing before it's due.",
+      "UAE companies carry a running list of dates that matter: trade license renewal, establishment card, labor file, Chamber of Commerce membership, and visa expiries. Missing any one of them can mean fines or a lapsed status. We track every deadline attached to your company and handle the renewal filing before it's due.",
     benefits: [
       {
         title: "Every renewal date tracked in one place",
@@ -249,7 +249,7 @@ const SERVICES: Record<string, CorporateService> = {
       },
       {
         q: "Do you handle Chamber of Commerce and other membership renewals?",
-        a: "Yes — any membership or certificate tied to your company's compliance status is tracked and renewed alongside your license.",
+        a: "Yes, any membership or certificate tied to your company's compliance status is tracked and renewed alongside your license.",
       },
       {
         q: "How far in advance will I be notified of a renewal?",
@@ -426,7 +426,7 @@ export default async function CorporateServicePage({
                   What you&apos;ll need <span className="text-primary">to get started</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  We prepare and file everything — this is simply what we&apos;ll ask you for.
+                  We prepare and file everything: this is simply what we&apos;ll ask you for.
                 </p>
               </div>
             </Reveal>

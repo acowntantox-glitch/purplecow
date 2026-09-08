@@ -31,7 +31,7 @@ const PANELS: ServicePillar[] = [
     title: "Business Setup",
     eyebrow: "Launch Your UAE Business",
     description:
-      "Mainland, Free Zone, or Offshore — we structure your company around your business, not the other way around.",
+      "Mainland, Free Zone, or Offshore: we structure your company around your business, not the other way around.",
     cta: "Get Started",
     image: "/images/service/business setup illustraion.png",
     animateImageOnActive: true,

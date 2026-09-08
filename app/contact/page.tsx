@@ -9,7 +9,7 @@ import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const TITLE = "Contact Us | Purple Cow Business Setup & Accounting";
 const DESCRIPTION =
-  "Get in touch with Purple Cow for UAE company formation, PRO services, or accounting and tax support. Reach us by WhatsApp, email, or the form below — typically within five minutes during business hours.";
+  "Get in touch with Purple Cow for UAE company formation, PRO services, or accounting and tax support. Reach us by WhatsApp, email, or the form below, typically within five minutes during business hours.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -76,11 +76,11 @@ const FAQS = [
   },
   {
     q: "Is the initial consultation free?",
-    a: "Yes. The first consultation is free and comes with a clear, upfront answer on jurisdiction, timeline, and cost — no sales pressure.",
+    a: "Yes. The first consultation is free and comes with a clear, upfront answer on jurisdiction, timeline, and cost, no sales pressure.",
   },
   {
     q: "Can I reach you outside UAE business hours?",
-    a: "You can send a WhatsApp message or email anytime — we'll pick it up as soon as the team is back online, usually the next business morning.",
+    a: "You can send a WhatsApp message or email anytime. We'll pick it up as soon as the team is back online, usually the next business morning.",
   },
   {
     q: "Do I need to visit your Dubai office in person?",
@@ -110,7 +110,7 @@ export default function ContactPage() {
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
                 Whether you&apos;re forming a new company or need a second opinion on
-                your books, send us a message. A real person on the team replies —
+                your books, send us a message. A real person on the team replies,
                 not a support queue.
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                   Tell us what you need
                 </h2>
                 <p className="mt-4 max-w-lg text-base leading-relaxed text-ink-soft">
-                  Share a few details and we&apos;ll come back with a clear answer —
+                  Share a few details and we&apos;ll come back with a clear answer,
                   not a generic sales pitch.
                 </p>
                 <div className="mt-8">

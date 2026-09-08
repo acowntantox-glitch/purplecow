@@ -8,7 +8,7 @@ export default function CTA() {
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-balance text-[9px] text-white/70 sm:mt-4 sm:text-lg">
           Book a free consultation and get a clear, upfront answer on jurisdiction,
-          timeline, and cost — no sales pressure, no hidden fees.
+          timeline, and cost, with no sales pressure and no hidden fees.
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
           <a

@@ -42,7 +42,7 @@ const CULTURE = [
   {
     title: "Ownership from day one",
     description:
-      "No multi-year ladder before you're trusted with real client work — you own cases and conversations early.",
+      "No multi-year ladder before you're trusted with real client work: you own cases and conversations early.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 15l6-6M8 7l1.5-1.5a3.5 3.5 0 0 1 5 5L13 12M16 17l-1.5 1.5a3.5 3.5 0 0 1-5-5L11 12" />
@@ -52,7 +52,7 @@ const CULTURE = [
   {
     title: "Work directly with clients",
     description:
-      "You'll talk to founders on WhatsApp and calls, not just push tickets through a queue — the work stays real.",
+      "You'll talk to founders on WhatsApp and calls, not just push tickets through a queue: the work stays real.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.2-3.4A7.96 7.96 0 0 1 4 12z" />
@@ -62,7 +62,7 @@ const CULTURE = [
   {
     title: "Flat structure, real autonomy",
     description:
-      "Small teams, short decision chains — good ideas ship without waiting on layers of sign-off.",
+      "Small teams, short decision chains: good ideas ship without waiting on layers of sign-off.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="9" />
@@ -94,7 +94,7 @@ const BENEFITS = [
   },
   {
     title: "Growth & training",
-    description: "Cross-training across formation, accounting, and PRO work — not siloed by department.",
+    description: "Cross-training across formation, accounting, and PRO work, not siloed by department.",
   },
   {
     title: "Dubai office, real flexibility",
@@ -106,7 +106,7 @@ const BENEFITS = [
   },
   {
     title: "A team that actually talks",
-    description: "Small enough that you'll know everyone's name — and what they're working on.",
+    description: "Small enough that you'll know everyone's name, and what they're working on.",
   },
 ];
 
@@ -116,7 +116,7 @@ const ROLES = [
     department: "Business Setup",
     type: "Full-time · Dubai",
     description:
-      "Guide founders through Mainland, Free Zone, and Offshore formation — from first consultation to license issuance.",
+      "Guide founders through Mainland, Free Zone, and Offshore formation, from first consultation to license issuance.",
   },
   {
     title: "Accountant / Tax Advisor",
@@ -130,7 +130,7 @@ const ROLES = [
     department: "Corporate Services",
     type: "Full-time · Dubai",
     description:
-      "Handle GDRFA, MOHRE, and ICP applications daily — visas, Emirates IDs, and establishment card renewals.",
+      "Handle GDRFA, MOHRE, and ICP applications daily: visas, Emirates IDs, and establishment card renewals.",
   },
   {
     title: "Client Success Associate",
@@ -145,7 +145,7 @@ const PROCESS = [
   {
     step: "01",
     title: "Apply",
-    description: "Send your CV for the role you're interested in — or email us if nothing listed fits yet.",
+    description: "Send your CV for the role you're interested in, or email us if nothing listed fits yet.",
   },
   {
     step: "02",
@@ -155,12 +155,12 @@ const PROCESS = [
   {
     step: "03",
     title: "Working conversation",
-    description: "A practical discussion around real scenarios from the role — no trick questions.",
+    description: "A practical discussion around real scenarios from the role, no trick questions.",
   },
   {
     step: "04",
     title: "Offer",
-    description: "If it's a fit on both sides, we move quickly — no weeks-long waiting for a decision.",
+    description: "If it's a fit on both sides, we move quickly, no weeks-long waiting for a decision.",
   },
 ];
 
@@ -175,7 +175,7 @@ const FAQS = [
   },
   {
     q: "Do you hire people without UAE experience?",
-    a: "Yes — for accounting and client-facing roles especially, relevant experience elsewhere matters more than prior UAE-specific exposure, which we train for on the job.",
+    a: "Yes. For accounting and client-facing roles especially, relevant experience elsewhere matters more than prior UAE-specific exposure, which we train for on the job.",
   },
   {
     q: "What if there's no open role that matches my background?",
@@ -300,7 +300,7 @@ export default function CareersPage() {
                   Open <span className="text-primary">roles</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  Don&apos;t see the right fit? Email us anyway — we keep strong
+                  Don&apos;t see the right fit? Email us anyway. We keep strong
                   applications on file.
                 </p>
               </div>

@@ -11,7 +11,7 @@ import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const TITLE = "About Purple Cow | Business Setup & Accounting in the UAE";
 const DESCRIPTION =
-  "Purple Cow is a digital-first business setup and accounting partner in the UAE — one team handling formation, licensing, and compliance, so nothing falls through the cracks after your license is issued.";
+  "Purple Cow is a digital-first business setup and accounting partner in the UAE: one team handling formation, licensing, and compliance, so nothing falls through the cracks after your license is issued.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -44,7 +44,7 @@ const VALUES = [
   {
     title: "Say the true cost upfront",
     description:
-      "The setup cost we quote is the setup cost you pay — no administrative add-ons revealed after you've committed.",
+      "The setup cost we quote is the setup cost you pay, with no administrative add-ons revealed after you've committed.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .586 1.414l8.5 8.5a2 2 0 0 0 2.828 0l7.5-7.5a2 2 0 0 0 0-2.828l-8.5-8.5A2 2 0 0 0 12.5 3z" />
@@ -55,7 +55,7 @@ const VALUES = [
   {
     title: "One team, start to finish",
     description:
-      "Formation, banking, visas, and accounting sit with the same team — not handed off between departments or outsourced once the license is issued.",
+      "Formation, banking, visas, and accounting sit with the same team, not handed off between departments or outsourced once the license is issued.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 15l6-6M8 7l1.5-1.5a3.5 3.5 0 0 1 5 5L13 12M16 17l-1.5 1.5a3.5 3.5 0 0 1-5-5L11 12" />
@@ -76,7 +76,7 @@ const VALUES = [
   {
     title: "Answer like a person, not a queue",
     description:
-      "Reach a dedicated account manager on WhatsApp, typically within five minutes during business hours — not a support ticket that goes quiet.",
+      "Reach a dedicated account manager on WhatsApp, typically within five minutes during business hours, not a support ticket that goes quiet.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.2-3.4A7.96 7.96 0 0 1 4 12z" />
@@ -96,7 +96,7 @@ const PROCESS = [
     step: "02",
     title: "Formation & licensing",
     description:
-      "We prepare and file your trade license application — translations, approvals, and paperwork handled end to end.",
+      "We prepare and file your trade license application: translations, approvals, and paperwork handled end to end.",
   },
   {
     step: "03",
@@ -108,7 +108,7 @@ const PROCESS = [
     step: "04",
     title: "Ongoing compliance",
     description:
-      "Bookkeeping, VAT and corporate tax filing, renewals, and PRO services — the relationship continues after licensing, not stop there.",
+      "Bookkeeping, VAT and corporate tax filing, renewals, and PRO services: the relationship continues after licensing, it doesn't stop there.",
   },
 ];
 
@@ -128,7 +128,7 @@ const TEAM = [
   {
     title: "In-house accountants & tax advisors",
     description:
-      "Qualified accountants handle your bookkeeping, VAT, and Corporate Tax filings directly — never outsourced to a third party after formation.",
+      "Qualified accountants handle your bookkeeping, VAT, and Corporate Tax filings directly, never outsourced to a third party after formation.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="3" width="16" height="18" rx="1.5" />
@@ -139,7 +139,7 @@ const TEAM = [
   {
     title: "PRO & visa specialists",
     description:
-      "The team that deals with GDRFA, MOHRE, and the ICP daily — so your visa and Emirates ID applications don't stall on avoidable errors.",
+      "The team that deals with GDRFA, MOHRE, and the ICP daily, so your visa and Emirates ID applications don't stall on avoidable errors.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="8" r="3.5" />
@@ -156,7 +156,7 @@ const FAQS = [
   },
   {
     q: "Where is Purple Cow based, and can you work with clients outside the UAE?",
-    a: "We're based in Dubai and work with founders across 20+ nationalities, many of whom manage their entire setup remotely. Document submission and license issuance can usually be handled without a UAE visit — some steps, like visa biometrics or opening a bank account, typically require one.",
+    a: "We're based in Dubai and work with founders across 20+ nationalities, many of whom manage their entire setup remotely. Document submission and license issuance can usually be handled without a UAE visit. Some steps, like visa biometrics or opening a bank account, typically require one.",
   },
   {
     q: "Do you only work with certain business sizes or industries?",
@@ -164,11 +164,11 @@ const FAQS = [
   },
   {
     q: "What happens after my license is issued?",
-    a: "That's where most formation agents stop. We continue as your accountants — bookkeeping, VAT and Corporate Tax filing, renewals, and PRO services for visas — so your company stays compliant long after day one.",
+    a: "That's where most formation agents stop. We continue as your accountants: bookkeeping, VAT and Corporate Tax filing, renewals, and PRO services for visas, so your company stays compliant long after day one.",
   },
   {
     q: "How is Purple Cow different from a typical business setup agent?",
-    a: "Most agents are formation-first: they're paid on the license and have little reason to think past it. We built the accounting side in from the start, so the same team that structures your company also keeps it compliant — one point of contact, not a handoff.",
+    a: "Most agents are formation-first: they're paid on the license and have little reason to think past it. We built the accounting side in from the start, so the same team that structures your company also keeps it compliant: one point of contact, not a handoff.",
   },
 ];
 
@@ -180,7 +180,7 @@ const CHECK_ICON = (
 
 const STORY_POINTS = [
   "Company formation and licensing across Mainland, Free Zone, and Offshore",
-  "In-house bookkeeping, VAT, and Corporate Tax — not outsourced after formation",
+  "In-house bookkeeping, VAT, and Corporate Tax, not outsourced after formation",
   "Corporate banking support and PRO services for visas, under one roof",
 ];
 
@@ -206,7 +206,7 @@ export default function AboutPage() {
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
                 Most business setup companies hand you a trade license and move on.
-                Purple Cow stays — as your accountants, your PRO, and the team you
+                Purple Cow stays: as your accountants, your PRO, and the team you
                 call when something doesn&apos;t add up.
               </p>
               <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:160ms]">
@@ -253,14 +253,14 @@ export default function AboutPage() {
                 <p className="mt-6 text-base leading-relaxed text-ink-soft">
                   Most UAE business setup companies are formation agents first. Once your
                   license is issued and their commission is paid, ongoing compliance
-                  becomes an afterthought — outsourced to whichever bookkeeper you find
+                  becomes an afterthought, outsourced to whichever bookkeeper you find
                   next, often after a VAT deadline has already been missed.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-ink-soft">
                   We built Purple Cow the other way around. Company formation specialists
                   and accountants work from the same desk, so your VAT registration,
                   Corporate Tax position, and bank account are considered before you sign
-                  your license application — not scrambled together after.
+                  your license application, not scrambled together after.
                 </p>
                 <ul className="mt-6 space-y-3">
                   {STORY_POINTS.map((point) => (
@@ -327,7 +327,7 @@ export default function AboutPage() {
                   How we work with you
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  Four stages, one team accountable for all of them — including the
+                  Four stages, one team accountable for all of them, including the
                   ones after your license is issued.
                 </p>
               </div>

@@ -11,7 +11,7 @@ const SCENES = [
     eyebrow: "PRO & Visa Services",
     title: "PRO Services",
     description:
-      "Employment visas, Emirates ID, and labor cards processed for you — no queuing at government counters.",
+      "Employment visas, Emirates ID, and labor cards processed for you, no queuing at government counters.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="5" width="18" height="14" rx="2" />

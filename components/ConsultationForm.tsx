@@ -133,7 +133,7 @@ export default function ConsultationForm() {
 
       {sent && (
         <p className="text-sm text-white/80">
-          Opening your email app to send this — if nothing happens, email us
+          Opening your email app to send this. If nothing happens, email us
           directly at{" "}
           <a href="mailto:hello@purplecow.ae" className="font-semibold text-white underline">
             hello@purplecow.ae

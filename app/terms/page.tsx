@@ -21,13 +21,13 @@ const SECTIONS = [
   {
     heading: "2. Our services",
     body: [
-      "Purple Cow provides UAE company formation, accounting, tax, and corporate administration services. The specific scope, deliverables, timeline, and fees for any engagement are agreed separately in a written proposal or engagement letter before work begins — content on this website is informational and doesn't itself constitute a service agreement.",
+      "Purple Cow provides UAE company formation, accounting, tax, and corporate administration services. The specific scope, deliverables, timeline, and fees for any engagement are agreed separately in a written proposal or engagement letter before work begins. Content on this website is informational and doesn't itself constitute a service agreement.",
     ],
   },
   {
     heading: "3. Website content",
     body: [
-      "Information on this website — including the Insights articles — is provided for general guidance only and does not constitute legal, tax, or financial advice. UAE regulations, fees, and thresholds change, and figures referenced on this site should be verified before you rely on them for a business decision.",
+      "Information on this website, including the Insights articles, is provided for general guidance only and does not constitute legal, tax, or financial advice. UAE regulations, fees, and thresholds change, and figures referenced on this site should be verified before you rely on them for a business decision.",
     ],
   },
   {

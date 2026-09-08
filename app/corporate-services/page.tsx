@@ -11,7 +11,7 @@ import { faqPageJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 const TITLE = "Corporate Services in the UAE | Purple Cow";
 const DESCRIPTION =
-  "Visas, corporate banking, renewals, and accounting & tax — Purple Cow handles the day-to-day corporate admin your UAE company needs, so nothing lapses on your watch.";
+  "Visas, corporate banking, renewals, and accounting & tax: Purple Cow handles the day-to-day corporate admin your UAE company needs, so nothing lapses on your watch.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const BREADCRUMB_ITEMS = [{ label: "Home", href: "/" }, { label: "Corporate Services" }];
 
 const STATS = [
-  { value: "4", label: "Core services — PRO, Banking, Renewals & Tax" },
+  { value: "4", label: "Core services: PRO, Banking, Renewals & Tax" },
   { value: "40+", label: "Free zones supported" },
   { value: "100%", label: "Renewal deadlines tracked" },
   { value: "<5 min", label: "WhatsApp response" },
@@ -68,7 +68,7 @@ const SERVICES = [
     title: "Corporate Banking",
     tagline: "A business bank account that actually opens",
     bestFor:
-      "Companies that need a compliance file prepared correctly the first time — not another rejected bank application.",
+      "Companies that need a compliance file prepared correctly the first time, not another rejected bank application.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 10 12 4l9 6" />
@@ -89,7 +89,7 @@ const SERVICES = [
     title: "Renewals & Compliance",
     tagline: "Nothing lapses on your watch",
     bestFor:
-      "Companies that want license, card, and membership renewals tracked and filed before they're due — not after a warning letter.",
+      "Companies that want license, card, and membership renewals tracked and filed before they're due, not after a warning letter.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="5" width="18" height="16" rx="2" />
@@ -110,7 +110,7 @@ const SERVICES = [
     title: "Accounting & Tax",
     tagline: "Bookkeeping, VAT & Corporate Tax, in-house",
     bestFor:
-      "Companies that want bookkeeping, VAT filing, and Corporate Tax handled by real accountants — not outsourced after formation.",
+      "Companies that want bookkeeping, VAT filing, and Corporate Tax handled by real accountants, not outsourced after formation.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="3" width="16" height="18" rx="1.5" />
@@ -159,7 +159,7 @@ const WHY = [
   {
     title: "One team for every request",
     description:
-      "Visas, banking, and renewals handled by the same team that formed your company — no re-explaining your setup.",
+      "Visas, banking, and renewals handled by the same team that formed your company, no re-explaining your setup.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 15l6-6M8 7l1.5-1.5a3.5 3.5 0 0 1 5 5L13 12M16 17l-1.5 1.5a3.5 3.5 0 0 1-5-5L11 12" />
@@ -215,11 +215,11 @@ const FAQS = [
   },
   {
     q: "Do you handle visa renewals for existing employees, not just new hires?",
-    a: "Yes. We manage the full visa lifecycle — new applications, renewals, and cancellations — not just the initial formation paperwork.",
+    a: "Yes. We manage the full visa lifecycle (new applications, renewals, and cancellations), not just the initial formation paperwork.",
   },
   {
     q: "Can you help if my company is already set up elsewhere?",
-    a: "Yes. We onboard existing UAE companies and take over their visas, banking relationship, and renewal tracking at any time — you don't need to have formed with us.",
+    a: "Yes. We onboard existing UAE companies and take over their visas, banking relationship, and renewal tracking at any time. You don't need to have formed with us.",
   },
 ];
 
@@ -259,7 +259,7 @@ export default function CorporateServicesPage() {
                 <span className="text-primary-light">without the admin grind</span>
               </h1>
               <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
-                Visas, bank accounts, renewals, and accounting & tax — the day-to-day
+                Visas, bank accounts, renewals, and accounting & tax: the day-to-day
                 corporate admin every UAE company needs, managed by one team so you can
                 focus on running the business.
               </p>
@@ -302,7 +302,7 @@ export default function CorporateServicesPage() {
                   <span className="text-primary">running day to day</span>
                 </h2>
                 <p className="mt-4 text-lg text-ink-soft">
-                  Four services, one team — instead of juggling a PRO agent, a bank
+                  Four services, one team, instead of juggling a PRO agent, a bank
                   relationship manager, a renewal reminder, and a separate bookkeeper.
                 </p>
               </div>

@@ -6,7 +6,7 @@ const AUTOPLAY_MS = 3400;
 
 const DOCS = [
   { name: "Trade License.pdf", status: "Synced" },
-  { name: "VAT Filing — Q2", status: "Synced" },
+  { name: "VAT Filing: Q2", status: "Synced" },
   { name: "Bank KYC Form", status: "Synced" },
 ];
 
@@ -15,7 +15,7 @@ const SCENES = [
     title: "Technology-Driven",
     eyebrow: "Client Portal",
     description:
-      "A client portal that replaces email threads and lost paperwork — track filings, documents, and deadlines in one place.",
+      "A client portal that replaces email threads and lost paperwork: track filings, documents, and deadlines in one place.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="4" width="18" height="12" rx="2" />
@@ -119,7 +119,7 @@ const SCENES = [
     title: "WhatsApp-First Support",
     eyebrow: "WhatsApp Support",
     description:
-      "Reach a real person where you already are — typically within 5 minutes during business hours.",
+      "Reach a real person where you already are, typically within 5 minutes during business hours.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.2-3.4A7.96 7.96 0 0 1 4 12z" />
