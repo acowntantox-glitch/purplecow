@@ -43,88 +43,63 @@ const STATS = [
 const SERVICES = [
   {
     key: "pro",
-    title: "PRO & Visa Services",
-    tagline: "Visas & Emirates ID, without the counters",
+    badge: "PRO & Visa Services",
+    image: "/images/stich/d5.jpg",
+    title: "Visas & Emirates ID, without the counters",
     bestFor:
       "Companies that need employment visas, Emirates ID, and labor cards processed without the back-and-forth at government counters.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="5" width="18" height="14" rx="2" />
-        <circle cx="9" cy="11" r="2" />
-        <path d="M6 16c.6-1.6 1.9-2.5 3-2.5s2.4.9 3 2.5M14 10h4M14 14h4" />
-      </svg>
-    ),
     benefits: [
       "Employment & investor visa processing",
       "Emirates ID and labor card issuance",
       "Medical fitness test coordination",
-      "Dependent & family visa support",
     ],
     href: "/corporate-services/pro",
-    cta: "Learn more about PRO & Visa Services",
+    cta: "Explore PRO & Visa Services",
   },
   {
     key: "banking",
-    title: "Corporate Banking",
-    tagline: "A business bank account that actually opens",
+    badge: "Corporate Banking",
+    image: "/images/stich/d4.jpg",
+    title: "A business bank account that actually opens",
     bestFor:
       "Companies that need a compliance file prepared correctly the first time, not another rejected bank application.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 10 12 4l9 6" />
-        <path d="M5 10v9M10 10v9M14 10v9M19 10v9M3 19h18" />
-      </svg>
-    ),
     benefits: [
       "Compliance file & KYC documentation prepared for you",
       "Direct relationships with major UAE banks",
       "Multi-currency account guidance",
-      "Support through account activation",
     ],
     href: "/corporate-services/banking",
-    cta: "Learn more about Corporate Banking",
+    cta: "Explore Corporate Banking",
   },
   {
     key: "renewals",
-    title: "Renewals & Compliance",
-    tagline: "Nothing lapses on your watch",
+    badge: "Renewals & Compliance",
+    image: "/images/stich/e1.jpg",
+    title: "Nothing lapses on your watch",
     bestFor:
       "Companies that want license, card, and membership renewals tracked and filed before they're due, not after a warning letter.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="5" width="18" height="16" rx="2" />
-        <path d="M3 10h18M8 3v4M16 3v4M8.5 15l2 2 4-4" />
-      </svg>
-    ),
     benefits: [
       "Trade license renewal tracking & filing",
       "Establishment card & labor file renewals",
-      "Chamber of Commerce membership renewal",
       "Deadline alerts before anything lapses",
     ],
     href: "/corporate-services/renewals",
-    cta: "Learn more about Renewals & Compliance",
+    cta: "Explore Renewals & Compliance",
   },
   {
     key: "accounting",
-    title: "Accounting & Tax",
-    tagline: "Bookkeeping, VAT & Corporate Tax, in-house",
+    badge: "Accounting & Tax",
+    image: "/images/stich/records.jpg",
+    title: "Bookkeeping, VAT & Corporate Tax, in-house",
     bestFor:
       "Companies that want bookkeeping, VAT filing, and Corporate Tax handled by real accountants, not outsourced after formation.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="3" width="16" height="18" rx="1.5" />
-        <path d="M8 8h8M8 12h5M8 16h8" />
-      </svg>
-    ),
     benefits: [
       "Monthly bookkeeping & reconciliation",
       "Quarterly VAT return preparation & filing",
       "Corporate Tax registration & filing",
-      "Financial statements ready on demand",
     ],
     href: "/accounting-tax",
-    cta: "Explore accounting & tax",
+    cta: "Explore Accounting & Tax",
   },
 ];
 
@@ -313,28 +288,40 @@ export default function CorporateServicesPage() {
                 <Reveal key={s.key} delay={i * 100}>
                   <div
                     id={s.key}
-                    className="flex h-full scroll-mt-28 flex-col rounded-2xl border border-surface-border bg-white p-8 shadow-xl shadow-black/5"
+                    className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-surface-border bg-white shadow-xl shadow-black/5"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary [&_svg]:h-6 [&_svg]:w-6">
-                      {s.icon}
+                    <div className="relative h-56 w-full overflow-hidden">
+                      <Image
+                        src={s.image}
+                        alt={s.title}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
+                      <span className="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
+                        {s.badge}
+                      </span>
                     </div>
-                    <h3 className="mt-5 text-xl font-semibold text-ink">{s.title}</h3>
-                    <p className="mt-1 text-sm font-medium text-primary">{s.tagline}</p>
-                    <p className="mt-4 text-sm leading-relaxed text-ink-soft">{s.bestFor}</p>
-                    <ul className="mt-6 space-y-3">
-                      {s.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                          {CHECK_ICON}
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <a
-                      href={s.href ?? "/#contact"}
-                      className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
-                    >
-                      {s.cta ?? "Ask about this service"} <span aria-hidden>&rarr;</span>
-                    </a>
+                    <div className="flex flex-1 flex-col p-8">
+                      <h3 className="text-xl font-semibold text-ink">{s.title}</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{s.bestFor}</p>
+                      <ul className="mt-6 space-y-3">
+                        {s.benefits.map((b) => (
+                          <li key={b} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                            {CHECK_ICON}
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <a
+                        href={s.href ?? "/#contact"}
+                        className="mt-auto inline-flex items-center justify-between rounded-xl bg-primary/10 px-5 py-3 text-sm font-semibold text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+                      >
+                        <span>{s.cta ?? "Ask about this service"}</span>
+                        <span aria-hidden>&rarr;</span>
+                      </a>
+                    </div>
                   </div>
                 </Reveal>
               ))}

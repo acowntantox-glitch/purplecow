@@ -44,63 +44,48 @@ const JURISDICTIONS = [
   {
     key: "mainland",
     slug: "mainland",
-    title: "Mainland",
-    tagline: "Trade anywhere in the UAE",
+    badge: "Mainland (DED)",
+    image: "/images/stich/office stich 1.jpg",
+    title: "Trade anywhere in the UAE",
     bestFor:
-      "Businesses trading directly within the local UAE market, or bidding on government contracts.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 21V9l6-4 6 4v12" />
-        <path d="M14 21v-7l6 3v4" />
-        <path d="M9 21v-4M4 21h16" />
-      </svg>
-    ),
+      "Unrestricted local commercial trading, open eligibility for lucrative UAE government tenders, and flexibility to lease office premises across any emirate.",
     benefits: [
-      "Trade freely across the UAE with no restrictions",
-      "No requirement to operate inside a free zone",
-      "Eligible to bid on government contracts",
-      "Widest range of licensable business activities",
+      "100% foreign ownership on commercial licenses",
+      "Direct local onshore UAE client invoicing",
+      "Scalable corporate investor & employee visas",
     ],
+    cta: "Explore Mainland Formation",
   },
   {
     key: "freezone",
     slug: "free-zone",
-    title: "Free Zone",
-    tagline: "100% foreign ownership, zone-based",
+    badge: "Free Zone (DMCC / IFZA)",
+    image:
+      "/images/stich/modern_dubai_internet_city_or_silicon_oasis_innovation_district_modern_office.png",
+    title: "Global tech & digital trade",
     bestFor:
-      "International trading, consultancy, and e-commerce businesses that don't need a mainland presence.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 3 3 8l9 5 9-5-9-5z" />
-        <path d="M3 16l9 5 9-5M3 12l9 5 9-5" />
-      </svg>
-    ),
+      "Optimized for cross-border e-commerce, digital technology ventures, international consultancies, and holding activities with accelerated setup times.",
     benefits: [
-      "100% foreign ownership, guaranteed",
-      "Choose from 40+ UAE free zones by industry",
-      "Streamlined, fast-track licensing",
-      "Visa quota included with your license",
+      "0% personal income tax and 100% capital repatriation",
+      "Digital remote company registration",
+      "Qualifying Free Zone Person corporate tax exemptions",
     ],
+    cta: "Explore Free Zone Options",
   },
   {
     key: "offshore",
     slug: "offshore",
-    title: "Offshore",
-    tagline: "Hold assets, structure internationally",
+    badge: "Offshore (JAFZA / RAK ICC)",
+    image: "/images/stich/clients stich 3.jpg",
+    title: "Hold assets internationally",
     bestFor:
-      "Holding companies, asset protection, and international structuring, no local office needed.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" />
-      </svg>
-    ),
+      "Institutional vehicle created strictly for cross-border holding, intellectual property consolidation, regional real estate ownership, and ultimate privacy.",
     benefits: [
-      "No physical office required in the UAE",
-      "100% foreign ownership with full confidentiality",
-      "Hold assets and open international bank accounts",
-      "No UAE residency requirement for shareholders",
+      "Direct ownership of prime UAE real estate assets",
+      "Zero local physical office requirement",
+      "Confidential register of corporate shareholders",
     ],
+    cta: "Explore Offshore Entities",
   },
 ];
 
@@ -276,13 +261,19 @@ export default function BusinessSetupPage() {
         <section className="bg-white py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
-              <div className="mx-auto max-w-2xl text-center">
-                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
-                  Three jurisdictions, <span className="text-primary">one clear recommendation</span>
-                </h2>
-                <p className="mt-4 text-lg text-ink-soft">
-                  We don&apos;t steer you toward whichever jurisdiction pays us more.
-                  We match you to the one that actually fits your business.
+              <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                <div className="max-w-2xl">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+                    Precision Advisory
+                  </span>
+                  <h2 className="text-balance mt-2 text-2xl font-bold tracking-tight text-black sm:text-4xl">
+                    Three jurisdictions. One clear recommendation.
+                  </h2>
+                </div>
+                <p className="max-w-md text-base text-ink-soft">
+                  We don&apos;t steer you toward whichever jurisdiction pays brokers the
+                  highest commission. We evaluate your revenue model, visa needs, and
+                  banking requirements.
                 </p>
               </div>
             </Reveal>
@@ -290,27 +281,39 @@ export default function BusinessSetupPage() {
             <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
               {JURISDICTIONS.map((j, i) => (
                 <Reveal key={j.key} delay={i * 100}>
-                  <div className="flex h-full flex-col rounded-2xl border border-surface-border bg-white p-8 shadow-xl shadow-black/5">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary [&_svg]:h-6 [&_svg]:w-6">
-                      {j.icon}
+                  <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-surface-border bg-white shadow-xl shadow-black/5">
+                    <div className="relative h-56 w-full overflow-hidden">
+                      <Image
+                        src={j.image}
+                        alt={j.title}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
+                      <span className="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
+                        {j.badge}
+                      </span>
                     </div>
-                    <h3 className="mt-5 text-xl font-semibold text-ink">{j.title}</h3>
-                    <p className="mt-1 text-sm font-medium text-primary">{j.tagline}</p>
-                    <p className="mt-4 text-sm leading-relaxed text-ink-soft">{j.bestFor}</p>
-                    <ul className="mt-6 space-y-3">
-                      {j.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                          {CHECK_ICON}
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <a
-                      href={`/business-setup/${j.slug}`}
-                      className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
-                    >
-                      Learn more about {j.title} <span aria-hidden>&rarr;</span>
-                    </a>
+                    <div className="flex flex-1 flex-col p-8">
+                      <h3 className="text-xl font-semibold text-ink">{j.title}</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{j.bestFor}</p>
+                      <ul className="mt-6 space-y-3">
+                        {j.benefits.map((b) => (
+                          <li key={b} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                            {CHECK_ICON}
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <a
+                        href={`/business-setup/${j.slug}`}
+                        className="mt-8 inline-flex items-center justify-between rounded-xl bg-primary/10 px-5 py-3 text-sm font-semibold text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+                      >
+                        <span>{j.cta}</span>
+                        <span aria-hidden>&rarr;</span>
+                      </a>
+                    </div>
                   </div>
                 </Reveal>
               ))}

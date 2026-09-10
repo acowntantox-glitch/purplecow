@@ -43,66 +43,48 @@ const STATS = [
 const SERVICES = [
   {
     key: "bookkeeping",
-    title: "Bookkeeping",
-    tagline: "Books that are always audit-ready",
+    badge: "Bookkeeping",
+    image: "/images/stich/a5.jpg",
+    title: "Books that are always audit-ready",
     bestFor:
       "Companies that want every invoice and expense reconciled by a real accountant, not sorted out in a scramble at year end.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
-        <path d="M9 12h6M9 16h6M9 8h3" />
-      </svg>
-    ),
     benefits: [
       "Monthly reconciliation & bank matching",
       "Invoices and expenses logged and categorized",
       "Financial statements ready on demand",
-      "IFRS-aligned bookkeeping standards",
     ],
     href: "/accounting-tax/bookkeeping",
-    cta: "Learn more about Bookkeeping",
+    cta: "Explore Bookkeeping",
   },
   {
     key: "vat",
-    title: "VAT Filing",
-    tagline: "Quarterly VAT, filed before the deadline",
+    badge: "VAT Filing",
+    image: "/images/stich/vat services.jpg",
+    title: "Quarterly VAT, filed before the deadline",
     bestFor:
       "Companies that need VAT returns prepared, checked, and submitted to the FTA, with input tax reviewed before it's ever filed.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12.5 3H5a2 2 0 0 0-2 2v7.5a2 2 0 0 0 .586 1.414l8.5 8.5a2 2 0 0 0 2.828 0l7.5-7.5a2 2 0 0 0 0-2.828l-8.5-8.5A2 2 0 0 0 12.5 3z" />
-        <circle cx="8" cy="8" r="1.25" fill="currentColor" stroke="none" />
-      </svg>
-    ),
     benefits: [
       "Quarterly VAT return preparation & filing",
       "Input tax verification",
       "FTA submission & correspondence handled",
-      "VAT registration for new companies",
     ],
     href: "/accounting-tax/vat",
-    cta: "Learn more about VAT Filing",
+    cta: "Explore VAT Filing",
   },
   {
     key: "corptax",
-    title: "Corporate Tax",
-    tagline: "Handled by people who understand it",
+    badge: "Corporate Tax",
+    image: "/images/stich/w2.jpg",
+    title: "Handled by people who understand it",
     bestFor:
       "Companies that want registration, taxable income calculation, and CT returns handled by accountants, not a checklist.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="3" width="16" height="18" rx="2" />
-        <path d="M8 8h8M8 12h8M8 16h5" />
-      </svg>
-    ),
     benefits: [
       "Corporate Tax registration",
       "Taxable income calculation",
       "CT return preparation & filing",
-      "Exemption & small business relief assessment",
     ],
     href: "/accounting-tax/corptax",
-    cta: "Learn more about Corporate Tax",
+    cta: "Explore Corporate Tax",
   },
 ];
 
@@ -291,28 +273,40 @@ export default function AccountingTaxPage() {
                 <Reveal key={s.key} delay={i * 100}>
                   <div
                     id={s.key}
-                    className="flex h-full scroll-mt-28 flex-col rounded-2xl border border-surface-border bg-white p-8 shadow-xl shadow-black/5"
+                    className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-2xl border border-surface-border bg-white shadow-xl shadow-black/5"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary [&_svg]:h-6 [&_svg]:w-6">
-                      {s.icon}
+                    <div className="relative h-56 w-full overflow-hidden">
+                      <Image
+                        src={s.image}
+                        alt={s.title}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, 100vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
+                      <span className="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
+                        {s.badge}
+                      </span>
                     </div>
-                    <h3 className="mt-5 text-xl font-semibold text-ink">{s.title}</h3>
-                    <p className="mt-1 text-sm font-medium text-primary">{s.tagline}</p>
-                    <p className="mt-4 text-sm leading-relaxed text-ink-soft">{s.bestFor}</p>
-                    <ul className="mt-6 space-y-3">
-                      {s.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-sm text-ink-soft">
-                          {CHECK_ICON}
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <a
-                      href={s.href}
-                      className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
-                    >
-                      {s.cta} <span aria-hidden>&rarr;</span>
-                    </a>
+                    <div className="flex flex-1 flex-col p-8">
+                      <h3 className="text-xl font-semibold text-ink">{s.title}</h3>
+                      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{s.bestFor}</p>
+                      <ul className="mt-6 space-y-3">
+                        {s.benefits.map((b) => (
+                          <li key={b} className="flex items-start gap-2.5 text-sm text-ink-soft">
+                            {CHECK_ICON}
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <a
+                        href={s.href}
+                        className="mt-auto inline-flex items-center justify-between rounded-xl bg-primary/10 px-5 py-3 text-sm font-semibold text-primary transition-colors group-hover:bg-primary group-hover:text-white"
+                      >
+                        <span>{s.cta}</span>
+                        <span aria-hidden>&rarr;</span>
+                      </a>
+                    </div>
                   </div>
                 </Reveal>
               ))}

@@ -27,7 +27,7 @@ export default function ServiceCards({ cards }: { cards: ServiceCardData[] }) {
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/0 transition-opacity duration-300 group-hover:from-black/90"
+            className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-black/0 transition-opacity duration-300 group-hover:from-black/40"
             aria-hidden
           />
           <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-6">

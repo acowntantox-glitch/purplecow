@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,14 +18,106 @@ type Jurisdiction = {
   badge: string;
   heroTitle: React.ReactNode;
   heroSubcopy: string;
+  heroImage: string;
   icon: React.ReactNode;
   stats: { value: string; label: string }[];
   overview: string;
-  benefits: { title: string; description: string }[];
+  overviewImage: string;
+  benefits: { title: string; description: string; icon: React.ReactNode }[];
   whoFor: string[];
   requirements: string[];
+  requirementsImage: string;
+  process: { step: string; title: string; description: string }[];
+  breakImage: string;
+  breakEyebrow: string;
+  breakHeading: React.ReactNode;
+  breakStats: { value: string; label: string }[];
   faqs: { q: string; a: string }[];
 };
+
+const ICON_MARKET = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" />
+  </svg>
+);
+const ICON_GOVERNMENT = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 21h16M6 21V9l6-5 6 5v12M9 21v-6h6v6" />
+  </svg>
+);
+const ICON_PERCENT = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="9" />
+    <path d="M9 9h.01M15 15h.01M15 9 9 15" />
+  </svg>
+);
+const ICON_PIN = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12z" />
+    <circle cx="12" cy="9" r="2.5" />
+  </svg>
+);
+const ICON_GRID = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="7" height="7" rx="1" />
+    <rect x="14" y="3" width="7" height="7" rx="1" />
+    <rect x="3" y="14" width="7" height="7" rx="1" />
+    <rect x="14" y="14" width="7" height="7" rx="1" />
+  </svg>
+);
+const ICON_TARGET = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="8" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="12" cy="12" r="0.6" fill="currentColor" stroke="none" />
+  </svg>
+);
+const ICON_ZAP = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" />
+  </svg>
+);
+const ICON_EXCHANGE = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M7 7h13l-3-3M17 17H4l3 3" />
+  </svg>
+);
+const ICON_USERS = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="9" cy="8" r="3" />
+    <path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6M17 11a3 3 0 1 0 0-6M22 20c0-2.7-1.8-4.8-4-5.6" />
+  </svg>
+);
+const ICON_NO_OFFICE = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 21h16M6 21V9l6-5 6 5v12M9 21v-6h6v6" />
+    <path d="M3 3l18 18" />
+  </svg>
+);
+const ICON_CONFIDENTIAL = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.5 5.2A9.8 9.8 0 0 1 12 5c5 0 9 4 10 7-.4 1.2-1.2 2.6-2.3 3.9M6.7 6.7C4.5 8.1 2.9 10 2 12c1 3 5 7 10 7 1.1 0 2.1-.2 3-.5" />
+  </svg>
+);
+const ICON_LAYERS = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2 3 7l9 5 9-5-9-5z" />
+    <path d="M3 12l9 5 9-5M3 17l9 5 9-5" />
+  </svg>
+);
+const ICON_WALLET = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="6" width="18" height="13" rx="2" />
+    <path d="M3 10h18M16 14h.01" />
+  </svg>
+);
+const ICON_USER_X = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="9" cy="8" r="3" />
+    <path d="M2 20c0-3.5 3-6 7-6 1 0 2 .2 2.8.5M18 8l4 4m0-4-4 4" />
+  </svg>
+);
 
 const JURISDICTIONS: Record<string, Jurisdiction> = {
   mainland: {
@@ -37,6 +130,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     ),
     heroSubcopy:
       "A Mainland license lets you operate across the entire UAE market and beyond: no restriction on where you trade, and no cap on foreign ownership for most activities.",
+    heroImage: "/images/stich/office stich 1.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 21V9l6-4 6 4v12" />
@@ -52,31 +146,37 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     ],
     overview:
       "A Mainland company is registered with the Department of Economic Development (DED) and can trade directly within the local UAE market, take on government contracts, and open branches anywhere in the country. It's the most flexible license type, with the widest range of business activities available.",
+    overviewImage: "/images/stich/a1.jpg",
     benefits: [
       {
         title: "Unrestricted UAE market access",
         description:
           "Trade with any company or individual anywhere in the UAE, with no geographic or sector limitation.",
+        icon: ICON_MARKET,
       },
       {
         title: "Eligible for government contracts",
         description:
           "Mainland companies can bid on and win UAE government tenders, a route closed to free zone entities.",
+        icon: ICON_GOVERNMENT,
       },
       {
         title: "100% foreign ownership on most activities",
         description:
           "Following the UAE's 2021 reforms, most commercial and industrial activities allow full foreign ownership.",
+        icon: ICON_PERCENT,
       },
       {
         title: "Flexible office locations",
         description:
           "Set up anywhere in the emirate, rather than being confined to a single free zone.",
+        icon: ICON_PIN,
       },
       {
         title: "Widest activity list",
         description:
           "Access to over 2,000 licensable business activities across commercial, professional, and industrial categories.",
+        icon: ICON_GRID,
       },
     ],
     whoFor: [
@@ -91,6 +191,36 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       "Memorandum of Association (MOA)",
       "Proof of registered office (Ejari / tenancy contract)",
       "Approvals from relevant authorities, depending on activity",
+    ],
+    requirementsImage: "/images/stich/a2.jpg",
+    process: [
+      {
+        step: "01",
+        title: "Initial approval & trade name",
+        description: "The DED reviews your activity and reserves your trade name.",
+      },
+      {
+        step: "02",
+        title: "MOA & licensing",
+        description: "Your Memorandum of Association is drafted and initial approval is issued.",
+      },
+      {
+        step: "03",
+        title: "Office & Ejari",
+        description: "We register your Mainland office lease (Ejari), as required for your activity.",
+      },
+      {
+        step: "04",
+        title: "License issued",
+        description: "Your DED trade license is issued and the company is ready to operate.",
+      },
+    ],
+    breakImage: "/images/stich/m3.jpg",
+    breakEyebrow: "UAE Market Access",
+    breakHeading: <>Built to trade <span className="text-primary-light">everywhere</span></>,
+    breakStats: [
+      { value: "2000+", label: "Licensable activities" },
+      { value: "0", label: "Restrictions on where you trade" },
     ],
     faqs: [
       {
@@ -121,6 +251,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     ),
     heroSubcopy:
       "Free zones give international founders full ownership, fast licensing, and a jurisdiction tailored to their industry, without needing a mainland presence.",
+    heroImage: "/images/stich/modern_dubai_internet_city_or_silicon_oasis_innovation_district_modern_office.png",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3 3 8l9 5 9-5-9-5z" />
@@ -135,29 +266,35 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     ],
     overview:
       "Free zones are self-contained jurisdictions with their own registration authority, each typically focused on a specific industry: media, tech, logistics, finance, and more. They're built for international founders who want full ownership and a fast setup, without needing to trade directly with the UAE mainland market.",
+    overviewImage: "/images/stich/m4.jpg",
     benefits: [
       {
         title: "100% foreign ownership, guaranteed",
         description:
           "Every UAE free zone allows full foreign ownership, with no exceptions by activity.",
+        icon: ICON_PERCENT,
       },
       {
         title: "Choose a zone built for your industry",
         description:
           "From commodities-focused zones to finance-focused zones, pick one with a regulatory framework suited to what you do.",
+        icon: ICON_TARGET,
       },
       {
         title: "Fast, streamlined licensing",
         description:
           "Free zone authorities are built for speed, often issuing licenses in days rather than weeks.",
+        icon: ICON_ZAP,
       },
       {
         title: "Repatriate 100% of profits and capital",
         description: "No restriction on moving money out of the UAE.",
+        icon: ICON_EXCHANGE,
       },
       {
         title: "Visa quota included with your license",
         description: "Most packages come with a set number of visas built in from day one.",
+        icon: ICON_USERS,
       },
     ],
     whoFor: [
@@ -172,6 +309,36 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       "Proof of address",
       "No Objection Certificate (NOC) if currently on a UAE employment visa",
       "Zone-specific application form",
+    ],
+    requirementsImage: "/images/stich/d3.jpg",
+    process: [
+      {
+        step: "01",
+        title: "Choose your zone",
+        description: "We match your activity to the right free zone authority.",
+      },
+      {
+        step: "02",
+        title: "Application & approval",
+        description: "Your application and shareholder documents are submitted for approval.",
+      },
+      {
+        step: "03",
+        title: "License issuance",
+        description: "Your free zone license and establishment card are issued.",
+      },
+      {
+        step: "04",
+        title: "Visa allocation",
+        description: "Your included visa quota is activated, ready for use.",
+      },
+    ],
+    breakImage: "/images/stich/m7.jpg",
+    breakEyebrow: "Free Zone Network",
+    breakHeading: <>40+ zones, one that <span className="text-primary-light">fits your industry</span></>,
+    breakStats: [
+      { value: "100%", label: "Foreign ownership guaranteed" },
+      { value: "40+", label: "Free zones to choose from" },
     ],
     faqs: [
       {
@@ -202,6 +369,7 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     ),
     heroSubcopy:
       "An offshore company doesn't trade within the UAE: it's built for holding assets, opening international bank accounts, and structuring cross-border operations with full confidentiality.",
+    heroImage: "/images/stich/clients stich 3.jpg",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="9" />
@@ -216,28 +384,34 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
     ],
     overview:
       "Offshore companies are registered in the UAE but are not licensed to conduct business within the UAE market. They're used for holding companies, international trading structures, IP holding, and opening multi-currency bank accounts, with a level of confidentiality mainland and free zone companies don't offer.",
+    overviewImage: "/images/stich/a6.jpg",
     benefits: [
       {
         title: "No physical office required",
         description: "Offshore companies don't need UAE office space, cutting setup and running costs.",
+        icon: ICON_NO_OFFICE,
       },
       {
         title: "100% foreign ownership with full confidentiality",
         description: "Shareholder details aren't published on a public register.",
+        icon: ICON_CONFIDENTIAL,
       },
       {
         title: "Hold assets and IP internationally",
         description:
           "A common structure for holding real estate, shares in other companies, or intellectual property.",
+        icon: ICON_LAYERS,
       },
       {
         title: "Open multi-currency bank accounts",
         description:
           "Offshore entities are commonly used to open corporate accounts for international operations.",
+        icon: ICON_WALLET,
       },
       {
         title: "No UAE residency requirement",
         description: "Shareholders and directors don't need to live in, or even visit, the UAE.",
+        icon: ICON_USER_X,
       },
     ],
     whoFor: [
@@ -252,6 +426,36 @@ const JURISDICTIONS: Record<string, Jurisdiction> = {
       "Bank reference letter (for some registries)",
       "A registered agent in the UAE (mandatory, and we act as yours)",
       "No physical presence or visit required in most cases",
+    ],
+    requirementsImage: "/images/stich/u1.jpg",
+    process: [
+      {
+        step: "01",
+        title: "Registered agent appointed",
+        description: "We act as your mandatory UAE registered agent from day one.",
+      },
+      {
+        step: "02",
+        title: "Documents & due diligence",
+        description: "Shareholder documents and compliance checks are completed.",
+      },
+      {
+        step: "03",
+        title: "Incorporation filed",
+        description: "Your offshore company is incorporated with the registry.",
+      },
+      {
+        step: "04",
+        title: "Certificate issued",
+        description: "Your Certificate of Incorporation is issued, ready for banking & holding.",
+      },
+    ],
+    breakImage: "/images/stich/s1.jpg",
+    breakEyebrow: "International Structuring",
+    breakHeading: <>Built for holding, <span className="text-primary-light">not trading</span></>,
+    breakStats: [
+      { value: "0", label: "UAE visits required" },
+      { value: "100%", label: "Confidential ownership" },
     ],
     faqs: [
       {
@@ -336,6 +540,9 @@ export default async function JurisdictionPage({
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
+          <div className="absolute inset-0 opacity-25" aria-hidden>
+            <Image src={data.heroImage} alt="" fill priority className="object-cover" />
+          </div>
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
             <Breadcrumb items={breadcrumbItems} />
@@ -383,10 +590,16 @@ export default async function JurisdictionPage({
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-16">
               <Reveal>
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary [&_svg]:h-6 [&_svg]:w-6">
-                  {data.icon}
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl shadow-black/10">
+                  <Image
+                    src={data.overviewImage}
+                    alt={`${data.title} company setup`}
+                    fill
+                    sizes="(min-width: 1024px) 35vw, 90vw"
+                    className="object-cover"
+                  />
                 </div>
-                <h2 className="text-balance mt-5 text-2xl font-bold tracking-tight text-black sm:text-4xl">
+                <h2 className="text-balance mt-6 text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   What is {data.article} {data.title} company?
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-ink-soft">{data.overview}</p>
@@ -411,7 +624,10 @@ export default async function JurisdictionPage({
                       key={b.title}
                       className="rounded-2xl border border-surface-border bg-white p-6 shadow-sm"
                     >
-                      <h3 className="text-base font-semibold text-ink">{b.title}</h3>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:h-5 [&_svg]:w-5">
+                        {b.icon}
+                      </div>
+                      <h3 className="mt-4 text-base font-semibold text-ink">{b.title}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-ink-soft">{b.description}</p>
                     </div>
                   ))}
@@ -423,9 +639,9 @@ export default async function JurisdictionPage({
 
         {/* Requirements */}
         <section className="relative overflow-hidden bg-surface py-20 sm:py-24">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Reveal>
-              <div className="text-center">
+              <div className="mx-auto max-w-2xl text-center">
                 <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
                   What you&apos;ll need <span className="text-primary">to get started</span>
                 </h2>
@@ -435,18 +651,101 @@ export default async function JurisdictionPage({
               </div>
             </Reveal>
 
-            <Reveal delay={100}>
-              <ul className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
-                {data.requirements.map((r) => (
-                  <li
-                    key={r}
-                    className="flex items-start gap-2.5 rounded-2xl border border-surface-border bg-white p-4 text-sm text-ink-soft shadow-sm"
-                  >
-                    {CHECK_ICON}
-                    <span>{r}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-center lg:gap-16">
+              <Reveal delay={80}>
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl shadow-black/10">
+                  <Image
+                    src={data.requirementsImage}
+                    alt={`${data.title} setup documents`}
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 90vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+              <Reveal delay={140}>
+                <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {data.requirements.map((r) => (
+                    <li
+                      key={r}
+                      className="flex items-start gap-2.5 rounded-2xl border border-surface-border bg-white p-4 text-sm text-ink-soft shadow-sm"
+                    >
+                      {CHECK_ICON}
+                      <span>{r}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Process */}
+        <section className="relative overflow-hidden bg-white py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <Reveal>
+              <div className="mx-auto max-w-2xl text-center">
+                <h2 className="text-balance text-2xl font-bold tracking-tight text-black sm:text-4xl">
+                  How {data.title} formation <span className="text-primary">actually works</span>
+                </h2>
+                <p className="mt-4 text-lg text-ink-soft">
+                  Four steps, one team handling all of them.
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+              <div
+                className="pointer-events-none absolute inset-x-0 top-6 hidden h-px bg-surface-border lg:block"
+                aria-hidden
+              />
+              {data.process.map((p, i) => (
+                <Reveal key={p.step} delay={i * 100}>
+                  <div className="relative">
+                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-lg shadow-primary/30">
+                      {p.step}
+                    </div>
+                    <h3 className="mt-5 text-lg font-semibold text-ink">{p.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{p.description}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Full-bleed visual break */}
+        <section className="relative w-full overflow-hidden py-24 sm:py-32">
+          <div className="absolute inset-0" aria-hidden>
+            <Image
+              src={data.breakImage}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-hero-deep via-hero-deep/85 to-transparent" />
+          </div>
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <Reveal>
+              <div className="max-w-xl">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white/80">
+                  {data.breakEyebrow}
+                </span>
+                <h2 className="text-balance mt-5 font-display text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+                  {data.breakHeading}
+                </h2>
+                <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-white/15 pt-8">
+                  {data.breakStats.map((stat) => (
+                    <div key={stat.label}>
+                      <dt className="text-2xl font-semibold text-white sm:text-3xl">
+                        <Counter value={stat.value} />
+                      </dt>
+                      <dd className="mt-1 text-sm text-white/70">{stat.label}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </Reveal>
           </div>
         </section>
@@ -483,22 +782,46 @@ export default async function JurisdictionPage({
         </section>
 
         {/* Compare other jurisdictions */}
-        <section className="bg-surface py-16 sm:py-20">
-          <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+        <section className="bg-surface py-20 sm:py-24">
+          <div className="mx-auto max-w-5xl px-6 text-center lg:px-8">
             <Reveal>
-              <p className="text-sm font-medium text-ink-soft">Not sure {data.title} is the right fit?</p>
-              <div className="mt-5 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                {others.map((o) => (
-                  <Link
-                    key={o.slug}
-                    href={`/business-setup/${o.slug}`}
-                    className="inline-flex items-center gap-2 rounded-full border border-surface-border bg-white px-5 py-2.5 text-sm font-semibold text-ink shadow-sm transition hover:border-primary/30 hover:text-primary"
-                  >
-                    Compare {o.title} <span aria-hidden>&rarr;</span>
-                  </Link>
-                ))}
-              </div>
+              <p className="text-sm font-semibold uppercase tracking-wide text-ink-soft">
+                Not sure {data.title} is the right fit?
+              </p>
+              <h2 className="text-balance mt-3 text-2xl font-bold tracking-tight text-black sm:text-4xl">
+                Compare the other <span className="text-primary">jurisdictions</span>
+              </h2>
             </Reveal>
+
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {others.map((o, i) => (
+                <Reveal key={o.slug} delay={i * 100}>
+                  <Link
+                    href={`/business-setup/${o.slug}`}
+                    className="group flex items-center gap-5 overflow-hidden rounded-2xl border border-surface-border bg-white p-4 text-left shadow-sm transition hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10"
+                  >
+                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl">
+                      <Image
+                        src={o.heroImage}
+                        alt={o.title}
+                        fill
+                        sizes="80px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                        {o.title}
+                      </p>
+                      <p className="mt-1 truncate text-sm font-medium text-ink">{o.heroSubcopy}</p>
+                    </div>
+                    <span aria-hidden className="ml-auto shrink-0 text-primary">
+                      &rarr;
+                    </span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </section>
 
