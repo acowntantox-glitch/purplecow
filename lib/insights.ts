@@ -197,7 +197,7 @@ export const ARTICLES: Record<string, Article> = {
     title: "What a Dubai company setup really costs in 2026",
     badge: "Business Setup",
     dek: "\"Company formation from AED 5,750\" ads are technically true and practically useless. Here's what a Dubai setup actually costs once you add the pieces those headlines leave out.",
-    heroImage: "/images/stich/s1.jpg",
+    heroImage: "/images/stich/do 4.jpg",
     readTime: "8 min read",
     updated: "Updated August 2026",
     updatedISO: "2026-08-31",

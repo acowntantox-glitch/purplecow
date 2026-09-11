@@ -203,50 +203,56 @@ export default function BusinessSetupPage() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
-          <div className="absolute inset-0 opacity-20" aria-hidden>
-            <Image
-              src="/images/service/business set 3.jpeg"
-              alt=""
-              fill
-              priority
-              className="object-cover"
-            />
-          </div>
           <div className="absolute inset-0 grid-fade" aria-hidden />
-          <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
+          <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-24">
             <Breadcrumb items={BREADCRUMB_ITEMS} />
-            <div className="mx-auto mt-10 max-w-3xl text-center">
-              <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
-                Business Setup
-              </span>
-              <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:60ms] sm:text-5xl lg:text-[3.25rem]">
-                Launch your UAE company the{" "}
-                <span className="text-primary-light">clear-headed way</span>
-              </h1>
-              <p className="animate-fade-up text-balance mx-auto mt-6 max-w-2xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
-                Mainland, Free Zone, or Offshore: we structure your company around your
-                business, handle the paperwork end to end, and stay on as your accountants
-                once you&apos;re licensed.
-              </p>
-              <div className="animate-fade-up mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row [animation-delay:160ms]">
-                <a
-                  href="/book-consultation"
-                  className="w-full rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light sm:w-auto"
-                >
-                  Book Free Consultation
-                </a>
-                <a
-                  href="https://wa.me/"
-                  className="w-full rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto"
-                >
-                  Chat on WhatsApp
-                </a>
+            <div className="mt-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+              <div>
+                <span className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80">
+                  Business Setup
+                </span>
+                <h1 className="animate-fade-up text-balance mt-6 font-display text-3xl font-semibold leading-tight tracking-tight text-white [animation-delay:60ms] sm:text-5xl lg:text-[3.25rem]">
+                  Launch your UAE company the{" "}
+                  <span className="text-primary-light">clear-headed way</span>
+                </h1>
+                <p className="animate-fade-up text-balance mt-6 max-w-xl text-base text-white/70 [animation-delay:120ms] sm:text-lg">
+                  Mainland, Free Zone, or Offshore: we structure your company around your
+                  business, handle the paperwork end to end, and stay on as your accountants
+                  once you&apos;re licensed.
+                </p>
+                <div className="animate-fade-up mt-10 flex flex-col gap-4 sm:flex-row [animation-delay:160ms]">
+                  <a
+                    href="/book-consultation"
+                    className="w-full rounded-full bg-primary px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-light sm:w-auto"
+                  >
+                    Book Free Consultation
+                  </a>
+                  <a
+                    href="https://wa.me/"
+                    className="w-full rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <div
+                className="relative mx-auto hidden aspect-square w-full max-w-xs items-center justify-center lg:flex"
+                aria-hidden
+              >
+                <span className="absolute h-full w-full rounded-full border border-white/10" />
+                <span className="absolute h-[70%] w-[70%] rounded-full border border-white/10" />
+                <span className="absolute h-[42%] w-[42%] rounded-full border border-primary-light/25" />
+                <svg viewBox="0 0 24 24" className="relative h-24 w-24 text-white/20" fill="none" stroke="currentColor" strokeWidth={1}>
+                  <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
               </div>
             </div>
 
-            <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-8 border-t border-white/10 pt-10 sm:grid-cols-4">
+            <dl className="mt-16 grid max-w-4xl grid-cols-2 gap-8 border-t border-white/10 pt-10 sm:grid-cols-4">
               {STATS.map((stat) => (
-                <div key={stat.label} className="text-center">
+                <div key={stat.label}>
                   <dt className="text-2xl font-semibold text-white sm:text-3xl">
                     <Counter value={stat.value} />
                   </dt>

@@ -193,6 +193,25 @@ export default function AboutPage() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
+          <div className="absolute inset-0">
+            <Image
+              src="/images/stich/arab meetings 4.jpg"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+              aria-hidden
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to bottom, rgba(11,10,31,0.55) 0%, rgba(11,10,31,0.78) 45%, rgba(11,10,31,0.95) 100%)",
+              }}
+              aria-hidden
+            />
+          </div>
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
             <Breadcrumb items={BREADCRUMB_ITEMS} />
@@ -275,8 +294,8 @@ export default function AboutPage() {
               <Reveal delay={150}>
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5">
                   <Image
-                    src="/images/dubai-skyline.png"
-                    alt="Dubai skyline"
+                    src="/images/stich/arab meetings 4.jpg"
+                    alt="Purple Cow team meeting with the Dubai skyline in the background"
                     fill
                     sizes="(min-width: 1024px) 45vw, 90vw"
                     className="object-cover"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
@@ -179,6 +180,25 @@ export default function WhyPurpleCowPage() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden hero-glow">
+          <div className="absolute inset-0">
+            <Image
+              src="/images/stich/v1.jpg"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+              aria-hidden
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to bottom, rgba(11,10,31,0.55) 0%, rgba(11,10,31,0.78) 45%, rgba(11,10,31,0.95) 100%)",
+              }}
+              aria-hidden
+            />
+          </div>
           <div className="absolute inset-0 grid-fade" aria-hidden />
           <div className="relative mx-auto max-w-7xl px-6 pt-32 pb-20 lg:px-8 lg:pt-40 lg:pb-28">
             <Breadcrumb items={BREADCRUMB_ITEMS} />
